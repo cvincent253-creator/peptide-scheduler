@@ -1,0 +1,1472 @@
+{
+  "version": "1.0",
+  "source": "https://peptidedosages.com",
+  "lastUpdated": "2026-05-24",
+  "disclaimer": "For educational and research purposes only. Not medical advice. Consult a qualified healthcare professional before starting any protocol.",
+  "categories": [
+    { "id": "healing", "name": "Healing & Recovery", "color": "#2ecc71", "icon": "🩹" },
+    { "id": "gh", "name": "Growth Hormone", "color": "#3498db", "icon": "💪" },
+    { "id": "weightloss", "name": "Metabolic / Weight Loss", "color": "#e74c3c", "icon": "🔥" },
+    { "id": "cognitive", "name": "Cognitive & Nootropic", "color": "#9b59b6", "icon": "🧠" },
+    { "id": "longevity", "name": "Longevity & Anti-Aging", "color": "#f39c12", "icon": "⏳" },
+    { "id": "immune", "name": "Immune Support", "color": "#1abc9c", "icon": "🛡️" },
+    { "id": "sexual", "name": "Sexual Health", "color": "#e91e63", "icon": "❤️" },
+    { "id": "energy", "name": "Energy & Mitochondrial", "color": "#ff9800", "icon": "⚡" },
+    { "id": "skin", "name": "Skin & Cosmetic", "color": "#00bcd4", "icon": "✨" },
+    { "id": "other", "name": "Other", "color": "#607d8b", "icon": "💉" }
+  ],
+  "peptides": [
+    {
+      "id": "bpc-157",
+      "name": "BPC-157",
+      "fullName": "Body Protection Compound-157",
+      "category": "healing",
+      "description": "Synthetic 15-amino-acid peptide derived from gastric protein. One of the most researched tissue-repair peptides with demonstrated anti-inflammatory and healing properties in preclinical models.",
+      "benefits": ["Tissue repair", "Anti-inflammatory", "Wound healing", "Gut health", "Tendon/ligament healing"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 200,
+        "maxDose": 600,
+        "typicalDose": 400,
+        "startDose": 200,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning", "Evening", "Any consistent time"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 8, "max": 16, "typical": 12 },
+        "breakWeeks": { "min": 2, "max": 4, "typical": 4 },
+        "route": "Subcutaneous",
+        "titration": [
+          { "weeks": "1-2", "dose": 200, "note": "Starting dose" },
+          { "weeks": "3-4", "dose": 400, "note": "Intermediate" },
+          { "weeks": "5+", "dose": 600, "note": "Full dose" }
+        ]
+      },
+      "reconstitution": {
+        "bacWaterML": 3.0,
+        "concentrationMgPerML": 1.67,
+        "unitsPer10mcg": "0.6 units on U-100 syringe",
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
+        "notes": "Avoid freeze-thaw cycles after reconstitution"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/bpc-157-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg"]
+    },
+    {
+      "id": "tb-500",
+      "name": "TB-500",
+      "fullName": "Thymosin Beta-4 Fragment",
+      "category": "healing",
+      "description": "Synthetic peptide fragment of thymosin beta-4. Promotes angiogenesis, accelerates wound healing, and supports tissue regeneration through enhanced cell motility and blood vessel formation.",
+      "benefits": ["Wound healing", "Angiogenesis", "Muscle repair", "Tendon healing", "Anti-fibrotic"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 500,
+        "maxDose": 1000,
+        "typicalDose": 750,
+        "startDose": 500,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning", "Evening", "Any consistent time"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 8, "max": 16, "typical": 12 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous",
+        "titration": [
+          { "weeks": "1-2", "dose": 500, "note": "Loading phase" },
+          { "weeks": "3-4", "dose": 600, "note": "Building" },
+          { "weeks": "5-8", "dose": 750, "note": "Maintenance" },
+          { "weeks": "9-12", "dose": 1000, "note": "Full dose" }
+        ]
+      },
+      "reconstitution": {
+        "bacWaterML": 3.0,
+        "concentrationMgPerML": 1.67,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
+        "notes": "Do NOT freeze reconstituted solution"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/tb-500-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg"]
+    },
+    {
+      "id": "ipamorelin",
+      "name": "Ipamorelin",
+      "fullName": "Ipamorelin",
+      "category": "gh",
+      "description": "Selective growth hormone secretagogue (GHRP). Stimulates GH release without significantly elevating cortisol or ACTH. Excellent specificity profile among GH secretagogues.",
+      "benefits": ["GH release", "Lean muscle", "Fat metabolism", "Recovery", "Sleep improvement"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 100,
+        "maxDose": 300,
+        "typicalDose": 200,
+        "startDose": 100,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Evening (30-60 min before bed)", "Morning", "Pre-workout"],
+        "defaultTiming": "Evening (30-60 min before bed)",
+        "cycleWeeks": { "min": 8, "max": 16, "typical": 12 },
+        "breakWeeks": { "min": 2, "max": 4, "typical": 2 },
+        "route": "Subcutaneous",
+        "notes": "Inject on empty stomach. Best synergy with natural nocturnal GH pulse.",
+        "titration": [
+          { "weeks": "1-2", "dose": 100, "note": "Start low" },
+          { "weeks": "3-4", "dose": 150, "note": "Increase" },
+          { "weeks": "5-8", "dose": 200, "note": "Standard dose" },
+          { "weeks": "9-12", "dose": 250, "note": "Full dose" }
+        ]
+      },
+      "reconstitution": {
+        "bacWaterML": 3.0,
+        "concentrationMgPerML": 1.67,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C or freeze -20°C",
+        "reconstituted": "Refrigerate 2-8°C, use within 4 weeks",
+        "notes": "Allow to reach room temp before opening"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ipamorelin-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg"]
+    },
+    {
+      "id": "cjc-1295-no-dac",
+      "name": "CJC-1295 No DAC",
+      "fullName": "CJC-1295 without DAC (Drug Affinity Complex)",
+      "category": "gh",
+      "description": "Growth hormone releasing hormone (GHRH) analog. Short half-life (~30 min), mimics natural pulsatile GH release. Often stacked with Ipamorelin for synergistic GH stimulation.",
+      "benefits": ["GH stimulation", "Muscle growth", "Fat loss", "Recovery", "Anti-aging"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 100,
+        "maxDose": 300,
+        "typicalDose": 200,
+        "startDose": 100,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Evening (before bed)", "Morning fasted", "Pre-workout"],
+        "defaultTiming": "Evening (before bed)",
+        "cycleWeeks": { "min": 8, "max": 16, "typical": 12 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous",
+        "notes": "Stack with Ipamorelin for amplified GH release. Inject on empty stomach."
+      },
+      "reconstitution": {
+        "bacWaterML": 3.0,
+        "concentrationMgPerML": 1.67,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C",
+        "notes": "Use within 28 days of reconstitution"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/cjc-1295-no-dac-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg"]
+    },
+    {
+      "id": "cjc-1295-dac",
+      "name": "CJC-1295 DAC",
+      "fullName": "CJC-1295 with DAC (Drug Affinity Complex)",
+      "category": "gh",
+      "description": "Long-acting GHRH analog. DAC attachment extends half-life to ~8 days. Weekly or twice-weekly dosing. Maintains elevated GH/IGF-1 levels continuously.",
+      "benefits": ["Sustained GH elevation", "Muscle growth", "Fat loss", "IGF-1 increase"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 500,
+        "maxDose": 2000,
+        "typicalDose": 1000,
+        "startDose": 500,
+        "daysPerWeek": 2,
+        "injectionTimingOptions": ["Twice weekly", "Once weekly"],
+        "defaultTiming": "Twice weekly",
+        "cycleWeeks": { "min": 8, "max": 16, "typical": 12 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 1.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C",
+        "notes": "Long half-life - less frequent injections required"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/cjc-1295-dac-2-mg-vial-dosage-protocol/",
+      "vialSizes": ["2mg", "5mg"]
+    },
+    {
+      "id": "sermorelin",
+      "name": "Sermorelin",
+      "fullName": "Sermorelin Acetate",
+      "category": "gh",
+      "description": "First 29 amino acids of GHRH. FDA-approved form for pediatric GH deficiency. Stimulates natural GH release from pituitary. Most studied GHRH peptide with longest safety track record.",
+      "benefits": ["GH stimulation", "Lean muscle", "Fat reduction", "Sleep quality", "Energy"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 200,
+        "maxDose": 500,
+        "typicalDose": 300,
+        "startDose": 200,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Evening (before bed)", "Morning fasted"],
+        "defaultTiming": "Evening (before bed)",
+        "cycleWeeks": { "min": 12, "max": 24, "typical": 16 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 3.0,
+        "concentrationMgPerML": 1.67,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C or freeze -20°C",
+        "reconstituted": "Refrigerate 2-8°C",
+        "notes": "Most stable of GHRH analogs"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/sermorelin-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg"]
+    },
+    {
+      "id": "tesamorelin",
+      "name": "Tesamorelin",
+      "fullName": "Tesamorelin",
+      "category": "gh",
+      "description": "Synthetic analog of GHRH. FDA-approved for HIV-associated lipodystrophy. Strong evidence for visceral fat reduction and IGF-1 elevation.",
+      "benefits": ["Visceral fat reduction", "GH/IGF-1 elevation", "Cognitive support", "Body composition"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 1,
+        "maxDose": 2,
+        "typicalDose": 2,
+        "startDose": 1,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning", "Evening"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 12, "max": 26, "typical": 26 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.2,
+        "concentrationMgPerML": 1.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C (do not freeze)",
+        "reconstituted": "Refrigerate 2-8°C",
+        "notes": "FDA-approved - do not freeze lyophilized form"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/tesamorelin-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg", "20mg"]
+    },
+    {
+      "id": "ghrp-2",
+      "name": "GHRP-2",
+      "fullName": "Growth Hormone Releasing Peptide-2",
+      "category": "gh",
+      "description": "Second-generation GHRP with strong GH release. More potent than GHRP-6 with less hunger stimulation. Elevates cortisol and prolactin at higher doses.",
+      "benefits": ["Strong GH release", "Muscle growth", "Fat loss", "Appetite stimulation"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 100,
+        "maxDose": 300,
+        "typicalDose": 200,
+        "startDose": 100,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning fasted", "Pre-workout", "Evening (before bed)"],
+        "defaultTiming": "Morning fasted",
+        "cycleWeeks": { "min": 8, "max": 12, "typical": 12 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous",
+        "notes": "Up to 3x daily dosing possible. Inject on empty stomach for best GH pulse."
+      },
+      "reconstitution": {
+        "bacWaterML": 3.0,
+        "concentrationMgPerML": 1.67,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C",
+        "notes": "Sensitive to temperature fluctuations"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ghrp-2-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg"]
+    },
+    {
+      "id": "ghrp-6",
+      "name": "GHRP-6",
+      "fullName": "Growth Hormone Releasing Peptide-6",
+      "category": "gh",
+      "description": "First-generation GHRP. Strong GH secretagogue with notable appetite stimulation (via ghrelin pathway). Good for bulking phases and GH optimization.",
+      "benefits": ["GH release", "Appetite increase", "Muscle growth", "Recovery"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 100,
+        "maxDose": 300,
+        "typicalDose": 200,
+        "startDose": 100,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning fasted", "Pre-workout", "Evening"],
+        "defaultTiming": "Morning fasted",
+        "cycleWeeks": { "min": 8, "max": 12, "typical": 12 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous",
+        "notes": "Significant hunger stimulation. Plan meals accordingly."
+      },
+      "reconstitution": {
+        "bacWaterML": 3.0,
+        "concentrationMgPerML": 0.67,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ghrp-6-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["2mg", "5mg", "10mg"]
+    },
+    {
+      "id": "igf-1-lr3",
+      "name": "IGF-1 LR3",
+      "fullName": "Insulin-like Growth Factor 1 Long R3",
+      "category": "gh",
+      "description": "Long-acting analog of IGF-1 with extended half-life (~20-30 hrs). Directly stimulates muscle growth, protein synthesis, and fat metabolism. Powerful anabolic compound.",
+      "benefits": ["Muscle hypertrophy", "Protein synthesis", "Fat metabolism", "Recovery", "Anti-catabolic"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 20,
+        "maxDose": 120,
+        "typicalDose": 60,
+        "startDose": 20,
+        "daysPerWeek": 5,
+        "injectionTimingOptions": ["Post-workout", "Morning"],
+        "defaultTiming": "Post-workout",
+        "cycleWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous or intramuscular",
+        "notes": "Short cycles recommended. Monitor blood glucose. Desensitization occurs with prolonged use."
+      },
+      "reconstitution": {
+        "bacWaterML": 1.0,
+        "concentrationMcgPerML": 1000,
+        "shelfLifeDays": 14,
+        "notes": "Use acetic acid for reconstitution, NOT BAC water"
+      },
+      "storage": {
+        "lyophilized": "Freeze at -80°C ideally, -20°C acceptable",
+        "reconstituted": "Refrigerate 2-8°C",
+        "notes": "Very temperature sensitive. Most delicate peptide in this list."
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/igf-1-lr3-1-mg-vial-dosage-protocol/",
+      "vialSizes": ["1mg"]
+    },
+    {
+      "id": "mgf",
+      "name": "MGF",
+      "fullName": "Mechano Growth Factor",
+      "category": "gh",
+      "description": "Splice variant of IGF-1 expressed in response to muscle damage. Activates satellite cells for muscle repair and growth. Short half-life - best used post-exercise.",
+      "benefits": ["Muscle repair", "Satellite cell activation", "Post-workout recovery", "Hypertrophy"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 100,
+        "maxDose": 300,
+        "typicalDose": 200,
+        "startDose": 100,
+        "daysPerWeek": 3,
+        "injectionTimingOptions": ["Post-workout (within 30 min)"],
+        "defaultTiming": "Post-workout (within 30 min)",
+        "cycleWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Intramuscular (target muscle)"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 2.5,
+        "shelfLifeDays": 14
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C, use quickly"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/mgf-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg"]
+    },
+    {
+      "id": "epitalon",
+      "name": "Epitalon",
+      "fullName": "Epithalon (Epitalon)",
+      "category": "longevity",
+      "description": "Synthetic tetrapeptide (Ala-Glu-Asp-Gly) based on epithalamin from pineal gland. Activates telomerase, may extend telomere length. One of most studied anti-aging peptides.",
+      "benefits": ["Telomere extension", "Anti-aging", "Sleep improvement", "Immune modulation", "Antioxidant"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 5,
+        "maxDose": 10,
+        "typicalDose": 10,
+        "startDose": 5,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Evening (before bed)", "Morning"],
+        "defaultTiming": "Evening (before bed)",
+        "cycleWeeks": { "min": 2, "max": 3, "typical": 3 },
+        "breakWeeks": { "min": 24, "max": 52, "typical": 24 },
+        "route": "Subcutaneous",
+        "notes": "Long break periods between cycles (6-12 months). Annual or biannual protocol is common."
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 30
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C or freeze -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/epitalon-epithalon-10-mg-vial-dosage-protocol/",
+      "vialSizes": ["10mg"]
+    },
+    {
+      "id": "thymosin-alpha-1",
+      "name": "Thymosin Alpha-1",
+      "fullName": "Thymosin Alpha-1 (Tα1)",
+      "category": "immune",
+      "description": "Naturally occurring peptide derived from thymosin fraction 5. FDA-approved in multiple countries as Zadaxin® for hepatitis and immunodeficiency. Potent immune modulator.",
+      "benefits": ["Immune modulation", "Antiviral", "Antibacterial", "Cancer adjunct therapy", "Inflammation reduction"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 1.6,
+        "maxDose": 3.2,
+        "typicalDose": 1.6,
+        "startDose": 1.6,
+        "daysPerWeek": 2,
+        "injectionTimingOptions": ["Twice weekly", "Daily"],
+        "defaultTiming": "Twice weekly",
+        "cycleWeeks": { "min": 4, "max": 12, "typical": 8 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 1.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/thymosin-alpha-1-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg"]
+    },
+    {
+      "id": "semaglutide",
+      "name": "Semaglutide",
+      "fullName": "Semaglutide (GLP-1 Receptor Agonist)",
+      "category": "weightloss",
+      "description": "GLP-1 receptor agonist with 94% homology to human GLP-1. Weekly injection. Approved as Ozempic® and Wegovy®. Potent weight loss and blood sugar regulation.",
+      "benefits": ["Weight loss", "Blood sugar control", "Appetite suppression", "Cardiovascular protection"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 0.25,
+        "maxDose": 2.4,
+        "typicalDose": 1.0,
+        "startDose": 0.25,
+        "daysPerWeek": 1,
+        "injectionTimingOptions": ["Once weekly (any day)"],
+        "defaultTiming": "Once weekly (any day)",
+        "cycleWeeks": { "min": 16, "max": 52, "typical": 36 },
+        "breakWeeks": { "min": 0, "max": 4, "typical": 0 },
+        "route": "Subcutaneous",
+        "notes": "Titrate slowly over months to minimize GI side effects. Maintain same day of week for injection."
+      },
+      "reconstitution": {
+        "bacWaterML": 2.5,
+        "concentrationMgPerML": 2.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C (do not freeze)",
+        "reconstituted": "Refrigerate 2-8°C",
+        "notes": "Temperature sensitive - never freeze"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/semaglutide-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg", "20mg"]
+    },
+    {
+      "id": "tirzepatide",
+      "name": "Tirzepatide",
+      "fullName": "Tirzepatide (GLP-1/GIP Dual Agonist)",
+      "category": "weightloss",
+      "description": "Dual GLP-1 and GIP receptor agonist. Approved as Mounjaro® (T2D) and Zepbound® (obesity). Superior weight loss outcomes vs semaglutide in clinical trials.",
+      "benefits": ["Superior weight loss", "Blood sugar control", "Appetite suppression", "Metabolic improvement"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 2.5,
+        "maxDose": 15,
+        "typicalDose": 5,
+        "startDose": 2.5,
+        "daysPerWeek": 1,
+        "injectionTimingOptions": ["Once weekly (any day)"],
+        "defaultTiming": "Once weekly (any day)",
+        "cycleWeeks": { "min": 16, "max": 52, "typical": 36 },
+        "breakWeeks": { "min": 0, "max": 4, "typical": 0 },
+        "route": "Subcutaneous",
+        "notes": "Escalate dose every 4 weeks. Maintain consistent weekly timing."
+      },
+      "reconstitution": {
+        "bacWaterML": 2.5,
+        "concentrationMgPerML": 6.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C, never freeze"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/tirzepatide-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg", "15mg", "30mg"]
+    },
+    {
+      "id": "retatrutide",
+      "name": "Retatrutide",
+      "fullName": "Retatrutide (GLP-1/GIP/Glucagon Triple Agonist)",
+      "category": "weightloss",
+      "description": "Triple-receptor agonist (GLP-1, GIP, glucagon). Most potent weight loss peptide in trials. Phase 3 clinical trials showing ~24% body weight reduction.",
+      "benefits": ["Extreme weight loss", "Metabolic enhancement", "Blood sugar control", "Cardiovascular"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 1,
+        "maxDose": 12,
+        "typicalDose": 4,
+        "startDose": 1,
+        "daysPerWeek": 1,
+        "injectionTimingOptions": ["Once weekly"],
+        "defaultTiming": "Once weekly",
+        "cycleWeeks": { "min": 16, "max": 52, "typical": 36 },
+        "breakWeeks": { "min": 0, "max": 4, "typical": 0 },
+        "route": "Subcutaneous",
+        "notes": "Escalate extremely slowly - 1mg/month increments. Most potent GLP agent."
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 10.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/retatrutide-20-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg", "20mg", "30mg"]
+    },
+    {
+      "id": "aod-9604",
+      "name": "AOD-9604",
+      "fullName": "AOD-9604 (Anti-Obesity Drug)",
+      "category": "weightloss",
+      "description": "Fragment of HGH (amino acids 176-191) with fat-burning properties. No effect on blood sugar or growth. Originally developed by Monash University for obesity treatment.",
+      "benefits": ["Fat metabolism", "Weight loss", "No growth effects", "No blood sugar impact"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 250,
+        "maxDose": 500,
+        "typicalDose": 300,
+        "startDose": 250,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning fasted", "Before exercise"],
+        "defaultTiming": "Morning fasted",
+        "cycleWeeks": { "min": 8, "max": 16, "typical": 12 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMcgPerML": 1000,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/aod-9604-2-mg-vial-dosage-protocol/",
+      "vialSizes": ["2mg", "5mg"]
+    },
+    {
+      "id": "pt-141",
+      "name": "PT-141",
+      "fullName": "PT-141 (Bremelanotide)",
+      "category": "sexual",
+      "description": "Melanocortin receptor agonist. FDA-approved as Vyleesi® for female sexual dysfunction. Also studied for male erectile dysfunction. Acts centrally on brain rather than vascular system.",
+      "benefits": ["Sexual arousal", "Libido enhancement", "Erectile function", "Female sexual desire"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 0.5,
+        "maxDose": 2,
+        "typicalDose": 1,
+        "startDose": 0.5,
+        "daysPerWeek": 1,
+        "injectionTimingOptions": ["45 min before activity", "As needed"],
+        "defaultTiming": "45 min before activity",
+        "cycleWeeks": { "min": 0, "max": 0, "typical": 0 },
+        "breakWeeks": { "min": 0, "max": 0, "typical": 0 },
+        "route": "Subcutaneous",
+        "notes": "As-needed dosing. Not for daily use. Maximum 1x per 24 hours."
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/pt-141-10-mg-vial-dosage-protocol/",
+      "vialSizes": ["10mg"]
+    },
+    {
+      "id": "melanotan-ii",
+      "name": "Melanotan II",
+      "fullName": "Melanotan II (MT-II)",
+      "category": "sexual",
+      "description": "Synthetic analog of alpha-MSH. Stimulates melanogenesis (tanning), libido, and erectile function via melanocortin receptors. Non-specific melanocortin agonist.",
+      "benefits": ["Skin tanning", "Libido enhancement", "Erectile function", "Appetite suppression"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 0.25,
+        "maxDose": 1,
+        "typicalDose": 0.5,
+        "startDose": 0.25,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Evening", "Before sun exposure"],
+        "defaultTiming": "Evening",
+        "cycleWeeks": { "min": 2, "max": 8, "typical": 4 },
+        "breakWeeks": { "min": 4, "max": 12, "typical": 8 },
+        "route": "Subcutaneous",
+        "notes": "Start very low to assess nausea. Use sunscreen still required. Monitor moles."
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/melanotan-ii-10-mg-vial-dosage-protocol/",
+      "vialSizes": ["10mg"]
+    },
+    {
+      "id": "ghk-cu",
+      "name": "GHK-Cu",
+      "fullName": "Copper Peptide GHK-Cu",
+      "category": "skin",
+      "description": "Naturally occurring copper complex in human plasma. Potent wound healer, collagen stimulator, and anti-aging compound. Used topically and systemically.",
+      "benefits": ["Collagen synthesis", "Wound healing", "Anti-aging skin", "Hair growth", "Anti-inflammatory"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 1,
+        "maxDose": 5,
+        "typicalDose": 2,
+        "startDose": 1,
+        "daysPerWeek": 5,
+        "injectionTimingOptions": ["Morning", "Evening"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 4, "max": 12, "typical": 8 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous or topical"
+      },
+      "reconstitution": {
+        "bacWaterML": 5.0,
+        "concentrationMgPerML": 10.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ghk-cu-50-mg-vial-dosage-protocol/",
+      "vialSizes": ["50mg", "100mg"]
+    },
+    {
+      "id": "dsip",
+      "name": "DSIP",
+      "fullName": "Delta Sleep-Inducing Peptide",
+      "category": "cognitive",
+      "description": "Endogenous neuropeptide that modulates sleep. Reduces stress hormones, promotes delta (deep) sleep, and has analgesic properties. Studied for stress and sleep disorders.",
+      "benefits": ["Deep sleep promotion", "Stress reduction", "Cortisol normalization", "Analgesia"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 100,
+        "maxDose": 500,
+        "typicalDose": 250,
+        "startDose": 100,
+        "daysPerWeek": 5,
+        "injectionTimingOptions": ["Evening (30-60 min before bed)"],
+        "defaultTiming": "Evening (30-60 min before bed)",
+        "cycleWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 3.0,
+        "concentrationMgPerML": 1.67,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/dsip-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg"]
+    },
+    {
+      "id": "selank",
+      "name": "Selank",
+      "fullName": "Selank",
+      "category": "cognitive",
+      "description": "Synthetic analogue of tuftsin. Anxiolytic and nootropic peptide. Modulates GABA and serotonin systems. Russian-developed peptide with strong anxiolytic properties without sedation.",
+      "benefits": ["Anxiety reduction", "Cognitive enhancement", "Memory", "Mood stabilization", "BDNF increase"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 250,
+        "maxDose": 3000,
+        "typicalDose": 500,
+        "startDose": 250,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning", "As needed"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 2, "max": 4, "typical": 4 },
+        "breakWeeks": { "min": 2, "max": 4, "typical": 2 },
+        "route": "Subcutaneous or intranasal"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 2.5,
+        "shelfLifeDays": 14
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C, use promptly"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/selank-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg"]
+    },
+    {
+      "id": "semax",
+      "name": "Semax",
+      "fullName": "Semax",
+      "category": "cognitive",
+      "description": "Synthetic ACTH analog. Strong nootropic and neuroprotective effects. Increases BDNF and NGF. Used in Russia as approved drug for stroke and cognitive disorders.",
+      "benefits": ["BDNF increase", "Neuroprotection", "Focus/cognition", "Stroke recovery", "Stress tolerance"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 300,
+        "maxDose": 2500,
+        "typicalDose": 600,
+        "startDose": 300,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning", "Before cognitive tasks"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 2, "max": 8, "typical": 4 },
+        "breakWeeks": { "min": 2, "max": 4, "typical": 2 },
+        "route": "Subcutaneous or intranasal"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 2.5,
+        "shelfLifeDays": 14
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/semax-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg"]
+    },
+    {
+      "id": "pe-22-28",
+      "name": "PE-22-28",
+      "fullName": "PE-22-28",
+      "category": "cognitive",
+      "description": "Spadin analog targeting TREK-1 potassium channel. Antidepressant mechanism distinct from SSRIs. Rapid onset mood improvement with potential for depression treatment.",
+      "benefits": ["Antidepressant", "Mood improvement", "Rapid onset", "Novel mechanism"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 250,
+        "maxDose": 1000,
+        "typicalDose": 500,
+        "startDose": 250,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning", "Evening"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 4, "max": 12, "typical": 8 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/pe-22-28-10-mg-vial-dosage-protocol/",
+      "vialSizes": ["10mg"]
+    },
+    {
+      "id": "nad-plus",
+      "name": "NAD+",
+      "fullName": "Nicotinamide Adenine Dinucleotide",
+      "category": "energy",
+      "description": "Essential coenzyme in energy metabolism. Declines with age. IV or SubQ supplementation replenishes cellular NAD+ for mitochondrial function, DNA repair, and sirtuin activation.",
+      "benefits": ["Energy boost", "DNA repair", "Sirtuin activation", "Mitochondrial function", "Anti-aging"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 100,
+        "maxDose": 500,
+        "typicalDose": 250,
+        "startDose": 100,
+        "daysPerWeek": 5,
+        "injectionTimingOptions": ["Morning", "Before exercise"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 4, "max": 12, "typical": 8 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous or IV",
+        "notes": "SubQ can cause burning sensation. Inject very slowly. IV preferred for higher doses."
+      },
+      "reconstitution": {
+        "bacWaterML": 10.0,
+        "concentrationMgPerML": 50.0,
+        "shelfLifeDays": 14
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C, protect from light",
+        "reconstituted": "Refrigerate 2-8°C, use within 24-48 hours"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/nad-500-mg-10ml-vial-dosage-protocol/",
+      "vialSizes": ["500mg", "1000mg"]
+    },
+    {
+      "id": "mots-c",
+      "name": "MOTS-C",
+      "fullName": "MOTS-C (Mitochondrial ORF of the 12S rRNA Type-C)",
+      "category": "energy",
+      "description": "Mitochondria-derived peptide. Regulates metabolic homeostasis, insulin sensitivity, and exercise capacity. Mimics exercise at the cellular level.",
+      "benefits": ["Insulin sensitivity", "Exercise mimetic", "Fat burning", "Longevity", "Mitochondrial health"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 5,
+        "maxDose": 10,
+        "typicalDose": 10,
+        "startDose": 5,
+        "daysPerWeek": 3,
+        "injectionTimingOptions": ["Morning", "Before exercise"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/mots-c-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg", "20mg", "40mg"]
+    },
+    {
+      "id": "ss-31",
+      "name": "SS-31",
+      "fullName": "SS-31 (Elamipretide / MTP-131)",
+      "category": "energy",
+      "description": "Szeto-Schiller peptide that targets mitochondrial inner membrane. Improves mitochondrial efficiency, reduces ROS, and improves heart/kidney function in clinical trials.",
+      "benefits": ["Mitochondrial protection", "Cardiac function", "Kidney health", "Exercise capacity", "Anti-aging"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 4,
+        "maxDose": 40,
+        "typicalDose": 10,
+        "startDose": 4,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning", "Before exercise"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 4, "max": 12, "typical": 8 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.5,
+        "concentrationMgPerML": 4.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ss-31-10-mg-vial-dosage-protocol/",
+      "vialSizes": ["10mg", "30mg", "50mg"]
+    },
+    {
+      "id": "aicar",
+      "name": "AICAR",
+      "fullName": "AICAR (5-Aminoimidazole-4-carboxamide ribonucleoside)",
+      "category": "energy",
+      "description": "AMPK activator. Mimics exercise adaptation at cellular level. Improves endurance, insulin sensitivity, and fat oxidation. Called an 'exercise in a pill' compound.",
+      "benefits": ["AMPK activation", "Endurance increase", "Fat burning", "Insulin sensitivity", "Exercise mimetic"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 10,
+        "maxDose": 50,
+        "typicalDose": 25,
+        "startDose": 10,
+        "daysPerWeek": 5,
+        "injectionTimingOptions": ["Morning", "Pre-workout"],
+        "defaultTiming": "Pre-workout",
+        "cycleWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 8 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 5.0,
+        "concentrationMgPerML": 10.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/aicar-50-mg-vial-dosage-protocol/",
+      "vialSizes": ["50mg"]
+    },
+    {
+      "id": "slu-pp-332",
+      "name": "SLU-PP-332",
+      "fullName": "SLU-PP-332 (ERR Agonist)",
+      "category": "energy",
+      "description": "Estrogen-related receptor (ERR) agonist. Activates genes involved in mitochondrial biogenesis and oxidative metabolism. Exercise-mimicking compound in early research.",
+      "benefits": ["Exercise mimetic", "Fat burning", "Mitochondrial biogenesis", "Endurance"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 1,
+        "maxDose": 10,
+        "typicalDose": 5,
+        "startDose": 1,
+        "daysPerWeek": 5,
+        "injectionTimingOptions": ["Morning", "Pre-workout"],
+        "defaultTiming": "Pre-workout",
+        "cycleWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.5,
+        "concentrationMgPerML": 2.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/slu-pp-332-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg"]
+    },
+    {
+      "id": "gonadorelin",
+      "name": "Gonadorelin",
+      "fullName": "Gonadorelin (GnRH)",
+      "category": "other",
+      "description": "Synthetic GnRH (gonadotropin-releasing hormone). Stimulates LH and FSH release from pituitary. Used to maintain testicular function and fertility during TRT or post-cycle.",
+      "benefits": ["LH/FSH stimulation", "Testicular function", "Fertility preservation", "Testosterone production"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 100,
+        "maxDose": 500,
+        "typicalDose": 250,
+        "startDose": 100,
+        "daysPerWeek": 2,
+        "injectionTimingOptions": ["Twice weekly", "3x weekly"],
+        "defaultTiming": "Twice weekly",
+        "cycleWeeks": { "min": 8, "max": 24, "typical": 12 },
+        "breakWeeks": { "min": 0, "max": 4, "typical": 0 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 1.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/gonadorelin-2-mg-vial-dosage-protocol/",
+      "vialSizes": ["2mg"]
+    },
+    {
+      "id": "hcg",
+      "name": "HCG",
+      "fullName": "Human Chorionic Gonadotropin",
+      "category": "other",
+      "description": "Mimics LH in the body. Stimulates testosterone production and maintains testicular size/function. Used during TRT and PCT. Measured in International Units (IU).",
+      "benefits": ["Testosterone stimulation", "Testicular maintenance", "Fertility", "PCT support"],
+      "dosing": {
+        "unit": "IU",
+        "minDose": 250,
+        "maxDose": 500,
+        "typicalDose": 500,
+        "startDose": 250,
+        "daysPerWeek": 2,
+        "injectionTimingOptions": ["Twice weekly", "3x weekly", "Daily low dose"],
+        "defaultTiming": "Twice weekly",
+        "cycleWeeks": { "min": 8, "max": 24, "typical": 12 },
+        "breakWeeks": { "min": 0, "max": 4, "typical": 0 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 1.0,
+        "concentrationIUPerML": 5000,
+        "shelfLifeDays": 30
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C, use within 30 days"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/hcg-5000-iu-vial-dosage-protocol/",
+      "vialSizes": ["5000 IU"]
+    },
+    {
+      "id": "hgh-191aa",
+      "name": "HGH 191AA",
+      "fullName": "Human Growth Hormone 191 Amino Acid",
+      "category": "gh",
+      "description": "Synthetic 191-amino acid growth hormone identical to natural human GH. The 'gold standard' of GH therapy. Measured in IU. Comprehensive anabolic and metabolic effects.",
+      "benefits": ["Muscle growth", "Fat loss", "Bone density", "Skin improvement", "Recovery", "Anti-aging"],
+      "dosing": {
+        "unit": "IU",
+        "minDose": 1,
+        "maxDose": 4,
+        "typicalDose": 2,
+        "startDose": 1,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning fasted", "Evening (before bed)"],
+        "defaultTiming": "Morning fasted",
+        "cycleWeeks": { "min": 16, "max": 52, "typical": 24 },
+        "breakWeeks": { "min": 8, "max": 16, "typical": 8 },
+        "route": "Subcutaneous",
+        "notes": "Inject morning for fat loss benefits. Evening for GH pulse synergy. Avoid eating 1hr before/after."
+      },
+      "reconstitution": {
+        "bacWaterML": 1.0,
+        "concentrationIUPerML": 10,
+        "shelfLifeDays": 21,
+        "notes": "Extremely gentle reconstitution - inject BAC water down vial wall slowly"
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C, use within 3 weeks"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/hgh-191aa-10-iu-vial-dosage-protocol/",
+      "vialSizes": ["10 IU"]
+    },
+    {
+      "id": "ll-37",
+      "name": "LL-37",
+      "fullName": "LL-37 (Cathelicidin)",
+      "category": "immune",
+      "description": "Human cathelicidin antimicrobial peptide. Broad-spectrum antimicrobial, anti-inflammatory, and wound healing properties. Key component of innate immune defense.",
+      "benefits": ["Antimicrobial", "Immune support", "Wound healing", "Anti-inflammatory", "Biofilm disruption"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 500,
+        "maxDose": 5000,
+        "typicalDose": 1000,
+        "startDose": 500,
+        "daysPerWeek": 5,
+        "injectionTimingOptions": ["Morning", "Evening"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.5,
+        "concentrationMgPerML": 2.0,
+        "shelfLifeDays": 14
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ll-37-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg"]
+    },
+    {
+      "id": "kpv",
+      "name": "KPV",
+      "fullName": "KPV (Lys-Pro-Val)",
+      "category": "immune",
+      "description": "C-terminal tripeptide of alpha-MSH. Potent anti-inflammatory. Specifically targets gut inflammation. Excellent for inflammatory bowel conditions.",
+      "benefits": ["Anti-inflammatory", "Gut healing", "IBD support", "Colitis treatment", "Skin inflammation"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 0.5,
+        "maxDose": 5,
+        "typicalDose": 1,
+        "startDose": 0.5,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning", "Evening"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 4, "max": 12, "typical": 8 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous or oral"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/kpv-10-mg-vial-dosage-protocol/",
+      "vialSizes": ["10mg"]
+    },
+    {
+      "id": "glutathione",
+      "name": "Glutathione",
+      "fullName": "Glutathione (GSH)",
+      "category": "immune",
+      "description": "Master antioxidant tripeptide. Neutralizes free radicals, supports liver detoxification, and brightens skin. Injectable form has superior bioavailability vs oral.",
+      "benefits": ["Antioxidant", "Liver detox", "Immune support", "Skin brightening", "Anti-aging"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 200,
+        "maxDose": 1200,
+        "typicalDose": 600,
+        "startDose": 200,
+        "daysPerWeek": 3,
+        "injectionTimingOptions": ["Morning", "Evening"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 4, "max": 12, "typical": 8 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous or IV"
+      },
+      "reconstitution": {
+        "bacWaterML": 3.0,
+        "concentrationMgPerML": 200.0,
+        "shelfLifeDays": 14
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C, protect from light",
+        "reconstituted": "Refrigerate 2-8°C, very light sensitive"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/glutathione-600-mg-vial-dosage-protocol/",
+      "vialSizes": ["600mg"]
+    },
+    {
+      "id": "5-amino-1mq",
+      "name": "5-Amino-1MQ",
+      "fullName": "5-Amino-1-methylquinolinium",
+      "category": "weightloss",
+      "description": "NNMT inhibitor. Reactivates brown fat metabolism. Studied for obesity reversal without exercise. Stimulates NAD+ pathway and fat cell reprogramming.",
+      "benefits": ["Fat burning", "Metabolism boost", "Brown fat activation", "Weight loss without exercise"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 50,
+        "maxDose": 200,
+        "typicalDose": 100,
+        "startDose": 50,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning", "Pre-workout"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 4, "max": 8, "typical": 8 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/5-amino-1mq-10-mg-vial-dosage-protocol/",
+      "vialSizes": ["10mg", "50mg"]
+    },
+    {
+      "id": "foxo4-dri",
+      "name": "FOXO4-DRI",
+      "fullName": "FOXO4-D-Retro-Inverso",
+      "category": "longevity",
+      "description": "Senolytic peptide that selectively induces apoptosis in senescent (zombie) cells. Clears cellular senescence, demonstrated tissue rejuvenation in mouse models.",
+      "benefits": ["Senescent cell clearance", "Tissue rejuvenation", "Anti-aging", "Organ function restoration"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 0.5,
+        "maxDose": 5,
+        "typicalDose": 1,
+        "startDose": 0.5,
+        "daysPerWeek": 3,
+        "injectionTimingOptions": ["Morning", "Evening"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 1, "max": 2, "typical": 1 },
+        "breakWeeks": { "min": 12, "max": 24, "typical": 12 },
+        "route": "Subcutaneous or IV",
+        "notes": "Short pulse cycles with very long breaks. Senolytic - clears cells, needs recovery time."
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 14
+      },
+      "storage": {
+        "lyophilized": "Freeze at -80°C ideal, -20°C acceptable",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/foxo4-dri-10-mg-vial-dosage-protocol/",
+      "vialSizes": ["10mg"]
+    },
+    {
+      "id": "snap-8",
+      "name": "SNAP-8",
+      "fullName": "SNAP-8 (Acetyl Octapeptide-3)",
+      "category": "skin",
+      "description": "SNAP-25 mimic that reduces muscle contraction. Topical anti-wrinkle peptide similar to Botox mechanism but milder. Reduces expression lines.",
+      "benefits": ["Wrinkle reduction", "Expression line softening", "Skin smoothing"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 100,
+        "maxDose": 500,
+        "typicalDose": 250,
+        "startDose": 100,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning", "Evening"],
+        "defaultTiming": "Evening",
+        "cycleWeeks": { "min": 4, "max": 12, "typical": 8 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Topical or subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/snap-8-10-mg-vial-dosage-protocol/",
+      "vialSizes": ["10mg"]
+    },
+    {
+      "id": "cagrilintide",
+      "name": "Cagrilintide",
+      "fullName": "Cagrilintide (Amylin Analog)",
+      "category": "weightloss",
+      "description": "Long-acting amylin analog. Reduces appetite via brainstem pathways. In CagriSema trials (with semaglutide), showed ~24% weight reduction. Complementary to GLP-1 therapy.",
+      "benefits": ["Appetite suppression", "Weight loss", "Synergy with GLP-1", "Slows gastric emptying"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 0.16,
+        "maxDose": 4.5,
+        "typicalDose": 2.4,
+        "startDose": 0.16,
+        "daysPerWeek": 1,
+        "injectionTimingOptions": ["Once weekly"],
+        "defaultTiming": "Once weekly",
+        "cycleWeeks": { "min": 16, "max": 52, "typical": 36 },
+        "breakWeeks": { "min": 0, "max": 4, "typical": 0 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/cagrilintide-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg"]
+    },
+    {
+      "id": "oxytocin",
+      "name": "Oxytocin",
+      "fullName": "Oxytocin",
+      "category": "cognitive",
+      "description": "Neuropeptide known as the 'love hormone'. Promotes social bonding, reduces anxiety, lowers cortisol. Used for social anxiety, PTSD, and bonding disorders.",
+      "benefits": ["Social bonding", "Anxiety reduction", "Cortisol reduction", "Trust enhancement", "PTSD support"],
+      "dosing": {
+        "unit": "IU",
+        "minDose": 10,
+        "maxDose": 40,
+        "typicalDose": 24,
+        "startDose": 10,
+        "daysPerWeek": 7,
+        "injectionTimingOptions": ["Morning", "Before social situations", "Intranasal"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Intranasal or subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationIUPerML": 40,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/oxytocin-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg"]
+    },
+    {
+      "id": "l-carnitine",
+      "name": "L-Carnitine",
+      "fullName": "L-Carnitine",
+      "category": "energy",
+      "description": "Amino acid derivative essential for fatty acid transport into mitochondria. Enhances fat oxidation, athletic performance, and recovery. Injectable form has superior absorption.",
+      "benefits": ["Fat burning", "Energy production", "Athletic performance", "Recovery", "Heart health"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 500,
+        "maxDose": 2000,
+        "typicalDose": 1000,
+        "startDose": 500,
+        "daysPerWeek": 5,
+        "injectionTimingOptions": ["Pre-workout", "Morning fasted"],
+        "defaultTiming": "Pre-workout",
+        "cycleWeeks": { "min": 8, "max": 16, "typical": 12 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous or IV"
+      },
+      "reconstitution": {
+        "bacWaterML": 1.0,
+        "concentrationMgPerML": 200.0,
+        "shelfLifeDays": 30
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/l-carnitine-200-mg-vial-dosage-protocol/",
+      "vialSizes": ["200mg"]
+    },
+    {
+      "id": "kisspeptin",
+      "name": "Kisspeptin",
+      "fullName": "Kisspeptin-10",
+      "category": "other",
+      "description": "Hypothalamic neuropeptide that triggers GnRH release. Upstream regulator of the HPG axis. Used for fertility, testosterone support, and puberty disorders.",
+      "benefits": ["GnRH stimulation", "Testosterone production", "Fertility", "HPG axis support"],
+      "dosing": {
+        "unit": "mcg",
+        "minDose": 100,
+        "maxDose": 500,
+        "typicalDose": 250,
+        "startDose": 100,
+        "daysPerWeek": 3,
+        "injectionTimingOptions": ["Morning", "Before sleep"],
+        "defaultTiming": "Morning",
+        "cycleWeeks": { "min": 4, "max": 12, "typical": 8 },
+        "breakWeeks": { "min": 4, "max": 8, "typical": 4 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/kisspeptin-10-mg-vial-dosage-protocol/",
+      "vialSizes": ["10mg"]
+    },
+    {
+      "id": "survodutide",
+      "name": "Survodutide",
+      "fullName": "Survodutide (GLP-1/Glucagon Dual Agonist)",
+      "category": "weightloss",
+      "description": "Dual GLP-1 and glucagon receptor agonist. In Phase 3 trials for obesity and NASH. Glucagon component enhances liver fat clearance beyond GLP-1 alone.",
+      "benefits": ["Weight loss", "Liver fat reduction", "NASH treatment", "Blood sugar control"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 0.6,
+        "maxDose": 4.8,
+        "typicalDose": 2.4,
+        "startDose": 0.6,
+        "daysPerWeek": 1,
+        "injectionTimingOptions": ["Once weekly"],
+        "defaultTiming": "Once weekly",
+        "cycleWeeks": { "min": 16, "max": 52, "typical": 36 },
+        "breakWeeks": { "min": 0, "max": 4, "typical": 0 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/survodutide-10-mg-vial-dosage-protocol/",
+      "vialSizes": ["10mg"]
+    },
+    {
+      "id": "mazdutide",
+      "name": "Mazdutide",
+      "fullName": "Mazdutide (GLP-1/Glucagon Dual Agonist)",
+      "category": "weightloss",
+      "description": "GLP-1/glucagon receptor co-agonist from Innovent Biologics. Chinese-developed obesity treatment showing strong weight loss in Phase 3 trials. Similar profile to survodutide.",
+      "benefits": ["Weight loss", "Metabolic improvement", "Blood sugar control"],
+      "dosing": {
+        "unit": "mg",
+        "minDose": 1,
+        "maxDose": 9,
+        "typicalDose": 4.5,
+        "startDose": 1,
+        "daysPerWeek": 1,
+        "injectionTimingOptions": ["Once weekly"],
+        "defaultTiming": "Once weekly",
+        "cycleWeeks": { "min": 16, "max": 52, "typical": 36 },
+        "breakWeeks": { "min": 0, "max": 4, "typical": 0 },
+        "route": "Subcutaneous"
+      },
+      "reconstitution": {
+        "bacWaterML": 2.0,
+        "concentrationMgPerML": 5.0,
+        "shelfLifeDays": 28
+      },
+      "storage": {
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
+      },
+      "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/mazdutide-5-mg-vial-dosage-protocol/",
+      "vialSizes": ["5mg", "10mg"]
+    }
+  ]
+}

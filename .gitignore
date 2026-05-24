@@ -1,0 +1,16 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Node (if using local server)
+node_modules/
+npm-debug.log
+
+# Build artifacts
+*.lock
