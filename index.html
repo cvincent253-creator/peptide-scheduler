@@ -694,6 +694,16 @@
   <!-- Upcoming cycles list -->
   <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-dim);margin:8px 0 10px 2px">Upcoming Events</div>
   <div id="cycle-events"></div>
+
+  <!-- Calendar Sync CTA -->
+  <div style="margin-top:16px;margin-bottom:8px">
+    <button class="btn btn-primary btn-full" onclick="exportCalendar()" style="font-size:15px;padding:14px;border-radius:16px;letter-spacing:0.3px">
+      📅 Add All Cycles to Calendar App
+    </button>
+    <div style="font-size:11px;color:var(--text-muted);text-align:center;margin-top:8px;line-height:1.6">
+      Downloads a .ics file with recurring ON &amp; BREAK events for every peptide in your protocol. Repeats automatically — forever. Compatible with Apple Calendar, Google Calendar, and Outlook.
+    </div>
+  </div>
 </div>
 
 <!-- LIBRARY PAGE -->
@@ -764,7 +774,7 @@
     <div class="toggle-row">
       <div>
         <div style="font-size:14px;font-weight:600">App Version</div>
-        <div style="font-size:12px;color:var(--text-dim)">1.0.0</div>
+        <div style="font-size:12px;color:var(--text-dim)">1.1.0</div>
       </div>
     </div>
   </div>
@@ -773,7 +783,7 @@
     <div class="card-title">Data</div>
     <div style="display:flex;flex-direction:column;gap:10px">
       <button class="btn btn-outline btn-full" onclick="exportData()">📤 Export My Data (JSON)</button>
-      <button class="btn btn-outline btn-full" onclick="exportCalendar()">📅 Export to Calendar (.ics)</button>
+      <button class="btn btn-outline btn-full" onclick="exportCalendar()">📅 Sync Cycles to Calendar App (.ics)</button>
       <button class="btn btn-danger btn-full" onclick="confirmClearData()">🗑️ Clear All Data</button>
     </div>
   </div>
@@ -919,20 +929,25 @@ function loadState() {
       state = { ...state, ...parsed };
     }
   } catch(e) {}
-  // Migrate: ensure all my peptides have needed fields
-  state.myPeptides = state.myPeptides.map(p => ({
-    startDate: new Date().toISOString().split('T')[0],
-    cycleWeeks: 12,
-    breakWeeks: 4,
-    daysPerWeek: 7,
-    selectedDays: [0,1,2,3,4,5,6],
-    timings: ['Morning'],
-    customDose: null,
-    customUnit: null,
-    reminderEnabled: true,
-    notes: '',
-    ...p
-  }));
+  // Migrate: ensure all my peptides have needed fields.
+  // PEPTIDE_DB is already loaded (loadPeptideDB awaited before loadState in init()),
+  // so we use per-peptide DB values as defaults, not generic 12/4.
+  state.myPeptides = state.myPeptides.map(p => {
+    const dbEntry = PEPTIDE_DB.find(d => d.id === p.id);
+    return {
+      startDate: new Date().toISOString().split('T')[0],
+      cycleWeeks: dbEntry ? (dbEntry.dosing.cycleWeeks.typical || 12) : 12,
+      breakWeeks: dbEntry ? (dbEntry.dosing.breakWeeks.typical || 4) : 4,
+      daysPerWeek: dbEntry ? dbEntry.dosing.daysPerWeek : 7,
+      selectedDays: dbEntry ? getDefaultDays(dbEntry.dosing.daysPerWeek) : [0,1,2,3,4,5,6],
+      timings: dbEntry ? [dbEntry.dosing.defaultTiming || 'Morning'] : ['Morning'],
+      customDose: dbEntry ? dbEntry.dosing.typicalDose : null,
+      customUnit: dbEntry ? dbEntry.dosing.unit : null,
+      reminderEnabled: true,
+      notes: '',
+      ...p  // saved values always take priority over defaults above
+    };
+  });
 }
 
 function saveState() {
@@ -1868,7 +1883,7 @@ function scheduleReminders() {
 }
 
 // ================================================================
-// EXPORT
+// EXPORT — RRULE-based recurring calendar (cycles forever)
 // ================================================================
 function exportCalendar() {
   if (state.myPeptides.length === 0) {
@@ -1876,32 +1891,76 @@ function exportCalendar() {
     return;
   }
 
-  let ics = 'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Peptide Scheduler//EN\r\nCALSCALE:GREGORIAN\r\nX-WR-CALNAME:Peptide Schedule\r\nX-WR-TIMEZONE:America/New_York\r\n';
+  const now = new Date();
+  const stamp = now.toISOString().replace(/[-:]/g,'').split('.')[0] + 'Z';
+
+  // Helper: format Date as YYYYMMDD (all-day format)
+  function fmtDate(d) {
+    const y = d.getFullYear();
+    const m = String(d.getMonth()+1).padStart(2,'0');
+    const day = String(d.getDate()).padStart(2,'0');
+    return `${y}${m}${day}`;
+  }
+
+  // Helper: escape ICS text
+  function icsEsc(s) {
+    return String(s).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n');
+  }
+
+  let ics = 'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Peptide Scheduler//EN\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\nX-WR-CALNAME:Peptide Schedule\r\n';
 
   state.myPeptides.forEach(mp => {
     const pd = getPeptideData(mp.id);
     const name = pd ? pd.name : mp.id;
-    const start = new Date(mp.startDate + 'T12:00:00');
+    const dose = mp.customDose || (pd ? pd.dosing.typicalDose : '');
+    const unit = mp.customUnit || (pd ? pd.dosing.unit : '');
+    const timing = (mp.timings || ['Morning']).join('/');
     const cycleDays = mp.cycleWeeks * 7;
     const breakDays = mp.breakWeeks * 7;
     const totalDays = cycleDays + breakDays;
+    const intervalWeeks = mp.cycleWeeks + mp.breakWeeks; // total period in weeks
 
-    // Generate events for 6 months
-    for (let cycle = 0; cycle < 10; cycle++) {
-      const cycleStart = new Date(start.getTime() + cycle * totalDays * 86400000);
-      if (cycleStart > new Date(Date.now() + 365 * 86400000)) break;
+    if (cycleDays === 0) return; // skip continuous peptides with no cycle
 
-      const cycleEnd = new Date(cycleStart.getTime() + cycleDays * 86400000);
+    const startDate = new Date(mp.startDate + 'T12:00:00');
+    const onStart = fmtDate(startDate);
+    // DTEND is exclusive in iCal, so add cycleDays
+    const onEnd = fmtDate(new Date(startDate.getTime() + cycleDays * 86400000));
 
-      // Cycle start event
-      ics += createICSEvent(`${name} Cycle ${cycle+1} Starts`, `Start of ${name} cycle ${cycle+1}. Dose: ${mp.customDose} ${mp.customUnit}`, cycleStart);
+    const onUid = `${mp.id}-on-cycle@peptide-scheduler`;
 
-      // Break start event
-      if (breakDays > 0) {
-        ics += createICSEvent(`${name} Cycle ${cycle+1} Ends - Begin Break`, `${name} cycle complete. ${mp.breakWeeks} week break begins.`, cycleEnd);
-        const breakEnd = new Date(cycleEnd.getTime() + breakDays * 86400000);
-        ics += createICSEvent(`${name} Break Ends - Restart Protocol`, `${name} break complete. Begin cycle ${cycle+2}.`, breakEnd);
-      }
+    // ── ON PERIOD (repeats every intervalWeeks weeks, forever) ──────────────
+    ics += `BEGIN:VEVENT\r\n`;
+    ics += `UID:${onUid}\r\n`;
+    ics += `DTSTAMP:${stamp}\r\n`;
+    ics += `DTSTART;VALUE=DATE:${onStart}\r\n`;
+    ics += `DTEND;VALUE=DATE:${onEnd}\r\n`;
+    ics += `SUMMARY:💉 ${icsEsc(name)} — ON (${mp.cycleWeeks} wks)\r\n`;
+    ics += `DESCRIPTION:${icsEsc(`Active: ${dose} ${unit} · ${timing}\\nCycle: ${mp.cycleWeeks} wks ON / ${mp.breakWeeks} wks OFF\\nRepeat: every ${intervalWeeks} weeks`)}\r\n`;
+    if (breakDays > 0 && intervalWeeks > 0) {
+      ics += `RRULE:FREQ=WEEKLY;INTERVAL=${intervalWeeks};UNTIL=20700101T000000Z\r\n`;
+    }
+    ics += `BEGIN:VALARM\r\nTRIGGER:-P1D\r\nACTION:DISPLAY\r\nDESCRIPTION:${icsEsc(name)} cycle starts tomorrow\r\nEND:VALARM\r\n`;
+    ics += `END:VEVENT\r\n`;
+
+    // ── BREAK PERIOD (starts when ON ends, repeats same interval) ───────────
+    if (breakDays > 0 && intervalWeeks > 0) {
+      const breakStartDate = new Date(startDate.getTime() + cycleDays * 86400000);
+      const breakEndDate   = new Date(startDate.getTime() + totalDays * 86400000);
+      const brStart = fmtDate(breakStartDate);
+      const brEnd   = fmtDate(breakEndDate);
+      const brUid   = `${mp.id}-break-cycle@peptide-scheduler`;
+
+      ics += `BEGIN:VEVENT\r\n`;
+      ics += `UID:${brUid}\r\n`;
+      ics += `DTSTAMP:${stamp}\r\n`;
+      ics += `DTSTART;VALUE=DATE:${brStart}\r\n`;
+      ics += `DTEND;VALUE=DATE:${brEnd}\r\n`;
+      ics += `SUMMARY:🔶 ${icsEsc(name)} — BREAK (${mp.breakWeeks} wks)\r\n`;
+      ics += `DESCRIPTION:${icsEsc(`Break period — ${mp.breakWeeks} wks off\\nResume ${name} on ${brEnd.slice(0,4)}-${brEnd.slice(4,6)}-${brEnd.slice(6,8)}`)}\r\n`;
+      ics += `RRULE:FREQ=WEEKLY;INTERVAL=${intervalWeeks};UNTIL=20700101T000000Z\r\n`;
+      ics += `BEGIN:VALARM\r\nTRIGGER:-P1D\r\nACTION:DISPLAY\r\nDESCRIPTION:${icsEsc(name)} break ends tomorrow — resume your protocol\r\nEND:VALARM\r\n`;
+      ics += `END:VEVENT\r\n`;
     }
   });
 
@@ -1914,13 +1973,7 @@ function exportCalendar() {
   a.download = 'peptide-schedule.ics';
   a.click();
   URL.revokeObjectURL(url);
-  showToast('📅 Calendar exported! Open the .ics file to import to your calendar app.', 'success');
-}
-
-function createICSEvent(title, description, date) {
-  const uid = Math.random().toString(36).substr(2,9) + '@peptide-scheduler';
-  const dtStr = date.toISOString().replace(/[-:]/g,'').split('.')[0] + 'Z';
-  return `BEGIN:VEVENT\r\nUID:${uid}\r\nDTSTAMP:${dtStr}\r\nDTSTART;VALUE=DATE:${dtStr.slice(0,8)}\r\nDTEND;VALUE=DATE:${dtStr.slice(0,8)}\r\nSUMMARY:${title}\r\nDESCRIPTION:${description}\r\nBEGIN:VALARM\r\nTRIGGER:-PT1H\r\nACTION:DISPLAY\r\nDESCRIPTION:${title}\r\nEND:VALARM\r\nEND:VEVENT\r\n`;
+  showToast('📅 Calendar file downloaded! Open it to import all recurring ON/BREAK cycles to Apple Calendar or Google Calendar.', 'success');
 }
 
 function exportData() {
