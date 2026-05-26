@@ -774,7 +774,7 @@
     <div class="toggle-row">
       <div>
         <div style="font-size:14px;font-weight:600">App Version</div>
-        <div style="font-size:12px;color:var(--text-dim)">1.1.0</div>
+        <div style="font-size:12px;color:var(--text-dim)">1.2.0</div>
       </div>
     </div>
   </div>
@@ -1296,22 +1296,36 @@ function openAddPeptide() {
   openModal('modal-add-peptide');
 }
 
+function doseFreqLabel(pd) {
+  const d = pd.dosing;
+  if (d.daysPerWeek === 1) return `${d.typicalDose} ${d.unit}/week`;
+  return `${d.typicalDose} ${d.unit}/day`;
+}
+
 function renderAddList(filter = '') {
   const myIds = new Set(state.myPeptides.map(p => p.id));
+  const q = filter.toLowerCase();
   const items = PEPTIDE_DB.filter(pd =>
-    !filter || pd.name.toLowerCase().includes(filter.toLowerCase()) ||
-    (pd.fullName && pd.fullName.toLowerCase().includes(filter.toLowerCase())) ||
-    (pd.benefits && pd.benefits.some(b => b.toLowerCase().includes(filter.toLowerCase())))
+    !q || pd.name.toLowerCase().includes(q) ||
+    (pd.fullName && pd.fullName.toLowerCase().includes(q)) ||
+    (pd.description && pd.description.toLowerCase().includes(q)) ||
+    (pd.benefits && pd.benefits.some(b => b.toLowerCase().includes(q))) ||
+    (pd.category && pd.category.toLowerCase().includes(q))
   );
 
   document.getElementById('add-peptide-list').innerHTML = items.map(pd => {
     const cat = getCategoryById(pd.category);
     const alreadyAdded = myIds.has(pd.id);
+    const catLabel = cat ? cat.name : pd.category;
+    const isBlend = pd.category === 'blends';
+    const isStack = pd.category === 'stacks';
+    const typeBadge = isBlend ? '<span style="font-size:10px;background:#8e44ad22;color:#8e44ad;border-radius:4px;padding:1px 5px;margin-left:4px">BLEND</span>'
+      : isStack ? '<span style="font-size:10px;background:#27ae6022;color:#27ae60;border-radius:4px;padding:1px 5px;margin-left:4px">STACK</span>' : '';
     return `<div class="lib-item">
       <div class="lib-icon" style="background:${cat?cat.color+'22':'#33333355'}">${cat?cat.icon:'💉'}</div>
       <div class="lib-info">
-        <div class="lib-name">${pd.name}</div>
-        <div class="lib-desc">${pd.dosing.typicalDose} ${pd.dosing.unit}/day · ${pd.category}</div>
+        <div class="lib-name">${pd.name}${typeBadge}</div>
+        <div class="lib-desc">${doseFreqLabel(pd)} · ${catLabel}</div>
       </div>
       ${alreadyAdded
         ? '<span class="badge badge-success" style="flex-shrink:0">Added</span>'
@@ -1512,11 +1526,15 @@ function filterLibrary() {
     : items.map(pd => {
         const c = getCategoryById(pd.category);
         const inProtocol = myIds.has(pd.id);
+        const isBlend = pd.category === 'blends';
+        const isStack = pd.category === 'stacks';
+        const typeBadge = isBlend ? '<span style="font-size:10px;background:#8e44ad22;color:#8e44ad;border-radius:4px;padding:1px 5px;margin-left:4px">BLEND</span>'
+          : isStack ? '<span style="font-size:10px;background:#27ae6022;color:#27ae60;border-radius:4px;padding:1px 5px;margin-left:4px">STACK</span>' : '';
         return `<div class="lib-item" onclick="openPeptideInfo('${pd.id}')">
           <div class="lib-icon" style="background:${c?c.color+'22':'#33333355'}">${c?c.icon:'💉'}</div>
           <div class="lib-info">
-            <div class="lib-name">${pd.name} ${inProtocol?'<span class="badge badge-success" style="font-size:10px;padding:2px 7px">Active</span>':''}</div>
-            <div class="lib-desc">${pd.dosing.typicalDose} ${pd.dosing.unit} · ${pd.benefits.slice(0,2).join(', ')}</div>
+            <div class="lib-name">${pd.name}${typeBadge} ${inProtocol?'<span class="badge badge-success" style="font-size:10px;padding:2px 7px">Active</span>':''}</div>
+            <div class="lib-desc">${doseFreqLabel(pd)} · ${pd.benefits.slice(0,2).join(', ')}</div>
           </div>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted);flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
         </div>`;
@@ -1544,7 +1562,15 @@ function openPeptideInfo(id) {
     </div>`;
   }
 
+  const isBlendInfo = pd.category === 'blends';
+  const isStackInfo = pd.category === 'stacks';
+  const typeBannerInfo = isBlendInfo
+    ? `<div style="background:#8e44ad15;border:1px solid #8e44ad44;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-size:13px;color:#8e44ad"><strong>🧬 Peptide Blend</strong> — All components are pre-mixed in a single vial. One injection delivers the full combined dose.</div>`
+    : isStackInfo
+    ? `<div style="background:#27ae6015;border:1px solid #27ae6044;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-size:13px;color:#27ae60"><strong>⚗️ Peptide Stack</strong> — Two separate vials. Each peptide is injected individually per its own schedule. See notes below.</div>`
+    : '';
   document.getElementById('info-body').innerHTML = `
+    ${typeBannerInfo}
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
       <div class="lib-icon" style="background:${cat?cat.color+'22':'#33333355'};width:52px;height:52px;font-size:24px;border-radius:16px">${cat?cat.icon:'💉'}</div>
       <div>
@@ -2029,7 +2055,9 @@ function getCategoryById(id) {
     { id:'sexual',color:'#e91e63',icon:'❤️',name:'Sexual Health' },
     { id:'energy',color:'#ff9800',icon:'⚡',name:'Energy & Mitochondrial' },
     { id:'skin',color:'#00bcd4',icon:'✨',name:'Skin & Cosmetic' },
-    { id:'other',color:'#607d8b',icon:'💉',name:'Other' }
+    { id:'other',color:'#607d8b',icon:'💉',name:'Other' },
+    { id:'blends',color:'#8e44ad',icon:'🧬',name:'Peptide Blends' },
+    { id:'stacks',color:'#27ae60',icon:'⚗️',name:'Peptide Stacks' }
   ];
   return cats.find(c => c.id === id) || null;
 }
@@ -2050,54 +2078,4 @@ function todayStr() {
   return dateStr(new Date());
 }
 
-function dateStr(d) {
-  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
-}
-
-function formatDate(d) {
-  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-  return `${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
-}
-
-function openModal(id) {
-  document.getElementById(id).classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal(id) {
-  document.getElementById(id).classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function closeModalOnOverlay(e, id) {
-  if (e.target === document.getElementById(id)) closeModal(id);
-}
-
-function showToast(message, type = 'info') {
-  const existing = document.querySelector('.toast');
-  if (existing) existing.remove();
-
-  const icons = { success: '✅', warning: '⚠️', danger: '❌', info: 'ℹ️' };
-  const colors = { success: 'var(--success)', warning: 'var(--warning)', danger: 'var(--danger)', info: 'var(--primary)' };
-
-  const toast = document.createElement('div');
-  toast.className = 'toast';
-  toast.style.borderColor = colors[type] || 'var(--border)';
-  const lines = message.split('\n');
-  const mainText = lines[0];
-  const subText = lines.slice(1).join(' · ');
-  toast.innerHTML = `<span style="font-size:18px">${icons[type]||'ℹ️'}</span><div><div style="font-size:13px;font-weight:600">${mainText}</div>${subText ? `<div style="font-size:11px;color:var(--text-dim);margin-top:2px">${subText}</div>` : ''}</div>`;
-  document.body.appendChild(toast);
-  const duration = subText ? 4000 : 3000;
-  setTimeout(() => toast.remove(), duration);
-}
-
-// ================================================================
-// BOOT
-// ================================================================
-window.addEventListener('load', init);
-window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); window._installPrompt = e; });
-</script>
-</body>
-</html>
+function dateS
