@@ -2078,4 +2078,54 @@ function todayStr() {
   return dateStr(new Date());
 }
 
-function dateS
+function dateStr(d) {
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+
+function formatDate(d) {
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  return `${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+}
+
+function openModal(id) {
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOnOverlay(e, id) {
+  if (e.target === document.getElementById(id)) closeModal(id);
+}
+
+function showToast(message, type = 'info') {
+  const existing = document.querySelector('.toast');
+  if (existing) existing.remove();
+
+  const icons = { success: '✅', warning: '⚠️', danger: '❌', info: 'ℹ️' };
+  const colors = { success: 'var(--success)', warning: 'var(--warning)', danger: 'var(--danger)', info: 'var(--primary)' };
+
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.style.borderColor = colors[type] || 'var(--border)';
+  const lines = message.split('\n');
+  const mainText = lines[0];
+  const subText = lines.slice(1).join(' · ');
+  toast.innerHTML = `<span style="font-size:18px">${icons[type]||'ℹ️'}</span><div><div style="font-size:13px;font-weight:600">${mainText}</div>${subText ? `<div style="font-size:11px;color:var(--text-dim);margin-top:2px">${subText}</div>` : ''}</div>`;
+  document.body.appendChild(toast);
+  const duration = subText ? 4000 : 3000;
+  setTimeout(() => toast.remove(), duration);
+}
+
+// ================================================================
+// BOOT
+// ================================================================
+window.addEventListener('load', init);
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); window._installPrompt = e; });
+</script>
+</body>
+</html>
