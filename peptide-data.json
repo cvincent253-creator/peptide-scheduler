@@ -1,80 +1,80 @@
 {
   "version": "1.0",
   "source": "https://peptidedosages.com",
-  "lastUpdated": "2026-05-26",
+  "lastUpdated": "2026-06-16",
   "disclaimer": "For educational and research purposes only. Not medical advice. Consult a qualified healthcare professional before starting any protocol.",
   "categories": [
     {
       "id": "healing",
       "name": "Healing & Recovery",
       "color": "#2ecc71",
-      "icon": "\ud83e\ude79"
+      "icon": "🩹"
     },
     {
       "id": "gh",
       "name": "Growth Hormone",
       "color": "#3498db",
-      "icon": "\ud83d\udcaa"
+      "icon": "💪"
     },
     {
       "id": "weightloss",
       "name": "Metabolic / Weight Loss",
       "color": "#e74c3c",
-      "icon": "\ud83d\udd25"
+      "icon": "🔥"
     },
     {
       "id": "cognitive",
       "name": "Cognitive & Nootropic",
       "color": "#9b59b6",
-      "icon": "\ud83e\udde0"
+      "icon": "🧠"
     },
     {
       "id": "longevity",
       "name": "Longevity & Anti-Aging",
       "color": "#f39c12",
-      "icon": "\u23f3"
+      "icon": "⏳"
     },
     {
       "id": "immune",
       "name": "Immune Support",
       "color": "#1abc9c",
-      "icon": "\ud83d\udee1\ufe0f"
+      "icon": "🛡️"
     },
     {
       "id": "sexual",
       "name": "Sexual Health",
       "color": "#e91e63",
-      "icon": "\u2764\ufe0f"
+      "icon": "❤️"
     },
     {
       "id": "energy",
       "name": "Energy & Mitochondrial",
       "color": "#ff9800",
-      "icon": "\u26a1"
+      "icon": "⚡"
     },
     {
       "id": "skin",
       "name": "Skin & Cosmetic",
       "color": "#00bcd4",
-      "icon": "\u2728"
+      "icon": "✨"
     },
     {
       "id": "other",
       "name": "Other",
       "color": "#607d8b",
-      "icon": "\ud83d\udc89"
+      "icon": "💉"
     },
     {
       "id": "blends",
       "name": "Peptide Blends",
       "color": "#8e44ad",
-      "icon": "\ud83e\uddec"
+      "icon": "🧬"
     },
     {
       "id": "stacks",
       "name": "Peptide Stacks",
       "color": "#27ae60",
-      "icon": "\u2697\ufe0f"
+      "icon": "⚗️"
     }
   ],
   "peptides": [
@@ -140,14 +140,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Avoid freeze-thaw cycles after reconstitution"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/bpc-157-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "Accelerates healing of muscles, tendons, ligaments, and gut tissue",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild nausea (rare)",
+        "Injection site irritation"
       ]
     },
     {
@@ -216,14 +222,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Do NOT freeze reconstituted solution"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/tb-500-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "Promotes systemic tissue repair and reduces inflammation after injury",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild fatigue initially",
+        "Injection site soreness"
       ]
     },
     {
@@ -293,14 +305,21 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C or freeze -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C, use within 4 weeks",
+        "lyophilized": "Refrigerate 2-8°C or freeze -20°C",
+        "reconstituted": "Refrigerate 2-8°C, use within 4 weeks",
         "notes": "Allow to reach room temp before opening"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ipamorelin-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "Stimulates pulsatile growth hormone release with minimal side effects",
+      "sideEffects": [
+        "Water retention",
+        "Mild tingling or numbness",
+        "Increased appetite",
+        "Headache (rare)"
       ]
     },
     {
@@ -348,13 +367,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "Use within 28 days of reconstitution"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/cjc-1295-no-dac-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg"
+      ],
+      "primaryUse": "Short-acting GHRH analog that boosts GH pulses when combined with a GHRP",
+      "sideEffects": [
+        "Water retention",
+        "Flushing",
+        "Tingling at injection site",
+        "Increased hunger"
       ]
     },
     {
@@ -399,14 +425,21 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "Long half-life - less frequent injections required"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/cjc-1295-dac-2-mg-vial-dosage-protocol/",
       "vialSizes": [
         "2mg",
         "5mg"
+      ],
+      "primaryUse": "Long-acting GHRH analog that provides sustained GH elevation",
+      "sideEffects": [
+        "Water retention",
+        "Carpal tunnel-like symptoms",
+        "Elevated prolactin",
+        "Increased cortisol"
       ]
     },
     {
@@ -452,14 +485,21 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C or freeze -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Refrigerate 2-8°C or freeze -20°C",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "Most stable of GHRH analogs"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/sermorelin-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "Stimulates natural GH production via the hypothalamic GHRH pathway",
+      "sideEffects": [
+        "Injection site redness",
+        "Flushing",
+        "Headache",
+        "Dizziness"
       ]
     },
     {
@@ -504,8 +544,8 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (do not freeze)",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Refrigerate 2-8°C (do not freeze)",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "FDA-approved - do not freeze lyophilized form"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/tesamorelin-5-mg-vial-dosage-protocol/",
@@ -513,6 +553,13 @@
         "5mg",
         "10mg",
         "20mg"
+      ],
+      "primaryUse": "Reduces visceral fat and stimulates GH in HIV-associated lipodystrophy",
+      "sideEffects": [
+        "Injection site reactions",
+        "Nausea",
+        "Peripheral edema",
+        "Joint pain"
       ]
     },
     {
@@ -559,14 +606,21 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "Sensitive to temperature fluctuations"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ghrp-2-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "Potent GH secretagogue that also raises IGF-1 and appetite",
+      "sideEffects": [
+        "Significant appetite increase",
+        "Elevated cortisol and prolactin",
+        "Water retention",
+        "Tingling"
       ]
     },
     {
@@ -613,14 +667,21 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ghrp-6-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "2mg",
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "Stimulates GH release and significantly increases appetite",
+      "sideEffects": [
+        "Intense hunger/appetite spike",
+        "Cortisol and prolactin elevation",
+        "Water retention",
+        "Fatigue"
       ]
     },
     {
@@ -665,16 +726,24 @@
         "bacWaterML": 1.0,
         "concentrationMcgPerML": 1000,
         "shelfLifeDays": 14,
-        "notes": "Use acetic acid for reconstitution, NOT BAC water"
+        "notes": "Use acetic acid for reconstitution, NOT BAC water",
+        "concentrationMgPerML": 1.0
       },
       "storage": {
-        "lyophilized": "Freeze at -80\u00b0C ideally, -20\u00b0C acceptable",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Freeze at -80°C ideally, -20°C acceptable",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "Very temperature sensitive. Most delicate peptide in this list."
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/igf-1-lr3-1-mg-vial-dosage-protocol/",
       "vialSizes": [
         "1mg"
+      ],
+      "primaryUse": "Promotes muscle cell growth and recovery via IGF-1 receptor activation",
+      "sideEffects": [
+        "Hypoglycemia risk",
+        "Joint pain",
+        "Water retention",
+        "Headache"
       ]
     },
     {
@@ -718,12 +787,18 @@
         "shelfLifeDays": 14
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C, use quickly"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C, use quickly"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/mgf-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg"
+      ],
+      "primaryUse": "Activates satellite cells to repair and build muscle after exercise",
+      "sideEffects": [
+        "Injection site discomfort",
+        "Muscle fatigue",
+        "Generally well-tolerated"
       ]
     },
     {
@@ -770,20 +845,26 @@
         "shelfLifeDays": 30
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C or freeze -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C or freeze -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/epitalon-epithalon-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Telomere-extending tetrapeptide that promotes longevity and anti-aging",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site reactions",
+        "Rare allergic response"
       ]
     },
     {
       "id": "thymosin-alpha-1",
       "name": "Thymosin Alpha-1",
-      "fullName": "Thymosin Alpha-1 (T\u03b11)",
+      "fullName": "Thymosin Alpha-1 (Tα1)",
       "category": "immune",
-      "description": "Naturally occurring peptide derived from thymosin fraction 5. FDA-approved in multiple countries as Zadaxin\u00ae for hepatitis and immunodeficiency. Potent immune modulator.",
+      "description": "Naturally occurring peptide derived from thymosin fraction 5. FDA-approved in multiple countries as Zadaxin® for hepatitis and immunodeficiency. Potent immune modulator.",
       "benefits": [
         "Immune modulation",
         "Antiviral",
@@ -821,13 +902,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/thymosin-alpha-1-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "Thymic peptide that enhances immune surveillance and antiviral defense",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site reactions",
+        "Rare flu-like symptoms"
       ]
     },
     {
@@ -835,7 +922,7 @@
       "name": "Semaglutide",
       "fullName": "Semaglutide (GLP-1 Receptor Agonist)",
       "category": "weightloss",
-      "description": "GLP-1 receptor agonist with 94% homology to human GLP-1. Weekly injection. Approved as Ozempic\u00ae and Wegovy\u00ae. Potent weight loss and blood sugar regulation.",
+      "description": "GLP-1 receptor agonist with 94% homology to human GLP-1. Weekly injection. Approved as Ozempic® and Wegovy®. Potent weight loss and blood sugar regulation.",
       "benefits": [
         "Weight loss",
         "Blood sugar control",
@@ -872,8 +959,8 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (do not freeze)",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Refrigerate 2-8°C (do not freeze)",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "Temperature sensitive - never freeze"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/semaglutide-5-mg-vial-dosage-protocol/",
@@ -881,6 +968,15 @@
         "5mg",
         "10mg",
         "20mg"
+      ],
+      "primaryUse": "GLP-1 receptor agonist that reduces appetite and promotes weight loss",
+      "sideEffects": [
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Constipation",
+        "Injection site reactions",
+        "Fatigue"
       ]
     },
     {
@@ -888,7 +984,7 @@
       "name": "Tirzepatide",
       "fullName": "Tirzepatide (GLP-1/GIP Dual Agonist)",
       "category": "weightloss",
-      "description": "Dual GLP-1 and GIP receptor agonist. Approved as Mounjaro\u00ae (T2D) and Zepbound\u00ae (obesity). Superior weight loss outcomes vs semaglutide in clinical trials.",
+      "description": "Dual GLP-1 and GIP receptor agonist. Approved as Mounjaro® (T2D) and Zepbound® (obesity). Superior weight loss outcomes vs semaglutide in clinical trials.",
       "benefits": [
         "Superior weight loss",
         "Blood sugar control",
@@ -925,8 +1021,8 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C, never freeze"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C, never freeze"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/tirzepatide-5-mg-vial-dosage-protocol/",
       "vialSizes": [
@@ -934,6 +1030,15 @@
         "10mg",
         "15mg",
         "30mg"
+      ],
+      "primaryUse": "Dual GIP/GLP-1 agonist offering superior weight loss and glucose control",
+      "sideEffects": [
+        "Nausea",
+        "Diarrhea",
+        "Vomiting",
+        "Constipation",
+        "Injection site reactions",
+        "Decreased appetite"
       ]
     },
     {
@@ -978,8 +1083,8 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/retatrutide-20-mg-vial-dosage-protocol/",
       "vialSizes": [
@@ -987,6 +1092,14 @@
         "10mg",
         "20mg",
         "30mg"
+      ],
+      "primaryUse": "Triple receptor agonist (GLP-1/GIP/glucagon) for aggressive weight reduction",
+      "sideEffects": [
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Constipation",
+        "Injection site reactions"
       ]
     },
     {
@@ -1028,16 +1141,23 @@
       "reconstitution": {
         "bacWaterML": 2.0,
         "concentrationMcgPerML": 1000,
-        "shelfLifeDays": 28
+        "shelfLifeDays": 28,
+        "concentrationMgPerML": 1.0
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/aod-9604-2-mg-vial-dosage-protocol/",
       "vialSizes": [
         "2mg",
         "5mg"
+      ],
+      "primaryUse": "Fat-burning peptide fragment that mimics the lipolytic region of HGH",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site redness",
+        "Headache (rare)"
       ]
     },
     {
@@ -1045,7 +1165,7 @@
       "name": "PT-141",
       "fullName": "PT-141 (Bremelanotide)",
       "category": "sexual",
-      "description": "Melanocortin receptor agonist. FDA-approved as Vyleesi\u00ae for female sexual dysfunction. Also studied for male erectile dysfunction. Acts centrally on brain rather than vascular system.",
+      "description": "Melanocortin receptor agonist. FDA-approved as Vyleesi® for female sexual dysfunction. Also studied for male erectile dysfunction. Acts centrally on brain rather than vascular system.",
       "benefits": [
         "Sexual arousal",
         "Libido enhancement",
@@ -1083,12 +1203,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/pt-141-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Melanocortin agonist that increases sexual arousal in men and women",
+      "sideEffects": [
+        "Nausea",
+        "Flushing",
+        "Spontaneous erections",
+        "Headache",
+        "Injection site pain"
       ]
     },
     {
@@ -1134,12 +1262,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/melanotan-ii-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Melanocortin peptide that enhances tanning, libido, and erections",
+      "sideEffects": [
+        "Nausea",
+        "Facial flushing",
+        "Spontaneous erections",
+        "Darkening of moles/freckles",
+        "Fatigue"
       ]
     },
     {
@@ -1185,13 +1321,18 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ghk-cu-50-mg-vial-dosage-protocol/",
       "vialSizes": [
         "50mg",
         "100mg"
+      ],
+      "primaryUse": "Stimulates skin regeneration, wound healing, and collagen production",
+      "sideEffects": [
+        "Generally well-tolerated topically",
+        "Mild skin irritation at injection site"
       ]
     },
     {
@@ -1235,13 +1376,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/dsip-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "Delta sleep-inducing peptide that regulates sleep cycles and reduces stress",
+      "sideEffects": [
+        "Mild sedation",
+        "Headache",
+        "Generally well-tolerated"
       ]
     },
     {
@@ -1287,13 +1434,19 @@
         "shelfLifeDays": 14
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C, use promptly"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C, use promptly"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/selank-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "Reduces anxiety and enhances cognitive function via GABA modulation",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild sedation",
+        "Nasal irritation (nasal route)"
       ]
     },
     {
@@ -1339,13 +1492,20 @@
         "shelfLifeDays": 14
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/semax-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "Neuroprotective peptide that enhances memory, focus, and BDNF levels",
+      "sideEffects": [
+        "Mild headache",
+        "Nasal irritation (nasal route)",
+        "Restlessness",
+        "Insomnia"
       ]
     },
     {
@@ -1390,12 +1550,18 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/pe-22-28-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Antidepressant peptide that promotes neuroplasticity and mood stability",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild mood changes",
+        "Headache (rare)"
       ]
     },
     {
@@ -1442,13 +1608,20 @@
         "shelfLifeDays": 14
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C, protect from light",
-        "reconstituted": "Refrigerate 2-8\u00b0C, use within 24-48 hours"
+        "lyophilized": "Refrigerate 2-8°C, protect from light",
+        "reconstituted": "Refrigerate 2-8°C, use within 24-48 hours"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/nad-500-mg-10ml-vial-dosage-protocol/",
       "vialSizes": [
         "500mg",
         "1000mg"
+      ],
+      "primaryUse": "Restores cellular NAD+ levels to support energy, DNA repair, and aging",
+      "sideEffects": [
+        "Flushing",
+        "Nausea",
+        "Headache (IV route especially)",
+        "Injection site pain"
       ]
     },
     {
@@ -1494,8 +1667,8 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/mots-c-5-mg-vial-dosage-protocol/",
       "vialSizes": [
@@ -1503,6 +1676,12 @@
         "10mg",
         "20mg",
         "40mg"
+      ],
+      "primaryUse": "Mitochondrial-derived peptide that improves insulin sensitivity and metabolism",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site reactions",
+        "Transient fatigue"
       ]
     },
     {
@@ -1548,14 +1727,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ss-31-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg",
         "30mg",
         "50mg"
+      ],
+      "primaryUse": "Mitochondria-targeted antioxidant that protects against oxidative damage",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Injection site reactions",
+        "Rare headache"
       ]
     },
     {
@@ -1601,12 +1786,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/aicar-50-mg-vial-dosage-protocol/",
       "vialSizes": [
         "50mg"
+      ],
+      "primaryUse": "AMPK activator that mimics exercise effects on metabolism and endurance",
+      "sideEffects": [
+        "Hypoglycemia risk",
+        "GI upset",
+        "Fatigue",
+        "Headache"
       ]
     },
     {
@@ -1651,12 +1843,18 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/slu-pp-332-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg"
+      ],
+      "primaryUse": "Exercise mimetic that activates ERR receptors for metabolic and endurance gains",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Headache",
+        "GI upset (rare)"
       ]
     },
     {
@@ -1701,12 +1899,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/gonadorelin-2-mg-vial-dosage-protocol/",
       "vialSizes": [
         "2mg"
+      ],
+      "primaryUse": "Mimics GnRH to stimulate LH/FSH and maintain testicular function",
+      "sideEffects": [
+        "Injection site reactions",
+        "Headache",
+        "Hot flashes (rare)",
+        "Hormonal fluctuation"
       ]
     },
     {
@@ -1749,15 +1954,24 @@
       "reconstitution": {
         "bacWaterML": 1.0,
         "concentrationIUPerML": 5000,
-        "shelfLifeDays": 30
+        "shelfLifeDays": 30,
+        "concentrationMgPerML": 5000.0
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C, use within 30 days"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C, use within 30 days"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/hcg-5000-iu-vial-dosage-protocol/",
       "vialSizes": [
         "5000 IU"
+      ],
+      "primaryUse": "Mimics LH to support testosterone production and testicular size",
+      "sideEffects": [
+        "Acne",
+        "Fluid retention",
+        "Mood changes",
+        "Testicular discomfort",
+        "Gynecomastia risk"
       ]
     },
     {
@@ -1803,15 +2017,23 @@
         "bacWaterML": 1.0,
         "concentrationIUPerML": 10,
         "shelfLifeDays": 21,
-        "notes": "Extremely gentle reconstitution - inject BAC water down vial wall slowly"
+        "notes": "Extremely gentle reconstitution - inject BAC water down vial wall slowly",
+        "concentrationMgPerML": 10.0
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C, use within 3 weeks"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C, use within 3 weeks"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/hgh-191aa-10-iu-vial-dosage-protocol/",
       "vialSizes": [
         "10 IU"
+      ],
+      "primaryUse": "Replaces or supplements endogenous growth hormone for body composition",
+      "sideEffects": [
+        "Water retention",
+        "Carpal tunnel syndrome",
+        "Joint pain",
+        "Elevated blood glucose"
       ]
     },
     {
@@ -1857,12 +2079,17 @@
         "shelfLifeDays": 14
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ll-37-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg"
+      ],
+      "primaryUse": "Provides antimicrobial defense and modulates immune response",
+      "sideEffects": [
+        "Injection site redness or stinging",
+        "Mild immune activation symptoms"
       ]
     },
     {
@@ -1908,12 +2135,17 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/kpv-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Reduces gut inflammation and supports intestinal barrier repair",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild digestive changes initially"
       ]
     },
     {
@@ -1959,12 +2191,18 @@
         "shelfLifeDays": 14
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C, protect from light",
-        "reconstituted": "Refrigerate 2-8\u00b0C, very light sensitive"
+        "lyophilized": "Refrigerate 2-8°C, protect from light",
+        "reconstituted": "Refrigerate 2-8°C, very light sensitive"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/glutathione-600-mg-vial-dosage-protocol/",
       "vialSizes": [
         "600mg"
+      ],
+      "primaryUse": "Master antioxidant that supports liver detox and cellular protection",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Rare allergic reaction",
+        "Mild digestive upset (oral)"
       ]
     },
     {
@@ -2009,13 +2247,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/5-amino-1mq-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg",
         "50mg"
+      ],
+      "primaryUse": "NNMT inhibitor that boosts metabolism and promotes fat loss",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild GI upset",
+        "Headache (rare)"
       ]
     },
     {
@@ -2061,12 +2305,18 @@
         "shelfLifeDays": 14
       },
       "storage": {
-        "lyophilized": "Freeze at -80\u00b0C ideal, -20\u00b0C acceptable",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -80°C ideal, -20°C acceptable",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/foxo4-dri-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Senolytic peptide that clears senescent cells to restore tissue function",
+      "sideEffects": [
+        "Fatigue during treatment",
+        "Flu-like symptoms",
+        "Injection site reactions"
       ]
     },
     {
@@ -2110,12 +2360,17 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/snap-8-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Reduces the appearance of expression lines and wrinkles",
+      "sideEffects": [
+        "Minimal — primarily topical cosmetic use",
+        "Rare skin sensitivity"
       ]
     },
     {
@@ -2159,13 +2414,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/cagrilintide-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "Long-acting amylin analog that reduces appetite and body weight",
+      "sideEffects": [
+        "Nausea",
+        "Injection site reactions",
+        "Vomiting",
+        "Decreased appetite"
       ]
     },
     {
@@ -2209,16 +2471,24 @@
       "reconstitution": {
         "bacWaterML": 2.0,
         "concentrationIUPerML": 40,
-        "shelfLifeDays": 28
+        "shelfLifeDays": 28,
+        "concentrationMgPerML": 2.5
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/oxytocin-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "Bonding and trust hormone that reduces anxiety and enhances social connection",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild headache",
+        "Nausea",
+        "Mood changes"
       ]
     },
     {
@@ -2264,12 +2534,19 @@
         "shelfLifeDays": 30
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/l-carnitine-200-mg-vial-dosage-protocol/",
       "vialSizes": [
         "200mg"
+      ],
+      "primaryUse": "Shuttles fatty acids into mitochondria to support fat burning and energy",
+      "sideEffects": [
+        "Fishy body odor (high doses)",
+        "Nausea",
+        "Diarrhea",
+        "Restlessness"
       ]
     },
     {
@@ -2314,12 +2591,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/kisspeptin-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Hypothalamic peptide that stimulates GnRH to support reproductive hormones",
+      "sideEffects": [
+        "Hot flashes",
+        "Headache",
+        "Nausea",
+        "Injection site reactions"
       ]
     },
     {
@@ -2363,12 +2647,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/survodutide-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "GLP-1/glucagon dual agonist for weight loss and metabolic improvement",
+      "sideEffects": [
+        "Nausea",
+        "Diarrhea",
+        "Vomiting",
+        "Injection site reactions"
       ]
     },
     {
@@ -2411,13 +2702,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/mazdutide-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "GLP-1/glucagon dual agonist with strong weight loss and glycemic control",
+      "sideEffects": [
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Injection site reactions"
       ]
     },
     {
@@ -2462,12 +2760,18 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/5-amino-1mq-50-mg-vial-dosage-protocol/",
       "vialSizes": [
         "50mg"
+      ],
+      "primaryUse": "NNMT inhibitor that boosts metabolism and promotes fat loss",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild GI upset",
+        "Headache (rare)"
       ]
     },
     {
@@ -2513,12 +2817,18 @@
         "concentrationMgPerML": 1.0
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/aod-9604-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg"
+      ],
+      "primaryUse": "Fat-burning peptide fragment that mimics the lipolytic region of HGH",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site redness",
+        "Headache (rare)"
       ]
     },
     {
@@ -2583,13 +2893,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Avoid freeze-thaw cycles after reconstitution"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/bpc-157-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Accelerates healing of muscles, tendons, ligaments, and gut tissue",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild nausea (rare)",
+        "Injection site irritation"
       ]
     },
     {
@@ -2633,12 +2949,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/cagrilintide-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Long-acting amylin analog that reduces appetite and body weight",
+      "sideEffects": [
+        "Nausea",
+        "Injection site reactions",
+        "Vomiting",
+        "Decreased appetite"
       ]
     },
     {
@@ -2683,13 +3006,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "Long half-life - less frequent injections required"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/cjc-1295-dac-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg"
+      ],
+      "primaryUse": "Long-acting GHRH analog that provides sustained GH elevation",
+      "sideEffects": [
+        "Water retention",
+        "Carpal tunnel-like symptoms",
+        "Elevated prolactin",
+        "Increased cortisol"
       ]
     },
     {
@@ -2733,12 +3063,18 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/dsip-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Delta sleep-inducing peptide that regulates sleep cycles and reduces stress",
+      "sideEffects": [
+        "Mild sedation",
+        "Headache",
+        "Generally well-tolerated"
       ]
     },
     {
@@ -2784,12 +3120,17 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ghk-cu-100-mg-vial-dosage-protocol/",
       "vialSizes": [
         "100mg"
+      ],
+      "primaryUse": "Stimulates skin regeneration, wound healing, and collagen production",
+      "sideEffects": [
+        "Generally well-tolerated topically",
+        "Mild skin irritation at injection site"
       ]
     },
     {
@@ -2836,13 +3177,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "Sensitive to temperature fluctuations"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ghrp-2-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Potent GH secretagogue that also raises IGF-1 and appetite",
+      "sideEffects": [
+        "Significant appetite increase",
+        "Elevated cortisol and prolactin",
+        "Water retention",
+        "Tingling"
       ]
     },
     {
@@ -2889,12 +3237,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ghrp-6-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg"
+      ],
+      "primaryUse": "Stimulates GH release and significantly increases appetite",
+      "sideEffects": [
+        "Intense hunger/appetite spike",
+        "Cortisol and prolactin elevation",
+        "Water retention",
+        "Fatigue"
       ]
     },
     {
@@ -2941,12 +3296,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ghrp-6-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Stimulates GH release and significantly increases appetite",
+      "sideEffects": [
+        "Intense hunger/appetite spike",
+        "Cortisol and prolactin elevation",
+        "Water retention",
+        "Fatigue"
       ]
     },
     {
@@ -3016,13 +3378,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C or freeze -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C, use within 4 weeks",
+        "lyophilized": "Refrigerate 2-8°C or freeze -20°C",
+        "reconstituted": "Refrigerate 2-8°C, use within 4 weeks",
         "notes": "Allow to reach room temp before opening"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ipamorelin-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Stimulates pulsatile growth hormone release with minimal side effects",
+      "sideEffects": [
+        "Water retention",
+        "Mild tingling or numbness",
+        "Increased appetite",
+        "Headache (rare)"
       ]
     },
     {
@@ -3065,12 +3434,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/mazdutide-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "GLP-1/glucagon dual agonist with strong weight loss and glycemic control",
+      "sideEffects": [
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Injection site reactions"
       ]
     },
     {
@@ -3116,12 +3492,18 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/mots-c-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Mitochondrial-derived peptide that improves insulin sensitivity and metabolism",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site reactions",
+        "Transient fatigue"
       ]
     },
     {
@@ -3167,12 +3549,18 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/mots-c-20-mg-vial-dosage-protocol/",
       "vialSizes": [
         "20mg"
+      ],
+      "primaryUse": "Mitochondrial-derived peptide that improves insulin sensitivity and metabolism",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site reactions",
+        "Transient fatigue"
       ]
     },
     {
@@ -3218,12 +3606,18 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/mots-c-40-mg-vial-dosage-protocol/",
       "vialSizes": [
         "40mg"
+      ],
+      "primaryUse": "Mitochondrial-derived peptide that improves insulin sensitivity and metabolism",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site reactions",
+        "Transient fatigue"
       ]
     },
     {
@@ -3270,12 +3664,19 @@
         "shelfLifeDays": 14
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C, protect from light",
-        "reconstituted": "Refrigerate 2-8\u00b0C, use within 24-48 hours"
+        "lyophilized": "Refrigerate 2-8°C, protect from light",
+        "reconstituted": "Refrigerate 2-8°C, use within 24-48 hours"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/nad-1000-mg-vial-dosage-protocol/",
       "vialSizes": [
         "1000mg"
+      ],
+      "primaryUse": "Restores cellular NAD+ levels to support energy, DNA repair, and aging",
+      "sideEffects": [
+        "Flushing",
+        "Nausea",
+        "Headache (IV route especially)",
+        "Injection site pain"
       ]
     },
     {
@@ -3323,12 +3724,19 @@
         "concentrationMgPerML": 2.5
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/oxytocin-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Bonding and trust hormone that reduces anxiety and enhances social connection",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild headache",
+        "Nausea",
+        "Mood changes"
       ]
     },
     {
@@ -3373,12 +3781,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/retatrutide-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Triple receptor agonist (GLP-1/GIP/glucagon) for aggressive weight reduction",
+      "sideEffects": [
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Constipation",
+        "Injection site reactions"
       ]
     },
     {
@@ -3423,12 +3839,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/retatrutide-20-mg-vial-dosage-protocol/",
       "vialSizes": [
         "20mg"
+      ],
+      "primaryUse": "Triple receptor agonist (GLP-1/GIP/glucagon) for aggressive weight reduction",
+      "sideEffects": [
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Constipation",
+        "Injection site reactions"
       ]
     },
     {
@@ -3473,12 +3897,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/retatrutide-30-mg-vial-dosage-protocol/",
       "vialSizes": [
         "30mg"
+      ],
+      "primaryUse": "Triple receptor agonist (GLP-1/GIP/glucagon) for aggressive weight reduction",
+      "sideEffects": [
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Constipation",
+        "Injection site reactions"
       ]
     },
     {
@@ -3524,12 +3956,18 @@
         "shelfLifeDays": 14
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C, use promptly"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C, use promptly"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/selank-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Reduces anxiety and enhances cognitive function via GABA modulation",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild sedation",
+        "Nasal irritation (nasal route)"
       ]
     },
     {
@@ -3537,7 +3975,7 @@
       "name": "Semaglutide (10mg)",
       "fullName": "Semaglutide (GLP-1 Receptor Agonist)",
       "category": "weightloss",
-      "description": "GLP-1 receptor agonist with 94% homology to human GLP-1. Weekly injection. Approved as Ozempic\u00ae and Wegovy\u00ae. Potent weight loss and blood sugar regulation.",
+      "description": "GLP-1 receptor agonist with 94% homology to human GLP-1. Weekly injection. Approved as Ozempic® and Wegovy®. Potent weight loss and blood sugar regulation.",
       "benefits": [
         "Weight loss",
         "Blood sugar control",
@@ -3574,13 +4012,22 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (do not freeze)",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Refrigerate 2-8°C (do not freeze)",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "Temperature sensitive - never freeze"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/semaglutide-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "GLP-1 receptor agonist that reduces appetite and promotes weight loss",
+      "sideEffects": [
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Constipation",
+        "Injection site reactions",
+        "Fatigue"
       ]
     },
     {
@@ -3588,7 +4035,7 @@
       "name": "Semaglutide (20mg)",
       "fullName": "Semaglutide (GLP-1 Receptor Agonist)",
       "category": "weightloss",
-      "description": "GLP-1 receptor agonist with 94% homology to human GLP-1. Weekly injection. Approved as Ozempic\u00ae and Wegovy\u00ae. Potent weight loss and blood sugar regulation.",
+      "description": "GLP-1 receptor agonist with 94% homology to human GLP-1. Weekly injection. Approved as Ozempic® and Wegovy®. Potent weight loss and blood sugar regulation.",
       "benefits": [
         "Weight loss",
         "Blood sugar control",
@@ -3625,13 +4072,22 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (do not freeze)",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Refrigerate 2-8°C (do not freeze)",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "Temperature sensitive - never freeze"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/semaglutide-20-mg-vial-dosage-protocol/",
       "vialSizes": [
         "20mg"
+      ],
+      "primaryUse": "GLP-1 receptor agonist that reduces appetite and promotes weight loss",
+      "sideEffects": [
+        "Nausea",
+        "Vomiting",
+        "Diarrhea",
+        "Constipation",
+        "Injection site reactions",
+        "Fatigue"
       ]
     },
     {
@@ -3677,12 +4133,19 @@
         "shelfLifeDays": 14
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/semax-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Neuroprotective peptide that enhances memory, focus, and BDNF levels",
+      "sideEffects": [
+        "Mild headache",
+        "Nasal irritation (nasal route)",
+        "Restlessness",
+        "Insomnia"
       ]
     },
     {
@@ -3728,13 +4191,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C or freeze -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Refrigerate 2-8°C or freeze -20°C",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "Most stable of GHRH analogs"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/sermorelin-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Stimulates natural GH production via the hypothalamic GHRH pathway",
+      "sideEffects": [
+        "Injection site redness",
+        "Flushing",
+        "Headache",
+        "Dizziness"
       ]
     },
     {
@@ -3780,12 +4250,18 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ss-31-30-mg-vial-dosage-protocol/",
       "vialSizes": [
         "30mg"
+      ],
+      "primaryUse": "Mitochondria-targeted antioxidant that protects against oxidative damage",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Injection site reactions",
+        "Rare headache"
       ]
     },
     {
@@ -3831,12 +4307,18 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ss-31-50-mg-vial-dosage-protocol/",
       "vialSizes": [
         "50mg"
+      ],
+      "primaryUse": "Mitochondria-targeted antioxidant that protects against oxidative damage",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Injection site reactions",
+        "Rare headache"
       ]
     },
     {
@@ -3905,13 +4387,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Do NOT freeze reconstituted solution"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/tb-500-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Promotes systemic tissue repair and reduces inflammation after injury",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild fatigue initially",
+        "Injection site soreness"
       ]
     },
     {
@@ -3956,13 +4444,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (do not freeze)",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Refrigerate 2-8°C (do not freeze)",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "FDA-approved - do not freeze lyophilized form"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/tesamorelin-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Reduces visceral fat and stimulates GH in HIV-associated lipodystrophy",
+      "sideEffects": [
+        "Injection site reactions",
+        "Nausea",
+        "Peripheral edema",
+        "Joint pain"
       ]
     },
     {
@@ -4007,21 +4502,28 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (do not freeze)",
-        "reconstituted": "Refrigerate 2-8\u00b0C",
+        "lyophilized": "Refrigerate 2-8°C (do not freeze)",
+        "reconstituted": "Refrigerate 2-8°C",
         "notes": "FDA-approved - do not freeze lyophilized form"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/tesamorelin-20-mg-vial-dosage-protocol/",
       "vialSizes": [
         "20mg"
+      ],
+      "primaryUse": "Reduces visceral fat and stimulates GH in HIV-associated lipodystrophy",
+      "sideEffects": [
+        "Injection site reactions",
+        "Nausea",
+        "Peripheral edema",
+        "Joint pain"
       ]
     },
     {
       "id": "thymosin-alpha-1-10mg",
       "name": "Thymosin Alpha-1 (10mg)",
-      "fullName": "Thymosin Alpha-1 (T\u03b11)",
+      "fullName": "Thymosin Alpha-1 (Tα1)",
       "category": "immune",
-      "description": "Naturally occurring peptide derived from thymosin fraction 5. FDA-approved in multiple countries as Zadaxin\u00ae for hepatitis and immunodeficiency. Potent immune modulator.",
+      "description": "Naturally occurring peptide derived from thymosin fraction 5. FDA-approved in multiple countries as Zadaxin® for hepatitis and immunodeficiency. Potent immune modulator.",
       "benefits": [
         "Immune modulation",
         "Antiviral",
@@ -4059,12 +4561,18 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/thymosin-alpha-1-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Thymic peptide that enhances immune surveillance and antiviral defense",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site reactions",
+        "Rare flu-like symptoms"
       ]
     },
     {
@@ -4072,7 +4580,7 @@
       "name": "Tirzepatide (10mg)",
       "fullName": "Tirzepatide (GLP-1/GIP Dual Agonist)",
       "category": "weightloss",
-      "description": "Dual GLP-1 and GIP receptor agonist. Approved as Mounjaro\u00ae (T2D) and Zepbound\u00ae (obesity). Superior weight loss outcomes vs semaglutide in clinical trials.",
+      "description": "Dual GLP-1 and GIP receptor agonist. Approved as Mounjaro® (T2D) and Zepbound® (obesity). Superior weight loss outcomes vs semaglutide in clinical trials.",
       "benefits": [
         "Superior weight loss",
         "Blood sugar control",
@@ -4109,12 +4617,21 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C, never freeze"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C, never freeze"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/tirzepatide-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Dual GIP/GLP-1 agonist offering superior weight loss and glucose control",
+      "sideEffects": [
+        "Nausea",
+        "Diarrhea",
+        "Vomiting",
+        "Constipation",
+        "Injection site reactions",
+        "Decreased appetite"
       ]
     },
     {
@@ -4122,7 +4639,7 @@
       "name": "Tirzepatide (15mg)",
       "fullName": "Tirzepatide (GLP-1/GIP Dual Agonist)",
       "category": "weightloss",
-      "description": "Dual GLP-1 and GIP receptor agonist. Approved as Mounjaro\u00ae (T2D) and Zepbound\u00ae (obesity). Superior weight loss outcomes vs semaglutide in clinical trials.",
+      "description": "Dual GLP-1 and GIP receptor agonist. Approved as Mounjaro® (T2D) and Zepbound® (obesity). Superior weight loss outcomes vs semaglutide in clinical trials.",
       "benefits": [
         "Superior weight loss",
         "Blood sugar control",
@@ -4159,12 +4676,21 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C, never freeze"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C, never freeze"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/tirzepatide-15-mg-vial-dosage-protocol/",
       "vialSizes": [
         "15mg"
+      ],
+      "primaryUse": "Dual GIP/GLP-1 agonist offering superior weight loss and glucose control",
+      "sideEffects": [
+        "Nausea",
+        "Diarrhea",
+        "Vomiting",
+        "Constipation",
+        "Injection site reactions",
+        "Decreased appetite"
       ]
     },
     {
@@ -4172,7 +4698,7 @@
       "name": "Tirzepatide (30mg)",
       "fullName": "Tirzepatide (GLP-1/GIP Dual Agonist)",
       "category": "weightloss",
-      "description": "Dual GLP-1 and GIP receptor agonist. Approved as Mounjaro\u00ae (T2D) and Zepbound\u00ae (obesity). Superior weight loss outcomes vs semaglutide in clinical trials.",
+      "description": "Dual GLP-1 and GIP receptor agonist. Approved as Mounjaro® (T2D) and Zepbound® (obesity). Superior weight loss outcomes vs semaglutide in clinical trials.",
       "benefits": [
         "Superior weight loss",
         "Blood sugar control",
@@ -4209,12 +4735,21 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C, never freeze"
+        "lyophilized": "Refrigerate 2-8°C",
+        "reconstituted": "Refrigerate 2-8°C, never freeze"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/tirzepatide-30-mg-vial-dosage-protocol/",
       "vialSizes": [
         "30mg"
+      ],
+      "primaryUse": "Dual GIP/GLP-1 agonist offering superior weight loss and glucose control",
+      "sideEffects": [
+        "Nausea",
+        "Diarrhea",
+        "Vomiting",
+        "Constipation",
+        "Injection site reactions",
+        "Decreased appetite"
       ]
     },
     {
@@ -4226,7 +4761,7 @@
         "10mg"
       ],
       "description": "Adamax (Dihexa) is a highly potent nootropic peptide that crosses the blood-brain barrier and enhances cognitive function by potentiating HGF/MET signaling. Research suggests it is millions of times more potent than BDNF in forming new synaptic connections.",
-      "primaryUse": "Cognitive enhancement, memory, learning, synaptic plasticity",
+      "primaryUse": "Nootropic peptide stack that supports memory, learning, and neuroprotection",
       "benefits": [
         "Memory enhancement",
         "Improved learning",
@@ -4276,16 +4811,16 @@
         "unitsPer10mcg": "0.02 units on U-100 syringe (per 1mg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 30 days after reconstitution"
       },
       "sideEffects": [
-        "Potential overstimulation",
-        "Headache",
-        "Long duration of action"
+        "Generally well-tolerated",
+        "Mild headache",
+        "Restlessness (rare)"
       ],
-      "notes": "Extremely potent \u2014 start at the lowest dose. Half-life is very long. Begin weekly or every-other-day dosing before moving to daily. Research use only.",
+      "notes": "Extremely potent — start at the lowest dose. Half-life is very long. Begin weekly or every-other-day dosing before moving to daily. Research use only.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/adamax-10-mg-vial-dosage-protocol/"
     },
     {
@@ -4297,7 +4832,7 @@
         "10mg"
       ],
       "description": "Adipotide (FTPP) is a proapoptotic peptide that selectively targets blood vessels supplying white adipose tissue. Research shows it induces apoptosis of adipose vasculature, leading to significant fat mass reduction in primate models.",
-      "primaryUse": "Targeted fat loss, white adipose tissue reduction",
+      "primaryUse": "Targets and destroys adipose tissue blood supply for localized fat loss",
       "benefits": [
         "Targeted fat loss",
         "Adipose tissue reduction",
@@ -4329,7 +4864,7 @@
           {
             "weeks": "1",
             "dose": 250,
-            "note": "Starting dose \u2014 monitor kidney function"
+            "note": "Starting dose — monitor kidney function"
           },
           {
             "weeks": "2-4",
@@ -4345,15 +4880,15 @@
         "unitsPer10mcg": "0.2 units on U-100 syringe (per 1mg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
-        "notes": "Keep cycles short \u2014 nephrotoxicity risk with extended use"
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
+        "notes": "Keep cycles short — nephrotoxicity risk with extended use"
       },
       "sideEffects": [
-        "Nephrotoxicity risk (kidney damage)",
+        "Kidney toxicity risk",
         "Dehydration",
-        "Electrolyte imbalance",
-        "Monitor kidney function"
+        "Significant thirst",
+        "Weight loss rebound"
       ],
       "notes": "CAUTION: Significant nephrotoxicity risk. Keep cycles to 4-5 weeks maximum. Monitor kidney function (creatinine, BUN) throughout. Maintain high water intake. Research use only.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/adipotide-10-mg-vial-dosage-protocol/"
@@ -4367,7 +4902,7 @@
         "16mg"
       ],
       "description": "Ara-290 is a non-hematopoietic erythropoietin analogue that selectively binds to innate repair receptors without stimulating red blood cell production. Clinical research shows neuroprotection, anti-inflammatory effects, and improved nerve conduction in small fiber neuropathy.",
-      "primaryUse": "Neuroprotection, anti-inflammatory, small fiber neuropathy, nerve repair",
+      "primaryUse": "Erythropoietin analog that reduces neuropathic pain and inflammation",
       "benefits": [
         "Neuroprotection",
         "Anti-inflammatory",
@@ -4407,7 +4942,7 @@
           {
             "weeks": "3+",
             "dose": 4,
-            "note": "Standard dose \u2014 3x/week"
+            "note": "Standard dose — 3x/week"
           }
         ]
       },
@@ -4418,14 +4953,14 @@
         "unitsPer10mcg": "0.25 units on U-100 syringe (per 1mg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 28 days after reconstitution"
       },
       "sideEffects": [
-        "Generally well tolerated",
+        "Generally well-tolerated",
         "Mild injection site reactions",
-        "Fatigue (rare)"
+        "Headache (rare)"
       ],
       "notes": "Does not stimulate RBC production unlike standard EPO. Shown in clinical trials to improve small fiber neuropathy symptoms. Administer 3x/week (e.g., Mon/Wed/Fri).",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ara-290-16-mg-vial-dosage-protocol/"
@@ -4439,7 +4974,7 @@
         "20mg"
       ],
       "description": "Cartalax is a Russian peptide bioregulator derived from cartilage tissue. Contains the tetrapeptide Ala-Glu-Asp-Leu. Research shows it normalizes chondrocyte function, supports cartilage integrity, and may slow age-related joint degeneration.",
-      "primaryUse": "Joint health, cartilage support, longevity",
+      "primaryUse": "Bioregulator that supports cartilage, connective tissue, and joint health",
       "benefits": [
         "Joint health",
         "Cartilage support",
@@ -4484,13 +5019,13 @@
         "unitsPer10mcg": "0.5 units on U-100 syringe (per 1mg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 30 days after reconstitution"
       },
       "sideEffects": [
-        "Generally well tolerated",
-        "Mild injection site reactions possible"
+        "Generally well-tolerated",
+        "Mild injection site reactions"
       ],
       "notes": "Russian peptide bioregulator. Protocol: 10-day course (1mg/day SC), repeated 2-3 times per year. Allow at least 3 months between courses.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/cartalax-20-mg-vial-dosage-protocol/"
@@ -4504,7 +5039,7 @@
         "60mg"
       ],
       "description": "Cerebrolysin is a complex mixture of neuropeptides and low-molecular-weight proteins derived from purified pig brain. Contains BDNF-like, CNTF-like, and GDNF-like factors. Extensive clinical research supports neuroprotection, cognitive enhancement, and recovery after neurological injury.",
-      "primaryUse": "Neuroprotection, cognitive enhancement, stroke recovery, neurological repair",
+      "primaryUse": "Neuroprotective growth factor blend supporting brain repair and cognition",
       "benefits": [
         "Neuroprotection",
         "Cognitive improvement",
@@ -4543,7 +5078,7 @@
           {
             "weeks": "2+",
             "dose": 10,
-            "note": "Standard dose \u2014 weekdays only"
+            "note": "Standard dose — weekdays only"
           }
         ]
       },
@@ -4551,18 +5086,19 @@
         "bacWaterML": 6.0,
         "concentrationMgPerML": 10.0,
         "shelfLifeDays": 14,
-        "unitsPer10mcg": "N/A \u2014 dose in mg"
+        "unitsPer10mcg": "N/A — dose in mg"
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F) or freeze",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Refrigerate 2-8°C (35.6-46.4°F) or freeze",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 14 days after reconstitution. May also come as pre-made solution."
       },
       "sideEffects": [
-        "Warm/flushing sensation (IV)",
-        "Mild dizziness",
-        "Fatigue",
-        "Hypersensitivity reactions (rare)"
+        "Injection site reactions",
+        "Agitation",
+        "Headache",
+        "Dizziness",
+        "Hot flashes"
       ],
       "notes": "5-day weekday courses (Mon-Fri), 20 sessions per cycle, 2-3 cycles/year. Administer slowly IM or diluted IV. Used in Eastern European clinical practice for decades.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/cerebrolysin-60-mg-vial-dosage-protocol/"
@@ -4576,7 +5112,7 @@
         "20mg"
       ],
       "description": "Chonluten is a Russian peptide bioregulator for bronchi and lung tissue. Contains the tripeptide Lys-Glu-Asp. Research shows it normalizes bronchial epithelial cell gene expression and may support respiratory function and lung longevity.",
-      "primaryUse": "Lung health, respiratory support, bronchial function, longevity",
+      "primaryUse": "Bronchial epithelial bioregulator that supports lung tissue health",
       "benefits": [
         "Respiratory support",
         "Bronchial health",
@@ -4621,13 +5157,13 @@
         "unitsPer10mcg": "0.5 units on U-100 syringe (per 1mg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 30 days after reconstitution"
       },
       "sideEffects": [
-        "Generally well tolerated",
-        "Mild injection site reactions possible"
+        "Generally well-tolerated",
+        "Mild injection site reactions"
       ],
       "notes": "Russian peptide bioregulator. Protocol: 10-day course (1mg/day SC), repeated 2-3 times per year. Allow at least 3 months between courses.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/chonluten-20-mg-vial-dosage-protocol/"
@@ -4641,7 +5177,7 @@
         "20mg"
       ],
       "description": "Cortagen is a Russian peptide bioregulator for cardiac and myocardial tissue. Research shows it normalizes cardiomyocyte function and may support cardiovascular health and heart longevity.",
-      "primaryUse": "Cardiac health, cardiovascular support, heart function, longevity",
+      "primaryUse": "Vascular and cardiac bioregulator targeting heart and vessel tissue",
       "benefits": [
         "Cardiovascular support",
         "Cardiac cell normalization",
@@ -4686,13 +5222,13 @@
         "unitsPer10mcg": "0.5 units on U-100 syringe (per 1mg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 30 days after reconstitution"
       },
       "sideEffects": [
-        "Generally well tolerated",
-        "Mild injection site reactions possible"
+        "Generally well-tolerated",
+        "Mild injection site reactions"
       ],
       "notes": "Russian peptide bioregulator. Protocol: 10-day course (1mg/day SC), repeated 2-3 times per year. Allow at least 3 months between courses.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/cortagen-20-mg-vial-dosage-protocol/"
@@ -4706,7 +5242,7 @@
         "75 IU"
       ],
       "description": "HMG is a purified gonadotropin preparation containing approximately equal amounts of FSH (follicle-stimulating hormone) and LH (luteinizing hormone). Used in fertility protocols to stimulate follicular development and ovulation in women, and to support testosterone production and spermatogenesis in men.",
-      "primaryUse": "Fertility, follicular stimulation, LH/FSH replacement, spermatogenesis support",
+      "primaryUse": "Stimulates follicle development in fertility protocols (FSH + LH activity)",
       "benefits": [
         "Follicular stimulation",
         "Fertility support",
@@ -4741,7 +5277,7 @@
           {
             "weeks": "1-2",
             "dose": 75,
-            "note": "75 IU \u2014 3x/week"
+            "note": "75 IU — 3x/week"
           },
           {
             "weeks": "3+",
@@ -4757,15 +5293,14 @@
         "unitsPer10mcg": "1 IU = use 0.013mL (13 units on U-100)"
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C or freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Refrigerate 2-8°C or freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 28 days after reconstitution. Sensitive to heat and light."
       },
       "sideEffects": [
-        "Ovarian hyperstimulation (OHSS) in women",
-        "Injection site reactions",
-        "Mood changes",
-        "Gynecomastia (men)"
+        "Ovarian hyperstimulation (women)",
+        "Injection site pain",
+        "Hormonal fluctuations"
       ],
       "notes": "Use under medical supervision. Doses and frequency vary significantly based on clinical indication. Monitor estradiol and follicle development in women. Not for use without proper hormonal monitoring.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/hmg-75-iu-vial-dosage-protocol/"
@@ -4779,7 +5314,7 @@
         "20mg"
       ],
       "description": "Livagen is a Russian peptide bioregulator targeting liver and cardiovascular tissues. Contains the tetrapeptide Lys-Glu-Asp-Ala. Research shows it activates chromatin in liver cells and may support hepatic function and metabolic health.",
-      "primaryUse": "Liver health, hepatic function, cardiovascular support, longevity",
+      "primaryUse": "Cardiovascular and liver bioregulator that supports vascular function",
       "benefits": [
         "Liver health",
         "Hepatic function",
@@ -4825,13 +5360,13 @@
         "unitsPer10mcg": "0.5 units on U-100 syringe (per 1mg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 30 days after reconstitution"
       },
       "sideEffects": [
-        "Generally well tolerated",
-        "Mild injection site reactions possible"
+        "Generally well-tolerated",
+        "Mild injection site reactions"
       ],
       "notes": "Russian peptide bioregulator. Protocol: 10-day course (1mg/day SC), repeated 2-3 times per year. Allow at least 3 months between courses.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/livagen-20-mg-vial-dosage-protocol/"
@@ -4845,7 +5380,7 @@
         "20mg"
       ],
       "description": "Ovagen is a Russian peptide bioregulator for liver function. Contains the tripeptide Glu-Asp-Leu. Research shows it normalizes hepatocyte function and supports liver regeneration and health.",
-      "primaryUse": "Liver function, hepatocyte support, liver regeneration, longevity",
+      "primaryUse": "Reproductive organ bioregulator supporting liver, kidney, and gut tissue",
       "benefits": [
         "Liver support",
         "Hepatocyte normalization",
@@ -4890,13 +5425,13 @@
         "unitsPer10mcg": "0.5 units on U-100 syringe (per 1mg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 30 days after reconstitution"
       },
       "sideEffects": [
-        "Generally well tolerated",
-        "Mild injection site reactions possible"
+        "Generally well-tolerated",
+        "Mild injection site reactions"
       ],
       "notes": "Russian peptide bioregulator. Protocol: 10-day course (1mg/day SC), repeated 2-3 times per year. Allow at least 3 months between courses.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/ovagen-20-mg-vial-dosage-protocol/"
@@ -4910,7 +5445,7 @@
         "2mg"
       ],
       "description": "PEG-MGF is a pegylated form of Mechano Growth Factor (MGF), an IGF-1 splice variant produced by mechanically stressed muscle. Pegylation extends half-life from minutes to days. Research shows it promotes muscle satellite cell activation, hypertrophy, and recovery.",
-      "primaryUse": "Muscle growth, hypertrophy, muscle repair, satellite cell activation",
+      "primaryUse": "Longer-acting MGF analog for sustained muscle repair and hypertrophy",
       "benefits": [
         "Muscle hypertrophy",
         "Satellite cell activation",
@@ -4961,14 +5496,14 @@
         "unitsPer10mcg": "1 unit on U-100 syringe (per 100mcg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 28 days after reconstitution"
       },
       "sideEffects": [
+        "Injection site reactions",
         "Muscle soreness",
-        "Hypoglycemia (rare)",
-        "Fatigue"
+        "Generally well-tolerated"
       ],
       "notes": "Unlike native MGF, PEG-MGF remains active for days so timing is less critical. Administer 3x/week (e.g., Mon/Wed/Fri). Often stacked with IGF-1 LR3 or GHRP/CJC protocols.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/peg-mgf-2-mg-vial-dosage-protocol/"
@@ -4982,7 +5517,7 @@
         "20mg"
       ],
       "description": "Pinealon is a Russian peptide bioregulator for the brain and pineal gland. Contains the tripeptide Ala-Glu-Asp. Research shows it supports pineal gland function, melatonin regulation, neuroprotection, and may improve sleep quality and cognitive function.",
-      "primaryUse": "Brain health, pineal gland support, sleep regulation, neuroprotection, longevity",
+      "primaryUse": "Pineal gland bioregulator that improves sleep quality and cognitive function",
       "benefits": [
         "Neuroprotection",
         "Sleep improvement",
@@ -5028,13 +5563,14 @@
         "unitsPer10mcg": "0.5 units on U-100 syringe (per 1mg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 30 days after reconstitution"
       },
       "sideEffects": [
-        "Generally well tolerated",
-        "Mild injection site reactions possible"
+        "Generally well-tolerated",
+        "Mild drowsiness",
+        "Vivid dreams"
       ],
       "notes": "Russian peptide bioregulator. Protocol: 10-day course (1mg/day SC), repeated 2-3 times per year. Allow at least 3 months between courses.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/pinealon-20-mg-vial-dosage-protocol/"
@@ -5048,7 +5584,7 @@
         "30mg"
       ],
       "description": "PNC-27 is a research peptide containing the MDM2-binding domain of p53 fused to a penetratin cell-penetrating sequence. Research suggests selective disruption of cancer cell membranes while leaving normal cells unaffected. Currently in early-stage oncology research.",
-      "primaryUse": "Oncology research, cancer cell research protocols",
+      "primaryUse": "Anti-cancer peptide that selectively induces apoptosis in tumor cells",
       "benefits": [
         "Cancer cell selective toxicity",
         "Apoptosis induction in cancer cells",
@@ -5093,16 +5629,17 @@
         "bacWaterML": 3.0,
         "concentrationMgPerML": 10.0,
         "shelfLifeDays": 21,
-        "unitsPer10mcg": "N/A \u2014 dose in mg"
+        "unitsPer10mcg": "N/A — dose in mg"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C, use within 21 days",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C, use within 21 days",
         "notes": "For research use only. Handle with care."
       },
       "sideEffects": [
-        "Research compound \u2014 safety profile not fully established",
-        "Injection site reactions"
+        "Injection site reactions",
+        "Limited human safety data available",
+        "Research use only"
       ],
       "notes": "Strictly research use only. Dosing protocols are not well established in humans. Consult primary literature before use.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/pnc-27-30-mg-vial-dosage-protocol/"
@@ -5116,7 +5653,7 @@
         "20mg"
       ],
       "description": "Prostamax is a Russian peptide bioregulator for prostate tissue. Contains the tetrapeptide Lys-Asp-Glu-Leu. Research shows it normalizes prostate glandular cell function and may support men's prostate health and urinary function.",
-      "primaryUse": "Prostate health, urinary function, men's health, longevity",
+      "primaryUse": "Prostate-specific bioregulator that supports gland health and function",
       "benefits": [
         "Prostate health",
         "Urinary support",
@@ -5162,13 +5699,13 @@
         "unitsPer10mcg": "0.5 units on U-100 syringe (per 1mg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 30 days after reconstitution"
       },
       "sideEffects": [
-        "Generally well tolerated",
-        "Mild injection site reactions possible"
+        "Generally well-tolerated",
+        "Mild injection site reactions"
       ],
       "notes": "Russian peptide bioregulator. Protocol: 10-day course (1mg/day SC), repeated 2-3 times per year. Allow at least 3 months between courses.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/prostamax-20-mg-vial-dosage-protocol/"
@@ -5182,7 +5719,7 @@
         "20mg"
       ],
       "description": "Testagen is a Russian peptide bioregulator for testicular tissue. Research shows it supports gonadal cell function and may help maintain testosterone production and reproductive health in aging men.",
-      "primaryUse": "Testicular health, testosterone support, reproductive health, longevity",
+      "primaryUse": "Thyroid and immune bioregulator that supports hormonal and immune balance",
       "benefits": [
         "Testosterone support",
         "Gonadal function",
@@ -5228,13 +5765,13 @@
         "unitsPer10mcg": "0.5 units on U-100 syringe (per 1mg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 30 days after reconstitution"
       },
       "sideEffects": [
-        "Generally well tolerated",
-        "Mild injection site reactions possible"
+        "Generally well-tolerated",
+        "Mild injection site reactions"
       ],
       "notes": "Russian peptide bioregulator. Protocol: 10-day course (1mg/day SC), repeated 2-3 times per year. Allow at least 3 months between courses.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/testagen-20-mg-vial-dosage-protocol/"
@@ -5248,7 +5785,7 @@
         "20mg"
       ],
       "description": "Vesugen is a Russian peptide bioregulator for vascular/blood vessel tissue. Contains the tripeptide Lys-Glu-Asp. Research shows it normalizes vascular endothelial cell function and supports cardiovascular health and blood vessel integrity.",
-      "primaryUse": "Vascular health, cardiovascular support, endothelial function, longevity",
+      "primaryUse": "Vascular system bioregulator that protects blood vessel integrity",
       "benefits": [
         "Vascular health",
         "Endothelial function",
@@ -5294,13 +5831,13 @@
         "unitsPer10mcg": "0.5 units on U-100 syringe (per 1mg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 30 days after reconstitution"
       },
       "sideEffects": [
-        "Generally well tolerated",
-        "Mild injection site reactions possible"
+        "Generally well-tolerated",
+        "Mild injection site reactions"
       ],
       "notes": "Russian peptide bioregulator. Protocol: 10-day course (1mg/day SC), repeated 2-3 times per year. Allow at least 3 months between courses.",
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/vesugen-20-mg-vial-dosage-protocol/"
@@ -5314,7 +5851,7 @@
         "20mg"
       ],
       "description": "Vilon is a Russian dipeptide peptide bioregulator (Lys-Glu) derived from thymus tissue. Research shows it stimulates immune function, exhibits anti-aging properties, and may extend lifespan through immune system regulation.",
-      "primaryUse": "Immune support, immune restoration, longevity, thymus function",
+      "primaryUse": "Dipeptide immune bioregulator that modulates neuroendocrine-immune function",
       "benefits": [
         "Immune stimulation",
         "Longevity",
@@ -5360,12 +5897,12 @@
         "unitsPer10mcg": "0.5 units on U-100 syringe (per 1mg dose)"
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 30 days after reconstitution"
       },
       "sideEffects": [
-        "Generally well tolerated",
+        "Generally well-tolerated",
         "Mild injection site reactions"
       ],
       "notes": "Russian peptide bioregulator. Protocol: 10-day course (1mg/day SC), repeated 2-3 times per year. Derived from thymus. Often combined with Epithalon in longevity protocols.",
@@ -5376,7 +5913,7 @@
       "name": "BPC-157 + TB-500 (10mg Blend)",
       "fullName": "BPC-157 + TB-500 Pre-Mixed Blend (10mg Vial)",
       "category": "blends",
-      "description": "Pre-mixed single-vial blend combining BPC-157 and TB-500 for synergistic tissue repair. One injection delivers both peptides, targeting complementary healing pathways \u2014 BPC-157 for localized repair and TB-500 for systemic angiogenesis and cell migration.",
+      "description": "Pre-mixed single-vial blend combining BPC-157 and TB-500 for synergistic tissue repair. One injection delivers both peptides, targeting complementary healing pathways — BPC-157 for localized repair and TB-500 for systemic angiogenesis and cell migration.",
       "benefits": [
         "Tissue repair",
         "Accelerated healing",
@@ -5416,13 +5953,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F) or freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Refrigerate 2-8°C (35.6-46.4°F) or freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Avoid freeze-thaw cycles after reconstitution"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-blend-dosages/bpc-157-tb-500-10-mg-vial-blend-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Combined tissue repair and anti-inflammatory action for accelerated injury recovery",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site irritation",
+        "Rare nausea"
       ]
     },
     {
@@ -5470,13 +6013,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F) or freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Refrigerate 2-8°C (35.6-46.4°F) or freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Avoid freeze-thaw cycles after reconstitution"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-blend-dosages/bpc-157-tb-500-20-mg-vial-blend-dosage-protocol/",
       "vialSizes": [
         "20mg"
+      ],
+      "primaryUse": "Combined tissue repair and anti-inflammatory action for accelerated injury recovery",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site irritation",
+        "Rare nausea"
       ]
     },
     {
@@ -5542,13 +6091,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 28 days of reconstitution"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-blend-dosages/cjc-1295-ipamorelin-10-mg-vial-blend-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Synergistic GH pulse amplification for muscle growth, fat loss, and recovery",
+      "sideEffects": [
+        "Water retention",
+        "Tingling",
+        "Increased appetite",
+        "Headache"
       ]
     },
     {
@@ -5596,13 +6152,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Keep away from light"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-blend-dosages/aod-9604-cjc-1295-ipamorelin-12-mg-vial-blend-dosage-protocol/",
       "vialSizes": [
         "12mg"
+      ],
+      "primaryUse": "Fat loss plus GH optimization in a single multi-peptide blend",
+      "sideEffects": [
+        "Water retention",
+        "Increased appetite",
+        "Tingling",
+        "Injection site reactions"
       ]
     },
     {
@@ -5640,7 +6203,7 @@
           "typical": 0
         },
         "route": "Subcutaneous",
-        "notes": "Weekly injection \u2014 typical dose is 0.25 mg each (total 0.5 mg) titrating up to 2.4 mg each. Long-term protocol.",
+        "notes": "Weekly injection — typical dose is 0.25 mg each (total 0.5 mg) titrating up to 2.4 mg each. Long-term protocol.",
         "titration": [
           {
             "weeks": "1-4",
@@ -5670,13 +6233,20 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F) or freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Refrigerate 2-8°C (35.6-46.4°F) or freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 28 days of reconstitution"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-blend-dosages/cagrilintide-semaglutide-10-mg-vial-blend-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Dual-mechanism weight loss combining amylin and GLP-1 agonism",
+      "sideEffects": [
+        "Nausea",
+        "Vomiting",
+        "Injection site reactions",
+        "Constipation"
       ]
     },
     {
@@ -5724,19 +6294,26 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Avoid light exposure"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-blend-dosages/cjc-1295-ghrp-2-10-mg-vial-blend-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Powerful GH release stack for body recomposition and anti-aging",
+      "sideEffects": [
+        "Cortisol/prolactin elevation",
+        "Water retention",
+        "Hunger",
+        "Tingling"
       ]
     },
     {
       "id": "glow-blend-70mg",
       "name": "GLOW (70mg Blend)",
-      "fullName": "GLOW Blend \u2014 GHK-Cu + TB-500 + BPC-157 (70mg Vial)",
+      "fullName": "GLOW Blend — GHK-Cu + TB-500 + BPC-157 (70mg Vial)",
       "category": "blends",
       "description": "GLOW is a 70mg cosmetic and tissue-repair blend containing GHK-Cu (copper peptide for collagen and skin), TB-500 (angiogenesis and healing), and BPC-157 (tissue repair). Targeted at skin rejuvenation, anti-aging, and systemic healing support.",
       "benefits": [
@@ -5778,19 +6355,24 @@
         "shelfLifeDays": 21
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Refrigerate 2-8°C (35.6-46.4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "GHK-Cu is light-sensitive; store in dark container"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-blend-dosages/glow-70-mg-vial-blend-dosage-protocol/",
       "vialSizes": [
         "70mg"
+      ],
+      "primaryUse": "Skin, hair, and nail enhancement through combined regenerative peptides",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site reactions"
       ]
     },
     {
       "id": "klow-blend-80mg",
       "name": "KLOW (80mg Blend)",
-      "fullName": "KLOW Blend \u2014 TB-500 + BPC-157 + KPV + GHK-Cu (80mg Vial)",
+      "fullName": "KLOW Blend — TB-500 + BPC-157 + KPV + GHK-Cu (80mg Vial)",
       "category": "blends",
       "description": "KLOW is an 80mg quad-peptide blend combining TB-500, BPC-157, KPV (anti-inflammatory tripeptide), and GHK-Cu (copper peptide). Designed for comprehensive tissue repair, inflammation control, and skin health in one daily injection.",
       "benefits": [
@@ -5832,13 +6414,19 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Refrigerate 2-8°C (35.6-46.4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Protect from light; avoid freeze-thaw after reconstitution"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-blend-dosages/klow-80-mg-vial-blend-dosage-protocol/",
       "vialSizes": [
         "80mg"
+      ],
+      "primaryUse": "Multi-target weight loss blend addressing appetite, metabolism, and fat",
+      "sideEffects": [
+        "Nausea",
+        "Decreased appetite",
+        "Injection site reactions"
       ]
     },
     {
@@ -5886,13 +6474,19 @@
         "shelfLifeDays": 21
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Freeze at -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Use within 21 days of reconstitution"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-blend-dosages/neuroxelin-48-mg-vial-blend-dosage-protocol/",
       "vialSizes": [
         "48mg"
+      ],
+      "primaryUse": "Cognitive and neuroprotective blend supporting brain health and focus",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild headache",
+        "Injection site reactions"
       ]
     },
     {
@@ -5961,19 +6555,26 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F) or freeze at -20\u00b0C",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Refrigerate 2-8°C (35.6-46.4°F) or freeze at -20°C",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Avoid freeze-thaw cycles"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-blend-dosages/tesamorelin-ipamorelin-10-mg-vial-blend-dosage-protocol/",
       "vialSizes": [
         "10mg"
+      ],
+      "primaryUse": "Targeted visceral fat reduction combined with GH pulse optimization",
+      "sideEffects": [
+        "Water retention",
+        "Joint pain",
+        "Injection site reactions",
+        "Tingling"
       ]
     },
     {
       "id": "tri-heal-blend-45mg",
       "name": "Tri-Heal (45mg Blend)",
-      "fullName": "Tri-Heal Blend \u2014 TB-500 + BPC-157 + KPV (45mg Vial)",
+      "fullName": "Tri-Heal Blend — TB-500 + BPC-157 + KPV (45mg Vial)",
       "category": "blends",
       "description": "Tri-Heal is a 45mg triple-peptide recovery blend containing TB-500 (systemic healing), BPC-157 (tissue repair), and KPV (anti-inflammatory tripeptide). Designed for accelerated musculoskeletal recovery and injury support.",
       "benefits": [
@@ -6015,13 +6616,18 @@
         "shelfLifeDays": 28
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F)",
+        "lyophilized": "Refrigerate 2-8°C (35.6-46.4°F)",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F)",
         "notes": "Avoid freeze-thaw cycles after reconstitution"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-blend-dosages/tri-heal-45-mg-vial-blend-dosage-protocol/",
       "vialSizes": [
         "45mg"
+      ],
+      "primaryUse": "Triple-action tissue repair blend for musculoskeletal injury recovery",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site reactions"
       ]
     },
     {
@@ -6062,7 +6668,7 @@
           "typical": 4
         },
         "route": "Subcutaneous",
-        "notes": "Dose shown is Ipamorelin (daily). CJC-1295 DAC: 1000 mcg (1mg) once weekly, fixed day. Ipamorelin titration: 100 mcg wks 1-2 \u2192 150 mcg wks 3-4 \u2192 200 mcg wks 5+.",
+        "notes": "Dose shown is Ipamorelin (daily). CJC-1295 DAC: 1000 mcg (1mg) once weekly, fixed day. Ipamorelin titration: 100 mcg wks 1-2 → 150 mcg wks 3-4 → 200 mcg wks 5+.",
         "titration": [
           {
             "weeks": "1-2",
@@ -6088,14 +6694,21 @@
         "notes": "Each vial reconstituted separately. CJC-1295 DAC: 2mL BW (1mg/mL). Ipamorelin: 3mL BW (1.67mg/mL)."
       },
       "storage": {
-        "lyophilized": "Freeze at -15\u00b0C (5\u00b0F) or colder",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F); use within 3-4 weeks",
+        "lyophilized": "Freeze at -15°C (5°F) or colder",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F); use within 3-4 weeks",
         "notes": "Store vials separately; do not pre-mix"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-stack-dosages/cjc-1295-dac-2-mg-vial-ipamorelin-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "CJC-1295 DAC 2mg",
         "Ipamorelin 5mg"
+      ],
+      "primaryUse": "Entry-level GH optimization stack balancing pulse and sustained release",
+      "sideEffects": [
+        "Water retention",
+        "Tingling",
+        "Mild fatigue",
+        "Headache"
       ]
     },
     {
@@ -6136,7 +6749,7 @@
           "typical": 4
         },
         "route": "Subcutaneous",
-        "notes": "Dose shown is Ipamorelin (daily). CJC-1295 DAC: 1000 mcg once weekly on a fixed day. Same protocol as 2mg version but 5mg vial provides 2.5\u00d7 more doses.",
+        "notes": "Dose shown is Ipamorelin (daily). CJC-1295 DAC: 1000 mcg once weekly on a fixed day. Same protocol as 2mg version but 5mg vial provides 2.5× more doses.",
         "titration": [
           {
             "weeks": "1-2",
@@ -6159,17 +6772,24 @@
         "bacWaterML": 3.0,
         "concentrationMgPerML": 1.67,
         "shelfLifeDays": 28,
-        "notes": "CJC-1295 DAC: 2mL BW \u2192 2.5mg/mL (25mcg/unit). Ipamorelin: 3mL BW \u2192 1.67mg/mL (16.7mcg/unit)."
+        "notes": "CJC-1295 DAC: 2mL BW → 2.5mg/mL (25mcg/unit). Ipamorelin: 3mL BW → 1.67mg/mL (16.7mcg/unit)."
       },
       "storage": {
-        "lyophilized": "Freeze at -15\u00b0C (5\u00b0F) or colder",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F); use within 3-4 weeks",
+        "lyophilized": "Freeze at -15°C (5°F) or colder",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F); use within 3-4 weeks",
         "notes": "Store vials separately; do not pre-mix"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-stack-dosages/cjc-1295-dac-5-mg-vial-ipamorelin-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "CJC-1295 DAC 5mg",
         "Ipamorelin 5mg"
+      ],
+      "primaryUse": "High-dose GH stack for advanced anti-aging and body recomposition",
+      "sideEffects": [
+        "Water retention",
+        "Carpal tunnel symptoms",
+        "Elevated prolactin",
+        "Tingling"
       ]
     },
     {
@@ -6177,7 +6797,7 @@
       "name": "PT-141 + Melanotan II (10mg+10mg) Stack",
       "fullName": "PT-141 (Bremelanotide) 10mg + Melanotan II 10mg Stack Protocol",
       "category": "stacks",
-      "description": "Two-vial melanocortin stack. Melanotan II is used daily (loading \u2192 maintenance) for skin pigmentation and sexual function. PT-141 (Bremelanotide) is used on-demand for sexual arousal, at least 45 minutes before activity. Two separate vials, separate purposes and schedules.",
+      "description": "Two-vial melanocortin stack. Melanotan II is used daily (loading → maintenance) for skin pigmentation and sexual function. PT-141 (Bremelanotide) is used on-demand for sexual arousal, at least 45 minutes before activity. Two separate vials, separate purposes and schedules.",
       "benefits": [
         "Sexual function",
         "Skin pigmentation",
@@ -6209,7 +6829,7 @@
           "typical": 4
         },
         "route": "Subcutaneous",
-        "notes": "Dose shown is Melanotan II (daily, loading phase). PT-141 is on-demand: 750-1750 mcg \u226545 min before activity, max 8 doses/month. Melanotan II transitions to 2-3\u00d7/week maintenance after loading.",
+        "notes": "Dose shown is Melanotan II (daily, loading phase). PT-141 is on-demand: 750-1750 mcg ≥45 min before activity, max 8 doses/month. Melanotan II transitions to 2-3×/week maintenance after loading.",
         "titration": [
           {
             "weeks": "1",
@@ -6229,7 +6849,7 @@
           {
             "weeks": "5+",
             "dose": 1000,
-            "note": "MT-II: up to 1000 mcg/day then maintenance 2-3\u00d7/week"
+            "note": "MT-II: up to 1000 mcg/day then maintenance 2-3×/week"
           }
         ]
       },
@@ -6237,17 +6857,25 @@
         "bacWaterML": 3.0,
         "concentrationMgPerML": 3.33,
         "shelfLifeDays": 7,
-        "notes": "Both vials: 3mL BW \u2192 ~3.33mg/mL (33.3mcg/unit). Reconstituted MT-II: use within ~1 week."
+        "notes": "Both vials: 3mL BW → ~3.33mg/mL (33.3mcg/unit). Reconstituted MT-II: use within ~1 week."
       },
       "storage": {
-        "lyophilized": "Freeze at -20\u00b0C (-4\u00b0F); PT-141 stable ~3 weeks at room temp",
-        "reconstituted": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F); use within 1 week",
+        "lyophilized": "Freeze at -20°C (-4°F); PT-141 stable ~3 weeks at room temp",
+        "reconstituted": "Refrigerate 2-8°C (35.6-46.4°F); use within 1 week",
         "notes": "Protect from light; reconstituted MT-II degrades faster than PT-141"
       },
       "sourceUrl": "https://peptidedosages.com/peptide-stack-dosages/melanotan-ii-10-mg-vial-pt-141-10-mg-vial-dosage-protocol/",
       "vialSizes": [
         "PT-141 10mg",
         "Melanotan II 10mg"
+      ],
+      "primaryUse": "Combined sexual enhancement and tanning stack with melanocortin synergy",
+      "sideEffects": [
+        "Nausea",
+        "Flushing",
+        "Spontaneous erections",
+        "Darkened moles",
+        "Headache"
       ]
     },
     {
@@ -6255,7 +6883,7 @@
       "name": "TB-500 (5mg) + BPC-157 (5mg) Stack",
       "fullName": "TB-500 5mg Vial + BPC-157 5mg Vial Stack Protocol",
       "category": "stacks",
-      "description": "Classic two-vial tissue repair stack. TB-500 is dosed twice weekly (loading) then once weekly (maintenance) for systemic healing. BPC-157 is dosed daily for localized repair. Two separate vials with different schedules \u2014 synergistic tissue recovery through complementary mechanisms.",
+      "description": "Classic two-vial tissue repair stack. TB-500 is dosed twice weekly (loading) then once weekly (maintenance) for systemic healing. BPC-157 is dosed daily for localized repair. Two separate vials with different schedules — synergistic tissue recovery through complementary mechanisms.",
       "benefits": [
         "Tissue repair",
         "Musculoskeletal healing",
@@ -6287,22 +6915,22 @@
           "typical": 4
         },
         "route": "Subcutaneous",
-        "notes": "Dose shown is BPC-157 (daily). TB-500: 1250 mcg 2\u00d7/week for wks 1-4, then 1250 mcg 1\u00d7/week for wks 5-12. BPC-157: 250 mcg/day wks 1-2, 500 mcg/day wks 3-8, 250 mcg/day wks 9-12.",
+        "notes": "Dose shown is BPC-157 (daily). TB-500: 1250 mcg 2×/week for wks 1-4, then 1250 mcg 1×/week for wks 5-12. BPC-157: 250 mcg/day wks 1-2, 500 mcg/day wks 3-8, 250 mcg/day wks 9-12.",
         "titration": [
           {
             "weeks": "1-2",
             "dose": 250,
-            "note": "BPC-157: 250 mcg/day (TB-500: 1250 mcg 2\u00d7/week)"
+            "note": "BPC-157: 250 mcg/day (TB-500: 1250 mcg 2×/week)"
           },
           {
             "weeks": "3-8",
             "dose": 500,
-            "note": "BPC-157: 500 mcg/day (TB-500: 1250 mcg 2\u00d7/week then 1\u00d7/week)"
+            "note": "BPC-157: 500 mcg/day (TB-500: 1250 mcg 2×/week then 1×/week)"
           },
           {
             "weeks": "9-12",
             "dose": 250,
-            "note": "BPC-157: 250 mcg/day (TB-500: 1250 mcg 1\u00d7/week)"
+            "note": "BPC-157: 250 mcg/day (TB-500: 1250 mcg 1×/week)"
           }
         ]
       },
@@ -6310,16 +6938,21 @@
         "bacWaterML": 2.0,
         "concentrationMgPerML": 2.5,
         "shelfLifeDays": 30,
-        "notes": "Both vials: 2mL BW \u2192 2.5mg/mL (25mcg/unit on U-100). Reconstituted solutions usable ~30 days."
+        "notes": "Both vials: 2mL BW → 2.5mg/mL (25mcg/unit on U-100). Reconstituted solutions usable ~30 days."
       },
       "storage": {
-        "lyophilized": "Refrigerate 2-8\u00b0C (35.6-46.4\u00b0F); long-term: -20\u00b0C (-4\u00b0F)",
-        "reconstituted": "Refrigerate 2-8\u00b0C"
+        "lyophilized": "Refrigerate 2-8°C (35.6-46.4°F); long-term: -20°C (-4°F)",
+        "reconstituted": "Refrigerate 2-8°C"
       },
       "sourceUrl": "https://peptidedosages.com/single-peptide-dosages/mazdutide-5-mg-vial-dosage-protocol/",
       "vialSizes": [
         "5mg",
         "10mg"
+      ],
+      "primaryUse": "Comprehensive injury recovery stack targeting systemic and local healing",
+      "sideEffects": [
+        "Generally well-tolerated",
+        "Mild injection site reactions"
       ]
     }
   ]
