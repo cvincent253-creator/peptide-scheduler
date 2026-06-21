@@ -1,0 +1,156 @@
+{
+  "cashtag": "$cv198636",
+  "venmo": "",
+  "paypal": "",
+  "zelle": "337-358-0335",
+  "applePayUrl": "",
+  "autoBtc": true,
+  "shipFee": 30,
+  "note": "",
+  "catalog": {
+    "inv:klow@80": {
+      "price": 90,
+      "stock": 8,
+      "forSale": true,
+      "name": "Klow",
+      "size": "",
+      "baseId": "inv:klow"
+    },
+    "inv:reta@40": {
+      "price": 135,
+      "stock": 10,
+      "forSale": true,
+      "name": "Reta · 40",
+      "size": "",
+      "baseId": "inv:reta"
+    },
+    "inv:aod@5": {
+      "price": 50,
+      "stock": 9,
+      "forSale": true,
+      "name": "Aod",
+      "size": "",
+      "baseId": "inv:aod"
+    },
+    "inv:kisspeptin@10": {
+      "price": 50,
+      "stock": 6,
+      "forSale": true,
+      "name": "Kisspeptin",
+      "size": "",
+      "baseId": "inv:kisspeptin"
+    },
+    "inv:motc@40": {
+      "price": 35,
+      "stock": 5,
+      "forSale": true,
+      "name": "Mot-c",
+      "size": "",
+      "baseId": "inv:motc"
+    },
+    "inv:nad@500": {
+      "price": 35,
+      "stock": 4,
+      "forSale": true,
+      "name": "Nad+",
+      "size": "",
+      "baseId": "inv:nad"
+    },
+    "inv:reta@10": {
+      "price": 55,
+      "stock": 2,
+      "forSale": true,
+      "name": "Reta · 10",
+      "size": "",
+      "baseId": "inv:reta"
+    },
+    "inv:selank@10": {
+      "price": 30,
+      "stock": 14,
+      "forSale": true,
+      "name": "Selank",
+      "size": "",
+      "baseId": "inv:selank"
+    },
+    "inv:semax@10": {
+      "price": 30,
+      "stock": 18,
+      "forSale": true,
+      "name": "Semax",
+      "size": "",
+      "baseId": "inv:semax"
+    },
+    "inv:tesamorelin@10": {
+      "price": 80,
+      "stock": 16,
+      "forSale": true,
+      "name": "Tesamorelin",
+      "size": "",
+      "baseId": "inv:tesamorelin"
+    },
+    "inv:vip@10": {
+      "price": 65,
+      "stock": 6,
+      "forSale": true,
+      "name": "Vip",
+      "size": "",
+      "baseId": "inv:vip"
+    },
+    "inv:ss31@50": {
+      "price": 112,
+      "stock": 7,
+      "forSale": true,
+      "name": "SS-31",
+      "size": "",
+      "baseId": "inv:ss31"
+    },
+    "inv:pt141@10": {
+      "price": 30,
+      "stock": 9,
+      "forSale": true,
+      "name": "Pt-141",
+      "size": "",
+      "baseId": "inv:pt141"
+    },
+    "inv:oxytocin@10": {
+      "price": 42,
+      "stock": 8,
+      "forSale": true,
+      "name": "Oxytocin",
+      "size": "",
+      "baseId": "inv:oxytocin"
+    },
+    "inv:wolverine@10": {
+      "price": 70,
+      "stock": 10,
+      "forSale": true,
+      "name": "Wolverine",
+      "size": "",
+      "baseId": "inv:wolverine"
+    },
+    "inv:cjcnodacwithipa@10": {
+      "price": 60,
+      "stock": 10,
+      "forSale": true,
+      "name": "Cjc/no dac with ipa",
+      "size": "",
+      "baseId": "inv:cjcnodacwithipa"
+    },
+    "inv:bacwater@30": {
+      "price": 25,
+      "stock": 12,
+      "forSale": true,
+      "name": "Bac water",
+      "size": "",
+      "baseId": "inv:bacwater"
+    },
+    "inv:motc@40mg": {
+      "price": 80,
+      "stock": 5,
+      "forSale": true,
+      "name": "MOT-C 40mg",
+      "size": "40mg",
+      "baseId": "inv:motc"
+    }
+  }
+}
