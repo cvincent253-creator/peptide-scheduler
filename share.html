@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0f">
+<title>Get the Peptide Scheduler app</title>
+<style>
+  :root{--bg:#0a0a0f;--card:#12121a;--border:#2a2a40;--primary:#00b4d8;--text:#e0e0f0;--dim:#8888aa;--muted:#555575}
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:30px 26px;max-width:400px;width:100%;text-align:center}
+  .logo{font-size:46px;margin-bottom:6px}
+  h1{font-size:23px;font-weight:800;letter-spacing:-0.3px}
+  .sub{font-size:14px;color:var(--dim);margin-top:6px;line-height:1.5}
+  .qr{background:#fff;border-radius:18px;padding:14px;width:236px;height:236px;margin:22px auto 8px;display:flex;align-items:center;justify-content:center}
+  .qr img{width:100%;height:100%;border-radius:6px;display:block}
+  .qrhint{font-size:12px;color:var(--muted)}
+  .urlbox{display:flex;align-items:center;gap:8px;background:#1a1a28;border:1px solid var(--border);border-radius:12px;padding:11px 13px;margin:20px 0 14px}
+  .urlbox input{flex:1;background:none;border:none;color:var(--text);font-size:13px;outline:none;font-family:ui-monospace,Menlo,monospace}
+  .btns{display:flex;flex-direction:column;gap:10px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:13px;border:none;cursor:pointer;font-size:15px;font-weight:700;text-decoration:none}
+  .btn-primary{background:var(--primary);color:#001b22}
+  .btn-ghost{background:#1a1a28;color:var(--text);border:1px solid var(--border)}
+  .btn-sm{padding:9px 13px;font-size:13px;font-weight:600;border-radius:10px}
+  .steps{text-align:left;background:#1a1a28;border-radius:14px;padding:14px 16px;margin-top:18px;font-size:13px;color:var(--dim);line-height:1.7}
+  .steps b{color:var(--text)}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1a1a28;border:1px solid var(--primary);border-radius:12px;padding:11px 18px;font-size:13px;font-weight:600;opacity:0;transition:.25s;pointer-events:none}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">💉</div>
+  <h1>Peptide Scheduler</h1>
+  <div class="sub">Scan the code or tap below to open the app on your phone, then add it to your home screen.</div>
+
+  <div class="qr"><img id="qr" alt="QR code"></div>
+  <div class="qrhint">📷 Point your phone camera at the code</div>
+
+  <div class="urlbox"><input id="url" readonly><button class="btn btn-ghost btn-sm" onclick="copyLink()">Copy</button></div>
+
+  <div class="btns">
+    <a class="btn btn-primary" id="open" href="#">Open the app →</a>
+    <button class="btn btn-ghost" onclick="shareLink()">📤 Share / Text the link</button>
+  </div>
+
+  <div class="steps">
+    <b>Add to your home screen:</b><br>
+    📱 <b>iPhone (Safari):</b> tap Share → "Add to Home Screen"<br>
+    🤖 <b>Android (Chrome):</b> tap ⋮ → "Install app"
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+  // The scheduler app URL — change this if your GitHub Pages address differs.
+  const APP_URL = 'https://cvincent253-creator.github.io/peptide-scheduler/';
+  document.getElementById('url').value = APP_URL;
+  document.getElementById('open').href = APP_URL;
+  document.getElementById('qr').src = 'https://api.qrserver.com/v1/create-qr-code/?size=420x420&margin=0&data=' + encodeURIComponent(APP_URL);
+
+  function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2200);}
+  function copyLink(){navigator.clipboard?navigator.clipboard.writeText(APP_URL).then(()=>toast('Link copied')).catch(()=>toast(APP_URL)):toast(APP_URL);}
+  function shareLink(){
+    const text = 'Install the Peptide Scheduler app: ' + APP_URL;
+    if(navigator.share){ navigator.share({title:'Peptide Scheduler', text:'Install the Peptide Scheduler app', url:APP_URL}).catch(()=>{}); }
+    else { window.location.href = 'sms:?&body=' + encodeURIComponent(text); }
+  }
+</script>
+</body>
+</html>
