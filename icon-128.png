@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0f">
+<title>Store Dashboard · Peptide Scheduler</title>
+<style>
+  :root{
+    --bg:#0a0a0f;--card:#12121a;--card2:#1a1a28;--border:#2a2a40;
+    --primary:#00b4d8;--primary-dim:rgba(0,180,216,0.15);--secondary:#48cae4;
+    --text:#e0e0f0;--text-dim:#8888aa;--text-muted:#555575;
+    --success:#2ecc71;--success-dim:rgba(46,204,113,0.15);
+    --warning:#f39c12;--warning-dim:rgba(243,156,18,0.15);
+    --danger:#e74c3c;--danger-dim:rgba(231,76,60,0.15);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:0 0 60px}
+  .topbar{position:sticky;top:0;z-index:10;background:rgba(12,12,20,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+  .topbar h1{font-size:18px;font-weight:700;display:flex;align-items:center;gap:9px}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--success)}
+  .wrap{max-width:780px;margin:0 auto;padding:16px 20px}
+  .tabs{display:flex;gap:6px;background:var(--card);border:1px solid var(--border);border-radius:13px;padding:5px;margin-bottom:16px;position:sticky;top:58px;z-index:9}
+  .tab{flex:1;padding:11px 6px;border:none;background:none;color:var(--text-dim);font-size:13px;font-weight:700;border-radius:9px;cursor:pointer;position:relative}
+  .tab.active{background:var(--primary);color:#001b22}
+  .tab .pip{position:absolute;top:5px;right:8px;min-width:16px;height:16px;border-radius:9px;background:var(--danger);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 4px}
+  .tab.active .pip{background:#001b22;color:var(--primary)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin-bottom:14px}
+  .card-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-dim);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between}
+  label.fl{display:block;font-size:11px;font-weight:600;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px}
+  .fg{margin-bottom:14px}
+  .fg:last-child{margin-bottom:0}
+  input,select{width:100%;padding:11px 13px;background:var(--card2);border:1px solid var(--border);border-radius:11px;color:var(--text);font-size:15px;font-family:inherit;outline:none;-webkit-appearance:none;appearance:none}
+  input:focus,select:focus{border-color:var(--primary)}
+  input::placeholder{color:var(--text-muted)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:12px 18px;border-radius:12px;border:none;cursor:pointer;font-size:14px;font-weight:600;transition:opacity .15s;width:100%}
+  .btn:active{opacity:.8}
+  .btn-primary{background:var(--primary);color:#001b22}
+  .btn-outline{background:var(--primary-dim);color:var(--primary);border:1px solid var(--primary)}
+  .btn-ghost{background:var(--card2);color:var(--text-dim);border:1px solid var(--border)}
+  .btn-sm{padding:8px 13px;font-size:13px;width:auto}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .toggle{position:relative;width:46px;height:27px;flex-shrink:0}
+  .toggle input{opacity:0;width:0;height:0}
+  .slider{position:absolute;inset:0;background:var(--border);border-radius:27px;cursor:pointer;transition:.25s}
+  .slider::before{content:'';position:absolute;width:21px;height:21px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.25s}
+  .toggle input:checked + .slider{background:var(--primary)}
+  .toggle input:checked + .slider::before{transform:translateX(19px)}
+  .search{display:flex;align-items:center;gap:9px;background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:0 13px;margin-bottom:12px}
+  .search input{border:none;background:none;padding:11px 0}
+  .catrow{padding:11px 0;border-bottom:1px solid var(--border)}
+  .catrow:last-child{border-bottom:none}
+  .badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.3px}
+  .b-inv{background:#48cae422;color:#48cae4}
+  .b-low{background:var(--warning-dim);color:var(--warning)}
+  .b-oos{background:var(--danger-dim);color:var(--danger)}
+  .b-new{background:var(--success-dim);color:var(--success)}
+  .hint{font-size:11px;color:var(--text-muted);line-height:1.55;margin-top:9px}
+  .toast{position:fixed;bottom:20px;left:16px;right:16px;max-width:420px;margin:0 auto;background:var(--card2);border:1px solid var(--primary);border-radius:13px;padding:13px 16px;font-size:13px;font-weight:600;z-index:2000;box-shadow:0 8px 32px rgba(0,0,0,.5);opacity:0;transform:translateY(10px);transition:.25s}
+  .toast.show{opacity:1;transform:translateY(0)}
+  .lock{max-width:380px;margin:80px auto;padding:24px}
+  .stat{flex:1;background:var(--card2);border-radius:12px;padding:13px;text-align:center}
+  .stat .n{font-size:22px;font-weight:800;color:var(--primary)}
+  .stat .l{font-size:10px;color:var(--text-muted);text-transform:uppercase;font-weight:600;margin-top:3px}
+  @media(max-width:560px){.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"><h1><span class="dot"></span> Store Dashboard</h1><span id="ver" style="font-size:12px;color:var(--text-muted)">v1.1</span></div>
+<div id="app" class="wrap"></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const JBIN_BASE='https://api.jsonbin.io/v3/b';
+const JBIN_BIN='6a03d785c0954111d815cc1f';
+const JBIN_KEY='$2a$10$m4RQwci2m44C0SJdDRwZWObmVU2/VGClTuGt8lHofY.2T/q8SwBlq';
+const ORDERS_BIN='6a384334da38895dfee816ef';
+const CFG_KEY='peptide-store-config';
+const DEFAULT_CFG={cashtag:'',venmo:'',paypal:'',zelle:'',applePayUrl:'',autoBtc:true,shipFee:30,note:'',catalog:{},ownerPin:''};
+let cfg={...DEFAULT_CFG};
+let PEPTIDE_DB=[];
+let unlocked=false, search='', tab='orders', ORDERS=[];
+
+function loadCfg(){try{const r=localStorage.getItem(CFG_KEY);if(r)cfg={...DEFAULT_CFG,...JSON.parse(r)};}catch(e){}if(!cfg.catalog)cfg.catalog={};}
+function saveCfg(){try{localStorage.setItem(CFG_KEY,JSON.stringify(cfg));}catch(e){}}
+async function loadDB(){try{const res=await fetch('./peptide-data.json');const d=await res.json();PEPTIDE_DB=d.peptides||[];}catch(e){PEPTIDE_DB=[];}}
+
+const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+function matchPeptideId(name){
+  const n=norm(name);if(n.length<2)return null;
+  let pd=PEPTIDE_DB.find(p=>norm(p.name)===n||norm(p.fullName)===n||norm(p.id)===n);
+  if(pd)return pd.id;
+  const ALIAS={motc:'mots-c',mot:'mots-c',motsc:'mots-c',cjc:'cjc-1295',ghkcu:'ghk-cu',tb:'tb-500',bpc:'bpc-157'};
+  if(ALIAS[n]){pd=PEPTIDE_DB.find(p=>norm(p.id)===norm(ALIAS[n])||norm(p.name)===norm(ALIAS[n]));if(pd)return pd.id;}
+  if(n.length>=3){pd=PEPTIDE_DB.find(p=>{const a=norm(p.name),b=norm(p.id);return a.startsWith(n)||n.startsWith(a)||b.startsWith(n)||n.startsWith(b)||a.includes(n)||n.includes(a);});if(pd)return pd.id;}
+  return null;
+}
+function getPd(id){return PEPTIDE_DB.find(p=>p.id===id)||null;}
+function pInfo(id){
+  const baseId=String(id).split('@')[0].replace(/^inv:/,'');
+  const pd=getPd(baseId);const c=cfg.catalog[id]||{};
+  if(pd)return{name:c.name||pd.name};
+  return{name:c.name||baseId};
+}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2600);}
+function setText(id,v){const e=document.getElementById(id);if(e)e.textContent=v;}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');}
+function fmtDate(ts){const d=new Date(ts);const m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];return m[d.getMonth()]+' '+d.getDate()+', '+d.toTimeString().slice(0,5);}
+
+// ── INVENTORY SYNC ──────────────────────────────────────────────
+async function syncInventory(){
+  toast('Syncing inventory…');
+  let inv=null,source='';
+  try{const res=await fetch(JBIN_BASE+'/'+JBIN_BIN+'/latest',{headers:{'X-Master-Key':JBIN_KEY}});if(res.ok){const j=await res.json();const rec=j.record||j;if(rec&&Array.isArray(rec.P)){inv=rec.P;source='cloud';}}}catch(e){}
+  if(!inv){toast('Could not reach inventory cloud');return;}
+  if(!inv.length){toast('Inventory is empty');return;}
+  const baseCount={};
+  inv.forEach(item=>{const m=matchPeptideId(item.name)||('inv:'+norm(item.name));baseCount[m]=(baseCount[m]||0)+1;});
+  Object.keys(baseCount).forEach(b=>{if(cfg.catalog[b])delete cfg.catalog[b];});
+  let n=0;
+  inv.forEach(item=>{
+    const matchedId=matchPeptideId(item.name);const isCustom=!matchedId;
+    const baseId=matchedId||('inv:'+norm(item.name));
+    const variant=item.size?norm(item.size):(item.conc?norm(item.conc):('x'+String(item.id||n).slice(-4)));
+    const id=baseId+'@'+variant;
+    const baseName=isCustom?item.name:(getPd(baseId)?getPd(baseId).name:item.name);
+    let suffix='';if(item.size)suffix=' '+item.size;else if(baseCount[baseId]>1&&item.conc)suffix=' · '+item.conc;
+    if(!cfg.catalog[id])cfg.catalog[id]={price:0,stock:0,forSale:true};
+    cfg.catalog[id].stock=(item.qty!=null?Math.round(item.qty):cfg.catalog[id].stock);
+    cfg.catalog[id].name=baseName+suffix;cfg.catalog[id].size=item.size||'';cfg.catalog[id].baseId=baseId;
+    n++;
+  });
+  saveCfg();renderCatalog();toast('Synced '+n+' item'+(n===1?'':'s')+' from '+source);
+}
+function addManual(){
+  const name=(document.getElementById('m-name').value||'').trim();
+  if(!name){toast('Enter a peptide name');return;}
+  const size=(document.getElementById('m-size').value||'').trim();
+  const price=parseFloat(document.getElementById('m-price').value)||0;
+  const stock=parseInt(document.getElementById('m-stock').value)||0;
+  const matchedId=matchPeptideId(name);const baseId=matchedId||('inv:'+norm(name));
+  const id=baseId+'@'+(size?norm(size):('m'+Date.now().toString().slice(-4)));
+  const baseName=matchedId&&getPd(baseId)?getPd(baseId).name:name;
+  cfg.catalog[id]={price,stock,forSale:true,name:baseName+(size?' '+size:''),size,baseId};
+  saveCfg();['m-name','m-size','m-price','m-stock'].forEach(i=>document.getElementById(i).value='');
+  renderCatalog();toast(baseName+(size?' '+size:'')+' added');
+}
+function toggleSale(id,on){if(!cfg.catalog[id])cfg.catalog[id]={price:0,stock:0,forSale:false};cfg.catalog[id].forSale=on;saveCfg();renderCatalog();}
+function setField(id,f,v){if(!cfg.catalog[id])return;cfg.catalog[id][f]=f==='stock'?(parseInt(v)||0):(parseFloat(v)||0);saveCfg();}
+function delItem(id){delete cfg.catalog[id];saveCfg();renderCatalog();}
+
+// ── PAYMENTS ────────────────────────────────────────────────────
+function savePay(){
+  cfg.cashtag=val('p-cashapp');cfg.venmo=val('p-venmo');cfg.paypal=val('p-paypal');cfg.zelle=val('p-zelle');cfg.applePayUrl=val('p-apple');
+  cfg.autoBtc=document.getElementById('p-btc').checked;cfg.shipFee=parseFloat(val('p-ship'))||0;saveCfg();
+}
+function val(id){const e=document.getElementById(id);return e?e.value.trim():'';}
+function exportConfig(){
+  const out={cashtag:cfg.cashtag,venmo:cfg.venmo,paypal:cfg.paypal,zelle:cfg.zelle,applePayUrl:cfg.applePayUrl,autoBtc:cfg.autoBtc,shipFee:cfg.shipFee,note:cfg.note,catalog:cfg.catalog};
+  const blob=new Blob([JSON.stringify(out,null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='store-config.json';a.click();
+  toast('store-config.json downloaded — upload it to your app repo');
+}
+
+// ── PIN ─────────────────────────────────────────────────────────
+function tryUnlock(){if(val('pin-in')===cfg.ownerPin){unlocked=true;render();}else toast('Wrong PIN');}
+function lock(){unlocked=false;render();}
+function clearPin(){if(confirm('Remove the dashboard PIN?')){cfg.ownerPin='';saveCfg();toast('PIN removed');render();}}
+function focusPin(){const v=prompt('Set a dashboard PIN (4+ digits) to protect it:');if(v&&v.trim().length>=4){cfg.ownerPin=v.trim();unlocked=true;saveCfg();render();toast('PIN set');}else if(v!==null)toast('Use at least 4 digits');}
+
+// ── ORDERS ──────────────────────────────────────────────────────
+async function fetchOrders(){
+  const ol=document.getElementById('orders-list');if(ol)ol.innerHTML='<div class="hint">Loading…</div>';
+  try{const res=await fetch(JBIN_BASE+'/'+ORDERS_BIN+'/latest',{headers:{'X-Master-Key':JBIN_KEY}});if(res.ok){const j=await res.json();const d=j.record||{};ORDERS=Array.isArray(d.orders)?d.orders:[];}}catch(e){}
+  renderOrders();renderCustomers();updateTabBadge();
+}
+function newCount(){return ORDERS.filter(o=>o.status!=='fulfilled').length;}
+function updateTabBadge(){const el=document.getElementById('tab-orders-pip');if(!el)return;const n=newCount();el.style.display=n>0?'flex':'none';el.textContent=n;}
+function renderOrders(){
+  const wrap=document.getElementById('orders-list');if(!wrap)return;
+  const list=[...ORDERS].sort((a,b)=>(b.ts||0)-(a.ts||0));
+  if(!list.length){wrap.innerHTML='<div class="hint" style="text-align:center;padding:16px">No orders yet. New customer orders appear here automatically.</div>';return;}
+  wrap.innerHTML=list.map(o=>{
+    const items=(o.items||[]).map(i=>`${i.qty}× ${esc(i.name)}`).join(', ');
+    const addr=o.address?`${esc(o.address.addr)}, ${esc(o.address.city)} ${esc(o.address.state||'')} ${esc(o.address.zip)}`:'Local pickup';
+    const done=o.status==='fulfilled';const c=o.customer||{};
+    return `<div class="catrow" style="opacity:${done?0.55:1}">
+      <div class="row"><div style="font-size:14px;font-weight:700">${esc(c.name||'Customer')} ${done?'':'<span class="badge b-new" style="margin-left:4px">NEW</span>'}</div><div style="font-size:16px;font-weight:800;color:var(--primary)">$${(o.total||0).toFixed(2)}</div></div>
+      <div style="font-size:12px;color:var(--text-dim);margin-top:4px">${items}</div>
+      <div style="font-size:11px;color:var(--text-muted);margin-top:4px">${o.id} · ${fmtDate(o.ts)} · ${o.payMethod||'—'} · ${o.delivery==='ship'?'📦 '+addr:'🏠 pickup'}${c.phone?' · '+esc(c.phone):''}</div>
+      <div style="margin-top:9px"><button class="btn ${done?'btn-ghost':'btn-outline'} btn-sm" onclick="markOrder('${o.id}','${done?'new':'fulfilled'}')">${done?'↩︎ Mark new':'✓ Mark fulfilled'}</button></div>
+    </div>`;
+  }).join('');
+}
+async function markOrder(id,status){
+  const o=ORDERS.find(x=>x.id===id);if(o)o.status=status;renderOrders();updateTabBadge();
+  try{await fetch(JBIN_BASE+'/'+ORDERS_BIN,{method:'PUT',headers:{'Content-Type':'application/json','X-Master-Key':JBIN_KEY},body:JSON.stringify({orders:ORDERS})});}catch(e){}
+}
+function renderCustomers(){
+  const wrap=document.getElementById('customers-list');if(!wrap)return;
+  const map={};
+  ORDERS.forEach(o=>{const c=o.customer||{};const k=((c.name||'').trim())||'Unknown';if(!map[k])map[k]={name:k,phone:'',count:0,total:0,last:0};map[k].count++;map[k].total+=o.total||0;if((o.ts||0)>map[k].last)map[k].last=o.ts;if(c.phone)map[k].phone=c.phone;});
+  const list=Object.values(map).sort((a,b)=>b.total-a.total);
+  if(!list.length){wrap.innerHTML='<div class="hint" style="text-align:center;padding:16px">Customers appear here after their first order.</div>';return;}
+  wrap.innerHTML=list.map(c=>`<div class="catrow"><div class="row"><div><div style="font-size:14px;font-weight:600">${esc(c.name)}</div><div style="font-size:11px;color:var(--text-muted)">${c.phone?esc(c.phone)+' · ':''}${c.count} order${c.count===1?'':'s'} · last ${fmtDate(c.last)}</div></div><div style="font-size:15px;font-weight:800;color:var(--primary)">$${c.total.toFixed(2)}</div></div></div>`).join('');
+}
+
+// ── CATALOG ─────────────────────────────────────────────────────
+function renderCatalog(){
+  const wrap=document.getElementById('catalog-list');if(!wrap)return;
+  const q=search.toLowerCase();
+  const all=Object.keys(cfg.catalog);
+  let ids;
+  if(q){const dbm=PEPTIDE_DB.filter(pd=>pd.name.toLowerCase().includes(q)).map(pd=>pd.id);const cm=all.filter(id=>pInfo(id).name.toLowerCase().includes(q));ids=Array.from(new Set([...cm,...dbm])).slice(0,30);}
+  else{const head=PEPTIDE_DB.map(pd=>pd.id).slice(0,6);ids=Array.from(new Set([...all,...head]));}
+  let listed=0,instock=0,low=0;
+  all.forEach(id=>{const c=cfg.catalog[id];if(c.forSale&&c.price>0){listed++;if(c.stock>0)instock++;if(c.stock<=2)low++;}});
+  setText('st-count',listed);setText('st-stock',instock);setText('st-low',low);
+  wrap.innerHTML=ids.map(id=>{
+    const c=cfg.catalog[id]||{price:0,stock:0,forSale:false};const inf=pInfo(id);
+    const tag=id.startsWith('inv:')?'<span class="badge b-inv" style="margin-left:6px">inventory</span>':'';
+    const sb=c.forSale?(c.stock<=0?'<span class="badge b-oos" style="margin-left:6px">out</span>':c.stock<=2?'<span class="badge b-low" style="margin-left:6px">low</span>':''):'';
+    return `<div class="catrow">
+      <div class="row">
+        <div style="font-size:14px;font-weight:600">${esc(inf.name)}${tag}${sb}<span style="font-size:11px;color:var(--text-muted);font-weight:500;margin-left:6px">${c.stock!=null?c.stock+' in stock':''}</span></div>
+        <label class="toggle"><input type="checkbox" ${c.forSale?'checked':''} onchange="toggleSale('${id}',this.checked)"><span class="slider"></span></label>
+      </div>
+      <div style="display:${c.forSale?'flex':'none'};gap:8px;margin-top:9px;align-items:flex-end">
+        <div style="flex:1"><label class="fl">Price $</label><input type="number" step="any" value="${c.price||''}" placeholder="0.00" onchange="setField('${id}','price',this.value)"></div>
+        <div style="flex:1"><label class="fl">In stock</label><input type="number" value="${c.stock!=null?c.stock:''}" placeholder="0" onchange="setField('${id}','stock',this.value)"></div>
+        <button class="btn btn-ghost btn-sm" style="padding:11px 12px" onclick="delItem('${id}')">🗑️</button>
+      </div>
+    </div>`;
+  }).join('')||'<div class="hint" style="text-align:center;padding:16px">No items yet — sync from your Inventory app or add one manually.</div>';
+}
+
+// ── TAB SHELL ───────────────────────────────────────────────────
+function setTab(t){tab=t;render();}
+function render(){
+  const app=document.getElementById('app');
+  if(cfg.ownerPin&&!unlocked){
+    app.innerHTML=`<div class="lock card"><div class="card-title">Locked</div><div class="fg"><label class="fl">Enter dashboard PIN</label><input type="password" inputmode="numeric" id="pin-in" placeholder="PIN"></div><button class="btn btn-primary" onclick="tryUnlock()">Unlock</button></div>`;
+    return;
+  }
+  const tabs=[['orders','Orders'],['inventory','Inventory'],['customers','Customers'],['settings','Settings']];
+  const bar=`<div class="tabs">${tabs.map(([k,l])=>`<button class="tab ${tab===k?'active':''}" onclick="setTab('${k}')">${l}${k==='orders'?'<span class="pip" id="tab-orders-pip" style="display:none">0</span>':''}</button>`).join('')}</div>`;
+  let body='';
+  if(tab==='orders'){
+    body=`<div class="card"><div class="card-title">Incoming orders <button class="btn btn-ghost btn-sm" onclick="fetchOrders()">🔄 Refresh</button></div><div id="orders-list"><div class="hint">Loading…</div></div></div>`;
+  } else if(tab==='inventory'){
+    body=`
+    <div class="card">
+      <div class="card-title">Inventory &amp; Pricing</div>
+      <div class="row" style="gap:10px;margin-bottom:14px">
+        <div class="stat"><div class="n" id="st-count">0</div><div class="l">Listed</div></div>
+        <div class="stat"><div class="n" id="st-stock">0</div><div class="l">In stock</div></div>
+        <div class="stat"><div class="n" id="st-low">0</div><div class="l">Low / out</div></div>
+      </div>
+      <button class="btn btn-outline" style="margin-bottom:14px" onclick="syncInventory()">🔄 Sync stock from Inventory app</button>
+      <div class="search">🔎<input id="search" placeholder="Search peptides…" value="${esc(search)}" oninput="search=this.value;renderCatalog()"></div>
+      <div id="catalog-list"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Add item manually</div>
+      <div class="grid2">
+        <div class="fg" style="grid-column:1/3"><label class="fl">Peptide name</label><input id="m-name" placeholder="e.g. MOT-c"></div>
+        <div class="fg"><label class="fl">Vial size</label><input id="m-size" placeholder="40mg"></div>
+        <div class="fg"><label class="fl">Price $</label><input id="m-price" type="number" step="any" placeholder="0.00"></div>
+        <div class="fg" style="grid-column:1/3"><label class="fl">Stock</label><input id="m-stock" type="number" placeholder="0"></div>
+      </div>
+      <button class="btn btn-primary" onclick="addManual()">Add to store</button>
+    </div>
+    <div class="card">
+      <div class="card-title">Publish to customer app</div>
+      <button class="btn btn-primary" onclick="exportConfig()">📤 Download store-config.json</button>
+      <div class="hint">Upload <strong>store-config.json</strong> next to <strong>index.html</strong> in your repo. Every customer's app then shows your live prices &amp; stock on next open. Re-export whenever you change prices or restock.</div>
+    </div>`;
+  } else if(tab==='customers'){
+    body=`<div class="card"><div class="card-title">Customers</div><div id="customers-list"><div class="hint">Loading…</div></div></div>`;
+  } else if(tab==='settings'){
+    body=`
+    <div class="card">
+      <div class="card-title">Payments <button class="btn btn-ghost btn-sm" onclick="${cfg.ownerPin?'lock()':'focusPin()'}">${cfg.ownerPin?'🔒 Lock':'Set PIN'}</button></div>
+      <div class="grid2">
+        <div class="fg"><label class="fl">Cash App $Cashtag</label><input id="p-cashapp" value="${esc(cfg.cashtag)}" placeholder="$YourTag" oninput="savePay()"></div>
+        <div class="fg"><label class="fl">Venmo username</label><input id="p-venmo" value="${esc(cfg.venmo)}" placeholder="@username" oninput="savePay()"></div>
+        <div class="fg"><label class="fl">PayPal.Me username</label><input id="p-paypal" value="${esc(cfg.paypal)}" placeholder="username" oninput="savePay()"></div>
+        <div class="fg"><label class="fl">Zelle email / phone</label><input id="p-zelle" value="${esc(cfg.zelle)}" placeholder="email or 555-…" oninput="savePay()"></div>
+      </div>
+      <div class="fg"><label class="fl">Card / Apple Pay link (Square or Stripe)</label><input id="p-apple" value="${esc(cfg.applePayUrl)}" placeholder="https://square.link/… or buy.stripe.com/…" oninput="savePay()"></div>
+      <div class="row" style="padding:8px 0;border-top:1px solid var(--border)">
+        <div><div style="font-size:14px;font-weight:600">Auto-convert to Bitcoin</div><div style="font-size:12px;color:var(--text-dim)">Cash App auto-invest note for buyers</div></div>
+        <label class="toggle"><input type="checkbox" id="p-btc" ${cfg.autoBtc?'checked':''} onchange="savePay()"><span class="slider"></span></label>
+      </div>
+      <div class="fg" style="margin-top:6px"><label class="fl">USPS shipping fee ($)</label><input type="number" step="any" id="p-ship" value="${cfg.shipFee!=null?cfg.shipFee:30}" oninput="savePay()"></div>
+      ${cfg.ownerPin?'<div class="hint">PIN protects this dashboard. <a href="javascript:clearPin()" style="color:var(--primary)">Remove PIN</a></div>':''}
+    </div>`;
+  }
+  app.innerHTML=bar+body;
+  if(tab==='inventory')renderCatalog();
+  if(tab==='orders'||tab==='customers')fetchOrders();
+}
+
+(async function(){loadCfg();await loadDB();render();})();
+</script>
+</body>
+</html>
