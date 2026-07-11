@@ -54,8 +54,23 @@ bump the cache version.
 | 10   | peptide-scheduler-v13       | 1.6.4   | Add 4 Norse Viking themes (Iron & Gold, Stormbringer, Blood Eagle, Valhalla) |
 | 11   | peptide-scheduler-v14       | 1.6.5   | Fix auto-update: add skipWaiting() to install event — no more manual updates needed |
 | 12   | peptide-scheduler-v15       | 1.6.6   | Add full visual headers for all 4 Viking themes (SVG patterns, rune strips) |
+| 13   | peptide-scheduler-v16       | 1.6.7   | Fix runes: replace SVG text with path-drawn rune shapes (no font dependency) |
+| 14   | peptide-scheduler-v17       | 1.6.8   | Fix auto-update: call reg.update() on every app open — no more waiting an hour |
+| 15   | peptide-scheduler-v18       | 1.6.9   | Guaranteed update: startup version check against version.json wipes cache on mismatch |
 
-**Next push should use: `peptide-scheduler-v16`**
+**Next push should use: `peptide-scheduler-v19`**
+
+---
+
+## version.json (new — required for v1.6.9+ update mechanism)
+
+A tiny file at the repo root. Always update it when bumping the app version.
+
+```json
+{"v":"1.6.X"}
+```
+
+On every app open, the startup script fetches this with a cache-busting URL (`?_=<timestamp>`). The service worker cannot serve a stale version because the URL never matches anything cached. If the server version differs from the hardcoded `APP_V` in the script, the app wipes all SW caches and reloads — guaranteed to get the latest even with a totally broken/old service worker.
 
 ---
 

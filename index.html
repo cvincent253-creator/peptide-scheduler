@@ -2,6 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+// STARTUP VERSION CHECK — runs before anything else
+// Fetches version.json with a cache-busting URL so the service worker can't serve a stale copy.
+// If the server has a newer version than what's running, wipe all SW caches and force a reload.
+// This guarantees updates reach the device even if the service worker update mechanism fails.
+(function() {
+  var APP_V = '1.6.9';
+  try {
+    fetch('./version.json?_=' + Date.now(), { cache: 'no-store' })
+      .then(function(r) { return r.ok ? r.json() : null; })
+      .then(function(d) {
+        if (d && d.v && d.v !== APP_V) {
+          var wipe = ('caches' in window)
+            ? caches.keys().then(function(ks) { return Promise.all(ks.map(function(k) { return caches.delete(k); })); })
+            : Promise.resolve();
+          wipe.then(function() { location.reload(true); });
+        }
+      })
+      .catch(function() {}); // offline or file missing — silent fail, no disruption
+  } catch(e) {}
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -733,7 +755,7 @@
   <div class="cow-spot" style="width:32px;height:22px;bottom:4px;right:110px;transform:rotate(30deg);border-radius:40% 60% 50% 50% / 60% 40% 55% 45%"></div>
   <div id="cow-header-text">
     <h1>💉 Peptide Scheduler</h1>
-    <div class="cow-sub">v1.6.7 — Your peptide protocol, organized</div>
+    <div class="cow-sub">v1.6.9 — Your peptide protocol, organized</div>
   </div>
 </div>
 
@@ -759,7 +781,7 @@
   </div>
   <div class="vhdr-text">
     <h1 style="color:#c8960c">⚔ Peptide Scheduler</h1>
-    <div class="vsub" style="color:#a07820">v1.6.7 — Forged in iron, tracked in gold</div>
+    <div class="vsub" style="color:#a07820">v1.6.9 — Forged in iron, tracked in gold</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#c8960c"></span><span style="background:#a07820"></span><span style="background:#6b5010"></span><span style="background:#3d2e08"></span>
@@ -785,7 +807,7 @@
   </div>
   <div class="vhdr-text">
     <h1 style="color:#6ab0e8">⛵ Peptide Scheduler</h1>
-    <div class="vsub" style="color:#4a7fa8">v1.6.7 — Ride the storm, track the dose</div>
+    <div class="vsub" style="color:#4a7fa8">v1.6.9 — Ride the storm, track the dose</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#6ab0e8"></span><span style="background:#4a88c0"></span><span style="background:#2a5888"></span><span style="background:#1a3050"></span>
@@ -817,7 +839,7 @@
   </div>
   <div class="vhdr-text">
     <h1 style="color:#d04040">🪓 Peptide Scheduler</h1>
-    <div class="vsub" style="color:#903030">v1.6.7 — Honor the ritual, log the dose</div>
+    <div class="vsub" style="color:#903030">v1.6.9 — Honor the ritual, log the dose</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#d04040"></span><span style="background:#a03030"></span><span style="background:#6a2020"></span><span style="background:#3d1010"></span>
@@ -852,7 +874,7 @@
   </div>
   <div class="vhdr-text">
     <h1 style="color:#b090f0">✦ Peptide Scheduler</h1>
-    <div class="vsub" style="color:#7858c0">v1.6.7 — Walk worthy to Valhalla</div>
+    <div class="vsub" style="color:#7858c0">v1.6.9 — Walk worthy to Valhalla</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#b090f0"></span><span style="background:#8058c8"></span><span style="background:#5030a0"></span><span style="background:#2a1860"></span>
@@ -1062,7 +1084,7 @@
     <div class="toggle-row">
       <div>
         <div style="font-size:14px;font-weight:600">App Version</div>
-        <div style="font-size:12px;color:var(--text-dim)">1.6.7</div>
+        <div style="font-size:12px;color:var(--text-dim)">1.6.9</div>
       </div>
     </div>
     <div style="margin-top:12px">
@@ -1147,7 +1169,7 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted);flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
     </div>
   </div>
-  <div style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:16px">Peptide Scheduler v1.6.7</div>
+  <div style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:16px">Peptide Scheduler v1.6.9</div>
 </div>
 
 <!-- INSIGHTS PAGE -->
@@ -9641,6 +9663,8 @@ async function registerSW() {
       if (ev.data.type === 'SW_READY') scheduleReminders();
       if (ev.data.action === 'markDoseTaken') renderToday();
     });
+    // Check for a new SW immediately every time the app opens
+    reg.update().catch(() => {});
     if (reg.waiting && navigator.serviceWorker.controller) showUpdateBanner(reg);
     reg.addEventListener('updatefound', () => {
       const nw = reg.installing;

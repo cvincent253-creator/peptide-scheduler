@@ -1,7 +1,7 @@
 // Peptide Scheduler Service Worker
-// Version 1.6.7
+// Version 1.6.9
 
-const CACHE_NAME = 'peptide-scheduler-v16';
+const CACHE_NAME = 'peptide-scheduler-v18';
 const ASSETS = [
   './',
   './index.html',
