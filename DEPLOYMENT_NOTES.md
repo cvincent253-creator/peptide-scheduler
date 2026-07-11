@@ -50,8 +50,10 @@ bump the cache version.
 | 6    | peptide-scheduler-v11       | 1.6.3   | After merge; forced SW update              |
 | 7    | peptide-scheduler-v11       | 1.6.3   | ⚠️ Forgot to bump — theme didn't show     |
 | 8    | peptide-scheduler-v12       | 1.6.3   | Fixed — cowprint theme now reachable       |
+| 9    | peptide-scheduler-v12       | 1.6.3   | DEPLOYMENT_NOTES.md committed (no HTML change) |
+| 10   | peptide-scheduler-v13       | 1.6.4   | Add 4 Norse Viking themes (Iron & Gold, Stormbringer, Blood Eagle, Valhalla) |
 
-**Next push should use: `peptide-scheduler-v13`**
+**Next push should use: `peptide-scheduler-v14`**
 
 ---
 

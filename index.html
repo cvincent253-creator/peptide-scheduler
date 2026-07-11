@@ -86,6 +86,42 @@
     --on-primary:#fff; --nav-bg:rgba(255,240,245,0.97);
     --cow-pink: #ff69b4; --cow-spot: #1a1a1a;
   }
+  html[data-theme="viking-gold"] {
+    --bg:#0d0a02; --card:#1c1608; --card2:#181406; --border:#3d2e08;
+    --primary:#c8960c; --primary-dim:rgba(200,150,12,0.16); --secondary:#a07820; --accent:#e8d090;
+    --text:#e8d090; --text-dim:#a07820; --text-muted:#6b5010;
+    --success:#7ab648; --success-dim:rgba(122,182,72,0.15);
+    --warning:#e8a020; --warning-dim:rgba(232,160,32,0.15);
+    --danger:#e05030; --danger-dim:rgba(224,80,48,0.15); --purple:#c8960c;
+    --on-primary:#0a0800; --nav-bg:rgba(13,10,2,0.97);
+  }
+  html[data-theme="stormbringer"] {
+    --bg:#050b12; --card:#0c1624; --card2:#0a1420; --border:#1a3050;
+    --primary:#6ab0e8; --primary-dim:rgba(106,176,232,0.15); --secondary:#4a88c0; --accent:#c0d8f0;
+    --text:#c0d8f0; --text-dim:#4a7fa8; --text-muted:#2a4860;
+    --success:#4ab8a8; --success-dim:rgba(74,184,168,0.15);
+    --warning:#e0a830; --warning-dim:rgba(224,168,48,0.15);
+    --danger:#e05050; --danger-dim:rgba(224,80,80,0.15); --purple:#7888f0;
+    --on-primary:#020810; --nav-bg:rgba(5,11,18,0.97);
+  }
+  html[data-theme="blood-eagle"] {
+    --bg:#0a0404; --card:#180808; --card2:#150707; --border:#3d1010;
+    --primary:#d04040; --primary-dim:rgba(208,64,64,0.16); --secondary:#a03030; --accent:#f0c8c8;
+    --text:#f0c8c8; --text-dim:#903030; --text-muted:#5a1818;
+    --success:#7ab648; --success-dim:rgba(122,182,72,0.15);
+    --warning:#e08820; --warning-dim:rgba(224,136,32,0.15);
+    --danger:#d04040; --danger-dim:rgba(208,64,64,0.16); --purple:#d04040;
+    --on-primary:#fde8e8; --nav-bg:rgba(10,4,4,0.97);
+  }
+  html[data-theme="valhalla"] {
+    --bg:#060412; --card:#100a28; --card2:#0e0820; --border:#2a1860;
+    --primary:#b090f0; --primary-dim:rgba(176,144,240,0.16); --secondary:#8058c8; --accent:#d8c8ff;
+    --text:#d8c8ff; --text-dim:#7858c0; --text-muted:#3a2060;
+    --success:#68b890; --success-dim:rgba(104,184,144,0.15);
+    --warning:#e0a830; --warning-dim:rgba(224,168,48,0.15);
+    --danger:#e05060; --danger-dim:rgba(224,80,96,0.15); --purple:#b090f0;
+    --on-primary:#f0eaff; --nav-bg:rgba(6,4,18,0.97);
+  }
   html[data-theme="editorial"] body { font-family:'Newsreader',Georgia,serif; }
   html[data-theme="editorial"] .page-header h1,
   html[data-theme="editorial"] h1,
@@ -677,7 +713,7 @@
   <div class="cow-spot" style="width:32px;height:22px;bottom:4px;right:110px;transform:rotate(30deg);border-radius:40% 60% 50% 50% / 60% 40% 55% 45%"></div>
   <div id="cow-header-text">
     <h1>💉 Peptide Scheduler</h1>
-    <div class="cow-sub">v1.6.3 — Your peptide protocol, organized</div>
+    <div class="cow-sub">v1.6.4 — Your peptide protocol, organized</div>
   </div>
 </div>
 <div id="main-content">
@@ -883,7 +919,7 @@
     <div class="toggle-row">
       <div>
         <div style="font-size:14px;font-weight:600">App Version</div>
-        <div style="font-size:12px;color:var(--text-dim)">1.6.3</div>
+        <div style="font-size:12px;color:var(--text-dim)">1.6.4</div>
       </div>
     </div>
     <div style="margin-top:12px">
@@ -968,7 +1004,7 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted);flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
     </div>
   </div>
-  <div style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:16px">Peptide Scheduler v1.6.3</div>
+  <div style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:16px">Peptide Scheduler v1.6.4</div>
 </div>
 
 <!-- INSIGHTS PAGE -->
@@ -9596,7 +9632,11 @@ const THEMES = [
   { id:'refined',   name:'Refined Dark',   desc:'Dark · mint · big numerals',    bg:'#0B0B0F', accent:'#46D6B4', line:'rgba(255,255,255,0.16)' },
   { id:'vital',     name:'Vital',          desc:'Bold · indigo · fitness feel',  bg:'#F3F3F7', accent:'#4F46E5', line:'rgba(0,0,0,0.13)' },
   { id:'editorial', name:'Editorial',      desc:'Warm · serif · terracotta',     bg:'#F2ECE0', accent:'#BE5E36', line:'rgba(0,0,0,0.13)' },
-  { id:'cowprint',  name:'Pink Cow Print', desc:'Hot pink · black spots · moo',  bg:'#fff0f5', accent:'#e91e63', line:'rgba(232,25,99,0.18)' }
+  { id:'cowprint',  name:'Pink Cow Print', desc:'Hot pink · black spots · moo',  bg:'#fff0f5', accent:'#e91e63', line:'rgba(232,25,99,0.18)' },
+  { id:'viking-gold',  name:'Iron & Gold',    desc:'Black · chainmail · Viking gold',  bg:'#0d0a02', accent:'#c8960c', line:'rgba(200,150,12,0.22)' },
+  { id:'stormbringer', name:'Stormbringer',   desc:'Deep navy · sea waves · frost',    bg:'#050b12', accent:'#6ab0e8', line:'rgba(106,176,232,0.22)' },
+  { id:'blood-eagle',  name:'Blood Eagle',    desc:'Black · crimson · Viking tribal',  bg:'#0a0404', accent:'#d04040', line:'rgba(208,64,64,0.22)' },
+  { id:'valhalla',     name:'Valhalla',       desc:'Deep violet · stars · Norse runes',bg:'#060412', accent:'#b090f0', line:'rgba(176,144,240,0.22)' }
 ];
 
 function applyTheme(id) {
