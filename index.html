@@ -733,7 +733,7 @@
   <div class="cow-spot" style="width:32px;height:22px;bottom:4px;right:110px;transform:rotate(30deg);border-radius:40% 60% 50% 50% / 60% 40% 55% 45%"></div>
   <div id="cow-header-text">
     <h1>💉 Peptide Scheduler</h1>
-    <div class="cow-sub">v1.6.6 — Your peptide protocol, organized</div>
+    <div class="cow-sub">v1.6.7 — Your peptide protocol, organized</div>
   </div>
 </div>
 
@@ -747,13 +747,19 @@
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill="url(#vg-chain)"/>
-      <text x="92%" y="78%" font-size="64" font-family="serif" fill="#c8960c" opacity="0.08" text-anchor="middle" dominant-baseline="middle">ᚢ</text>
-      <text x="5%" y="78%" font-size="28" font-family="serif" fill="#c8960c" opacity="0.05" text-anchor="start" dominant-baseline="middle">ᚦᚱᚢᛏ</text>
+      <!-- Uruz rune (ᚢ) drawn as SVG path — two strokes with arch -->
+      <svg x="80%" y="10%" width="52" height="60" opacity="0.12">
+        <path d="M6 0 L6 58 M38 0 L38 38 Q38 58 22 58 Q6 58 6 58" fill="none" stroke="#c8960c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <!-- Decorative horizontal tick marks left side -->
+      <line x1="3%" y1="35%" x2="14%" y2="35%" stroke="#c8960c" stroke-width="0.7" opacity="0.1"/>
+      <line x1="3%" y1="52%" x2="20%" y2="52%" stroke="#c8960c" stroke-width="0.7" opacity="0.09"/>
+      <line x1="3%" y1="70%" x2="12%" y2="70%" stroke="#c8960c" stroke-width="0.7" opacity="0.08"/>
     </svg>
   </div>
   <div class="vhdr-text">
     <h1 style="color:#c8960c">⚔ Peptide Scheduler</h1>
-    <div class="vsub" style="color:#a07820">v1.6.6 — Forged in iron, tracked in gold</div>
+    <div class="vsub" style="color:#a07820">v1.6.7 — Forged in iron, tracked in gold</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#c8960c"></span><span style="background:#a07820"></span><span style="background:#6b5010"></span><span style="background:#3d2e08"></span>
@@ -770,13 +776,16 @@
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill="url(#sb-wave)"/>
-      <text x="92%" y="75%" font-size="64" font-family="serif" fill="#6ab0e8" opacity="0.07" text-anchor="middle" dominant-baseline="middle">ᚦ</text>
       <line x1="0" y1="0" x2="100%" y2="0" stroke="#6ab0e8" stroke-width="1.5" opacity="0.25"/>
+      <!-- Thurisaz rune (ᚦ) drawn as SVG path — vertical stroke with thorn -->
+      <svg x="80%" y="10%" width="52" height="60" opacity="0.12">
+        <path d="M10 0 L10 60 M10 12 L40 30 L10 48" fill="none" stroke="#6ab0e8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </svg>
   </div>
   <div class="vhdr-text">
     <h1 style="color:#6ab0e8">⛵ Peptide Scheduler</h1>
-    <div class="vsub" style="color:#4a7fa8">v1.6.6 — Ride the storm, track the dose</div>
+    <div class="vsub" style="color:#4a7fa8">v1.6.7 — Ride the storm, track the dose</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#6ab0e8"></span><span style="background:#4a88c0"></span><span style="background:#2a5888"></span><span style="background:#1a3050"></span>
@@ -796,15 +805,19 @@
       </defs>
       <rect width="100%" height="100%" fill="url(#be-tribal)"/>
       <line x1="0" y1="0" x2="100%" y2="0" stroke="#d04040" stroke-width="2" opacity="0.35"/>
-      <text x="92%" y="75%" font-size="64" font-family="serif" fill="#d04040" opacity="0.07" text-anchor="middle" dominant-baseline="middle">ᚱ</text>
-      <path d="M10 8L18 4L26 8L18 20Z" fill="none" stroke="#d04040" stroke-width="0.8" opacity="0.14" transform="translate(0,4)"/>
-      <path d="M10 8L18 4L26 8L18 20Z" fill="none" stroke="#d04040" stroke-width="0.8" opacity="0.1" transform="translate(38,2)"/>
-      <path d="M10 8L18 4L26 8L18 20Z" fill="none" stroke="#d04040" stroke-width="0.8" opacity="0.08" transform="translate(76,4)"/>
+      <!-- Small axe-head shapes along the bottom -->
+      <path d="M10 8L20 0L30 8L20 22Z" fill="none" stroke="#d04040" stroke-width="0.8" opacity="0.14" transform="translate(0,4)"/>
+      <path d="M10 8L20 0L30 8L20 22Z" fill="none" stroke="#d04040" stroke-width="0.8" opacity="0.11" transform="translate(38,2)"/>
+      <path d="M10 8L20 0L30 8L20 22Z" fill="none" stroke="#d04040" stroke-width="0.8" opacity="0.08" transform="translate(76,4)"/>
+      <!-- Raidho rune (ᚱ) drawn as SVG path — vertical with arch and kick -->
+      <svg x="80%" y="10%" width="52" height="60" opacity="0.12">
+        <path d="M8 0 L8 60 M8 0 L36 16 L8 34 M8 34 L36 60" fill="none" stroke="#d04040" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </svg>
   </div>
   <div class="vhdr-text">
     <h1 style="color:#d04040">🪓 Peptide Scheduler</h1>
-    <div class="vsub" style="color:#903030">v1.6.6 — Honor the ritual, log the dose</div>
+    <div class="vsub" style="color:#903030">v1.6.7 — Honor the ritual, log the dose</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#d04040"></span><span style="background:#a03030"></span><span style="background:#6a2020"></span><span style="background:#3d1010"></span>
@@ -824,18 +837,22 @@
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill="url(#vh-stars)"/>
+      <!-- Vegvisir compass rings -->
       <circle cx="14%" cy="50%" r="22" fill="none" stroke="#b090f0" stroke-width="0.6" opacity="0.14"/>
       <circle cx="14%" cy="50%" r="13" fill="none" stroke="#b090f0" stroke-width="0.6" opacity="0.11"/>
       <line x1="14%" y1="22%" x2="14%" y2="78%" stroke="#b090f0" stroke-width="0.5" opacity="0.11"/>
       <line x1="4.5%" y1="50%" x2="23.5%" y2="50%" stroke="#b090f0" stroke-width="0.5" opacity="0.11"/>
       <line x1="7%" y1="34%" x2="21%" y2="66%" stroke="#b090f0" stroke-width="0.5" opacity="0.09"/>
       <line x1="21%" y1="34%" x2="7%" y2="66%" stroke="#b090f0" stroke-width="0.5" opacity="0.09"/>
-      <text x="92%" y="75%" font-size="64" font-family="serif" fill="#b090f0" opacity="0.07" text-anchor="middle" dominant-baseline="middle">ᚹ</text>
+      <!-- Wunjo rune (ᚹ) drawn as SVG path — vertical stroke with pennant flag -->
+      <svg x="80%" y="10%" width="52" height="60" opacity="0.12">
+        <path d="M10 0 L10 60 M10 0 L42 18 L10 36" fill="none" stroke="#b090f0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </svg>
   </div>
   <div class="vhdr-text">
     <h1 style="color:#b090f0">✦ Peptide Scheduler</h1>
-    <div class="vsub" style="color:#7858c0">v1.6.6 — Walk worthy to Valhalla</div>
+    <div class="vsub" style="color:#7858c0">v1.6.7 — Walk worthy to Valhalla</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#b090f0"></span><span style="background:#8058c8"></span><span style="background:#5030a0"></span><span style="background:#2a1860"></span>
@@ -1045,7 +1062,7 @@
     <div class="toggle-row">
       <div>
         <div style="font-size:14px;font-weight:600">App Version</div>
-        <div style="font-size:12px;color:var(--text-dim)">1.6.6</div>
+        <div style="font-size:12px;color:var(--text-dim)">1.6.7</div>
       </div>
     </div>
     <div style="margin-top:12px">
@@ -1130,7 +1147,7 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted);flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
     </div>
   </div>
-  <div style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:16px">Peptide Scheduler v1.6.6</div>
+  <div style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:16px">Peptide Scheduler v1.6.7</div>
 </div>
 
 <!-- INSIGHTS PAGE -->
