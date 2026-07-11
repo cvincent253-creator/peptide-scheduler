@@ -8,7 +8,7 @@
 // If the server has a newer version than what's running, wipe all SW caches and force a reload.
 // This guarantees updates reach the device even if the service worker update mechanism fails.
 (function() {
-  var APP_V = '1.6.9';
+  var APP_V = '1.7.0';
   try {
     fetch('./version.json?_=' + Date.now(), { cache: 'no-store' })
       .then(function(r) { return r.ok ? r.json() : null; })
@@ -143,6 +143,15 @@
     --warning:#e0a830; --warning-dim:rgba(224,168,48,0.15);
     --danger:#e05060; --danger-dim:rgba(224,80,96,0.15); --purple:#b090f0;
     --on-primary:#f0eaff; --nav-bg:rgba(6,4,18,0.97);
+  }
+  html[data-theme="yggdrasil"] {
+    --bg:#010a03; --card:#071408; --card2:#061206; --border:#163a18;
+    --primary:#4ea858; --primary-dim:rgba(78,168,88,0.16); --secondary:#367a3c; --accent:#a8d8ac;
+    --text:#a8d8ac; --text-dim:#3a7840; --text-muted:#1e4020;
+    --success:#60c860; --success-dim:rgba(96,200,96,0.15);
+    --warning:#c8a030; --warning-dim:rgba(200,160,48,0.15);
+    --danger:#c84848; --danger-dim:rgba(200,72,72,0.15); --purple:#4ea858;
+    --on-primary:#010a03; --nav-bg:rgba(1,10,3,0.97);
   }
   html[data-theme="editorial"] body { font-family:'Newsreader',Georgia,serif; }
   html[data-theme="editorial"] .page-header h1,
@@ -686,7 +695,7 @@
   /* IOS NOTCH SUPPORT */
   .ios-header { padding-top: max(12px, env(safe-area-inset-top)); }
   /* NORSE VIKING THEMED HEADERS */
-  #viking-gold-header, #stormbringer-header, #blood-eagle-header, #valhalla-header {
+  #viking-gold-header, #stormbringer-header, #blood-eagle-header, #valhalla-header, #yggdrasil-header {
     display: none;
     position: relative;
     overflow: hidden;
@@ -699,6 +708,7 @@
   html[data-theme="stormbringer"] #stormbringer-header  { display: block; background: #0c1624; }
   html[data-theme="blood-eagle"]  #blood-eagle-header   { display: block; background: #180808; }
   html[data-theme="valhalla"]     #valhalla-header      { display: block; background: #100a28; }
+  html[data-theme="yggdrasil"]   #yggdrasil-header     { display: block; background: #071408; }
   .vhdr-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
   .vhdr-text { position: relative; z-index: 2; padding-bottom: 10px; }
   .vhdr-text h1 { font-size: 20px; font-weight: 800; letter-spacing: -0.3px; }
@@ -755,7 +765,7 @@
   <div class="cow-spot" style="width:32px;height:22px;bottom:4px;right:110px;transform:rotate(30deg);border-radius:40% 60% 50% 50% / 60% 40% 55% 45%"></div>
   <div id="cow-header-text">
     <h1>💉 Peptide Scheduler</h1>
-    <div class="cow-sub">v1.6.9 — Your peptide protocol, organized</div>
+    <div class="cow-sub">v1.7.0 — Your peptide protocol, organized</div>
   </div>
 </div>
 
@@ -781,7 +791,7 @@
   </div>
   <div class="vhdr-text">
     <h1 style="color:#c8960c">⚔ Peptide Scheduler</h1>
-    <div class="vsub" style="color:#a07820">v1.6.9 — Forged in iron, tracked in gold</div>
+    <div class="vsub" style="color:#a07820">v1.7.0 — Forged in iron, tracked in gold</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#c8960c"></span><span style="background:#a07820"></span><span style="background:#6b5010"></span><span style="background:#3d2e08"></span>
@@ -807,7 +817,7 @@
   </div>
   <div class="vhdr-text">
     <h1 style="color:#6ab0e8">⛵ Peptide Scheduler</h1>
-    <div class="vsub" style="color:#4a7fa8">v1.6.9 — Ride the storm, track the dose</div>
+    <div class="vsub" style="color:#4a7fa8">v1.7.0 — Ride the storm, track the dose</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#6ab0e8"></span><span style="background:#4a88c0"></span><span style="background:#2a5888"></span><span style="background:#1a3050"></span>
@@ -839,7 +849,7 @@
   </div>
   <div class="vhdr-text">
     <h1 style="color:#d04040">🪓 Peptide Scheduler</h1>
-    <div class="vsub" style="color:#903030">v1.6.9 — Honor the ritual, log the dose</div>
+    <div class="vsub" style="color:#903030">v1.7.0 — Honor the ritual, log the dose</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#d04040"></span><span style="background:#a03030"></span><span style="background:#6a2020"></span><span style="background:#3d1010"></span>
@@ -874,10 +884,48 @@
   </div>
   <div class="vhdr-text">
     <h1 style="color:#b090f0">✦ Peptide Scheduler</h1>
-    <div class="vsub" style="color:#7858c0">v1.6.9 — Walk worthy to Valhalla</div>
+    <div class="vsub" style="color:#7858c0">v1.7.0 — Walk worthy to Valhalla</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#b090f0"></span><span style="background:#8058c8"></span><span style="background:#5030a0"></span><span style="background:#2a1860"></span>
+  </div>
+</div>
+
+<!-- YGGDRASIL HEADER -->
+<div id="yggdrasil-header">
+  <div class="vhdr-bg">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <pattern id="ygg-roots" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+          <line x1="0" y1="0" x2="36" y2="36" stroke="#4ea858" stroke-width="0.5" opacity="0.20"/>
+          <line x1="36" y1="0" x2="0" y2="36" stroke="#4ea858" stroke-width="0.5" opacity="0.20"/>
+          <line x1="0" y1="18" x2="36" y2="18" stroke="#4ea858" stroke-width="0.35" opacity="0.13"/>
+          <line x1="18" y1="0" x2="18" y2="36" stroke="#4ea858" stroke-width="0.35" opacity="0.13"/>
+          <circle cx="18" cy="18" r="1.5" fill="#4ea858" opacity="0.20"/>
+          <circle cx="0" cy="0" r="1" fill="#c8a030" opacity="0.18"/>
+          <circle cx="36" cy="36" r="1" fill="#c8a030" opacity="0.18"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#ygg-roots)"/>
+      <!-- Branch sweeps rising from lower left — World Tree roots -->
+      <path d="M0,90 Q90,28 230,0" stroke="#4ea858" stroke-width="1.1" fill="none" opacity="0.16"/>
+      <path d="M0,90 Q140,55 340,24" stroke="#4ea858" stroke-width="0.8" fill="none" opacity="0.11"/>
+      <path d="M0,90 Q55,14 120,0" stroke="#4ea858" stroke-width="0.7" fill="none" opacity="0.09"/>
+      <!-- Top edge accent -->
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="#4ea858" stroke-width="1.5" opacity="0.25"/>
+      <!-- Berkanan rune (ᛒ) — the birch/tree rune: staff + two angular right-side bumps -->
+      <svg x="80%" y="10%" width="52" height="60" opacity="0.14">
+        <path d="M8 0 L8 60 M8 5 L28 18 L8 32 M8 32 L28 46 L8 58"
+              fill="none" stroke="#4ea858" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </svg>
+  </div>
+  <div class="vhdr-text">
+    <h1 style="color:#4ea858">🌲 Peptide Scheduler</h1>
+    <div class="vsub" style="color:#3a7840">v1.7.0 — Rooted in the World Tree</div>
+  </div>
+  <div class="vhdr-strip">
+    <span style="background:#4ea858"></span><span style="background:#2a6830"></span><span style="background:#70c870"></span><span style="background:#c8a030"></span>
   </div>
 </div>
 
@@ -1084,7 +1132,7 @@
     <div class="toggle-row">
       <div>
         <div style="font-size:14px;font-weight:600">App Version</div>
-        <div style="font-size:12px;color:var(--text-dim)">1.6.9</div>
+        <div style="font-size:12px;color:var(--text-dim)">1.7.0</div>
       </div>
     </div>
     <div style="margin-top:12px">
@@ -1169,7 +1217,7 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted);flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
     </div>
   </div>
-  <div style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:16px">Peptide Scheduler v1.6.9</div>
+  <div style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:16px">Peptide Scheduler v1.7.0</div>
 </div>
 
 <!-- INSIGHTS PAGE -->
@@ -9803,7 +9851,8 @@ const THEMES = [
   { id:'viking-gold',  name:'Iron & Gold',    desc:'Black · chainmail · Viking gold',  bg:'#0d0a02', accent:'#c8960c', line:'rgba(200,150,12,0.22)' },
   { id:'stormbringer', name:'Stormbringer',   desc:'Deep navy · sea waves · frost',    bg:'#050b12', accent:'#6ab0e8', line:'rgba(106,176,232,0.22)' },
   { id:'blood-eagle',  name:'Blood Eagle',    desc:'Black · crimson · Viking tribal',  bg:'#0a0404', accent:'#d04040', line:'rgba(208,64,64,0.22)' },
-  { id:'valhalla',     name:'Valhalla',       desc:'Deep violet · stars · Norse runes',bg:'#060412', accent:'#b090f0', line:'rgba(176,144,240,0.22)' }
+  { id:'valhalla',     name:'Valhalla',       desc:'Deep violet · stars · Norse runes',bg:'#060412', accent:'#b090f0', line:'rgba(176,144,240,0.22)' },
+  { id:'yggdrasil',   name:'Yggdrasil',      desc:'Deep forest · ancient roots · World Tree', bg:'#010a03', accent:'#4ea858', line:'rgba(78,168,88,0.22)' }
 ];
 
 function applyTheme(id) {
