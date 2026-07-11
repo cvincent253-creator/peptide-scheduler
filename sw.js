@@ -1,7 +1,7 @@
 // Peptide Scheduler Service Worker
-// Version 1.6.4
+// Version 1.6.5
 
-const CACHE_NAME = 'peptide-scheduler-v13';
+const CACHE_NAME = 'peptide-scheduler-v14';
 const ASSETS = [
   './',
   './index.html',
@@ -9,8 +9,9 @@ const ASSETS = [
   './manifest.json'
 ];
 
-// Install: cache assets (waits for user-triggered update instead of auto-activating)
+// Install: cache assets and immediately skip waiting so the new SW activates automatically
 self.addEventListener('install', event => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll(ASSETS);
