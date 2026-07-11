@@ -53,8 +53,9 @@ bump the cache version.
 | 9    | peptide-scheduler-v12       | 1.6.3   | DEPLOYMENT_NOTES.md committed (no HTML change) |
 | 10   | peptide-scheduler-v13       | 1.6.4   | Add 4 Norse Viking themes (Iron & Gold, Stormbringer, Blood Eagle, Valhalla) |
 | 11   | peptide-scheduler-v14       | 1.6.5   | Fix auto-update: add skipWaiting() to install event — no more manual updates needed |
+| 12   | peptide-scheduler-v15       | 1.6.6   | Add full visual headers for all 4 Viking themes (SVG patterns, rune strips) |
 
-**Next push should use: `peptide-scheduler-v15`**
+**Next push should use: `peptide-scheduler-v16`**
 
 ---
 
