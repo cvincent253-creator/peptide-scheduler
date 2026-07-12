@@ -8,7 +8,7 @@
 // If the server has a newer version than what's running, wipe all SW caches and force a reload.
 // This guarantees updates reach the device even if the service worker update mechanism fails.
 (function() {
-  var APP_V = '1.7.0';
+  var APP_V = '1.8.0';
   try {
     fetch('./version.json?_=' + Date.now(), { cache: 'no-store' })
       .then(function(r) { return r.ok ? r.json() : null; })
@@ -152,6 +152,60 @@
     --warning:#c8a030; --warning-dim:rgba(200,160,48,0.15);
     --danger:#c84848; --danger-dim:rgba(200,72,72,0.15); --purple:#4ea858;
     --on-primary:#010a03; --nav-bg:rgba(1,10,3,0.97);
+  }
+  html[data-theme="dark-nebula"] {
+    --bg:#030108; --card:#0a0312; --card2:#08020f; --border:#2a1460;
+    --primary:#8060e0; --primary-dim:rgba(128,96,224,0.16); --secondary:#5838b0; --accent:#c0a0ff;
+    --text:#c0a0ff; --text-dim:#5038a0; --text-muted:#2a1060;
+    --success:#60a8d0; --success-dim:rgba(96,168,208,0.15);
+    --warning:#c8a030; --warning-dim:rgba(200,160,48,0.15);
+    --danger:#e05060; --danger-dim:rgba(224,80,96,0.15); --purple:#8060e0;
+    --on-primary:#030108; --nav-bg:rgba(3,1,8,0.97);
+  }
+  html[data-theme="cosmic-void"] {
+    --bg:#000206; --card:#020818; --card2:#010612; --border:#081840;
+    --primary:#0888f0; --primary-dim:rgba(8,136,240,0.16); --secondary:#0560c0; --accent:#60ccff;
+    --text:#80c8ff; --text-dim:#0850a0; --text-muted:#042868;
+    --success:#4ab8d8; --success-dim:rgba(74,184,216,0.15);
+    --warning:#c8a830; --warning-dim:rgba(200,168,48,0.15);
+    --danger:#e05060; --danger-dim:rgba(224,80,96,0.15); --purple:#0888f0;
+    --on-primary:#000206; --nav-bg:rgba(0,2,6,0.97);
+  }
+  html[data-theme="andromeda"] {
+    --bg:#020316; --card:#060828; --card2:#050620; --border:#181060;
+    --primary:#3858e8; --primary-dim:rgba(56,88,232,0.16); --secondary:#2040c0; --accent:#e060c8;
+    --text:#c0d4ff; --text-dim:#3040a0; --text-muted:#181860;
+    --success:#60b8d0; --success-dim:rgba(96,184,208,0.15);
+    --warning:#c89830; --warning-dim:rgba(200,152,48,0.15);
+    --danger:#e060b0; --danger-dim:rgba(224,96,176,0.15); --purple:#e060c8;
+    --on-primary:#020316; --nav-bg:rgba(2,3,22,0.97);
+  }
+  html[data-theme="solar-flare"] {
+    --bg:#060100; --card:#180800; --card2:#140600; --border:#402008;
+    --primary:#e06818; --primary-dim:rgba(224,104,24,0.16); --secondary:#b04810; --accent:#ffc848;
+    --text:#ffe0a0; --text-dim:#a05010; --text-muted:#602808;
+    --success:#60a858; --success-dim:rgba(96,168,88,0.15);
+    --warning:#ffc848; --warning-dim:rgba(255,200,72,0.15);
+    --danger:#e04020; --danger-dim:rgba(224,64,32,0.15); --purple:#e06818;
+    --on-primary:#060100; --nav-bg:rgba(6,1,0,0.97);
+  }
+  html[data-theme="quantum-drift"] {
+    --bg:#000c12; --card:#011a20; --card2:#01161c; --border:#083840;
+    --primary:#00c0b0; --primary-dim:rgba(0,192,176,0.16); --secondary:#009888; --accent:#40f0e0;
+    --text:#80f0e8; --text-dim:#008878; --text-muted:#024848;
+    --success:#40d8b0; --success-dim:rgba(64,216,176,0.15);
+    --warning:#c8c030; --warning-dim:rgba(200,192,48,0.15);
+    --danger:#e05878; --danger-dim:rgba(224,88,120,0.15); --purple:#00c0b0;
+    --on-primary:#000c12; --nav-bg:rgba(0,12,18,0.97);
+  }
+  html[data-theme="supernova"] {
+    --bg:#060000; --card:#180200; --card2:#140100; --border:#480808;
+    --primary:#d82010; --primary-dim:rgba(216,32,16,0.16); --secondary:#a01008; --accent:#ff7820;
+    --text:#ffd0a0; --text-dim:#a01808; --text-muted:#600808;
+    --success:#60a858; --success-dim:rgba(96,168,88,0.15);
+    --warning:#ff8020; --warning-dim:rgba(255,128,32,0.15);
+    --danger:#d82010; --danger-dim:rgba(216,32,16,0.16); --purple:#d82010;
+    --on-primary:#060000; --nav-bg:rgba(6,0,0,0.97);
   }
   html[data-theme="editorial"] body { font-family:'Newsreader',Georgia,serif; }
   html[data-theme="editorial"] .page-header h1,
@@ -695,7 +749,8 @@
   /* IOS NOTCH SUPPORT */
   .ios-header { padding-top: max(12px, env(safe-area-inset-top)); }
   /* NORSE VIKING THEMED HEADERS */
-  #viking-gold-header, #stormbringer-header, #blood-eagle-header, #valhalla-header, #yggdrasil-header {
+  #viking-gold-header, #stormbringer-header, #blood-eagle-header, #valhalla-header, #yggdrasil-header,
+  #dark-nebula-header, #cosmic-void-header, #andromeda-header, #solar-flare-header, #quantum-drift-header, #supernova-header {
     display: none;
     position: relative;
     overflow: hidden;
@@ -708,7 +763,13 @@
   html[data-theme="stormbringer"] #stormbringer-header  { display: block; background: #0c1624; }
   html[data-theme="blood-eagle"]  #blood-eagle-header   { display: block; background: #180808; }
   html[data-theme="valhalla"]     #valhalla-header      { display: block; background: #100a28; }
-  html[data-theme="yggdrasil"]   #yggdrasil-header     { display: block; background: #071408; }
+  html[data-theme="yggdrasil"]    #yggdrasil-header      { display: block; background: #071408; }
+  html[data-theme="dark-nebula"]  #dark-nebula-header    { display: block; background: #0a0312; }
+  html[data-theme="cosmic-void"]  #cosmic-void-header    { display: block; background: #020818; }
+  html[data-theme="andromeda"]    #andromeda-header      { display: block; background: #060828; }
+  html[data-theme="solar-flare"]  #solar-flare-header    { display: block; background: #180800; }
+  html[data-theme="quantum-drift"] #quantum-drift-header { display: block; background: #011a20; }
+  html[data-theme="supernova"]    #supernova-header      { display: block; background: #180200; }
   .vhdr-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
   .vhdr-text { position: relative; z-index: 2; padding-bottom: 10px; }
   .vhdr-text h1 { font-size: 20px; font-weight: 800; letter-spacing: -0.3px; }
@@ -765,7 +826,7 @@
   <div class="cow-spot" style="width:32px;height:22px;bottom:4px;right:110px;transform:rotate(30deg);border-radius:40% 60% 50% 50% / 60% 40% 55% 45%"></div>
   <div id="cow-header-text">
     <h1>💉 Peptide Scheduler</h1>
-    <div class="cow-sub">v1.7.0 — Your peptide protocol, organized</div>
+    <div class="cow-sub">v1.8.0 — Your peptide protocol, organized</div>
   </div>
 </div>
 
@@ -791,7 +852,7 @@
   </div>
   <div class="vhdr-text">
     <h1 style="color:#c8960c">⚔ Peptide Scheduler</h1>
-    <div class="vsub" style="color:#a07820">v1.7.0 — Forged in iron, tracked in gold</div>
+    <div class="vsub" style="color:#a07820">v1.8.0 — Forged in iron, tracked in gold</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#c8960c"></span><span style="background:#a07820"></span><span style="background:#6b5010"></span><span style="background:#3d2e08"></span>
@@ -817,7 +878,7 @@
   </div>
   <div class="vhdr-text">
     <h1 style="color:#6ab0e8">⛵ Peptide Scheduler</h1>
-    <div class="vsub" style="color:#4a7fa8">v1.7.0 — Ride the storm, track the dose</div>
+    <div class="vsub" style="color:#4a7fa8">v1.8.0 — Ride the storm, track the dose</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#6ab0e8"></span><span style="background:#4a88c0"></span><span style="background:#2a5888"></span><span style="background:#1a3050"></span>
@@ -849,7 +910,7 @@
   </div>
   <div class="vhdr-text">
     <h1 style="color:#d04040">🪓 Peptide Scheduler</h1>
-    <div class="vsub" style="color:#903030">v1.7.0 — Honor the ritual, log the dose</div>
+    <div class="vsub" style="color:#903030">v1.8.0 — Honor the ritual, log the dose</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#d04040"></span><span style="background:#a03030"></span><span style="background:#6a2020"></span><span style="background:#3d1010"></span>
@@ -884,7 +945,7 @@
   </div>
   <div class="vhdr-text">
     <h1 style="color:#b090f0">✦ Peptide Scheduler</h1>
-    <div class="vsub" style="color:#7858c0">v1.7.0 — Walk worthy to Valhalla</div>
+    <div class="vsub" style="color:#7858c0">v1.8.0 — Walk worthy to Valhalla</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#b090f0"></span><span style="background:#8058c8"></span><span style="background:#5030a0"></span><span style="background:#2a1860"></span>
@@ -922,10 +983,311 @@
   </div>
   <div class="vhdr-text">
     <h1 style="color:#4ea858">🌲 Peptide Scheduler</h1>
-    <div class="vsub" style="color:#3a7840">v1.7.0 — Rooted in the World Tree</div>
+    <div class="vsub" style="color:#3a7840">v1.8.0 — Rooted in the World Tree</div>
   </div>
   <div class="vhdr-strip">
     <span style="background:#4ea858"></span><span style="background:#2a6830"></span><span style="background:#70c870"></span><span style="background:#c8a030"></span>
+  </div>
+</div>
+
+<!-- DARK NEBULA HEADER -->
+<div id="dark-nebula-header">
+  <div class="vhdr-bg">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <radialGradient id="dn-nb1" cx="67%" cy="50%" r="45%"><stop offset="0%" stop-color="#5828b0" stop-opacity=".65"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <radialGradient id="dn-nb2" cx="26%" cy="30%" r="32%"><stop offset="0%" stop-color="#1a3070" stop-opacity=".45"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <radialGradient id="dn-nb3" cx="70%" cy="52%" r="18%"><stop offset="0%" stop-color="#a060e8" stop-opacity=".70"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <pattern id="dn-hdr-dust" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+          <circle cx="3" cy="4" r=".50" fill="#fff" opacity=".30"/>
+          <circle cx="12" cy="9" r=".40" fill="#c8b0ff" opacity=".28"/>
+          <circle cx="7" cy="16" r=".45" fill="#fff" opacity=".22"/>
+          <circle cx="17" cy="2" r=".35" fill="#c8b0ff" opacity=".20"/>
+          <circle cx="16" cy="14" r=".40" fill="#fff" opacity=".18"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="#030108"/>
+      <rect width="100%" height="100%" fill="url(#dn-nb1)"/>
+      <rect width="100%" height="100%" fill="url(#dn-nb2)"/>
+      <rect width="100%" height="100%" fill="url(#dn-nb3)"/>
+      <rect width="100%" height="100%" fill="url(#dn-hdr-dust)"/>
+      <circle cx="22" cy="12" r="1.5" fill="#fff" opacity=".95"/>
+      <circle cx="80" cy="7" r="1.1" fill="#e0d0ff" opacity=".88"/>
+      <circle cx="145" cy="20" r="1.8" fill="#fff" opacity=".92"/>
+      <circle cx="55" cy="58" r="1.3" fill="#c8b0ff" opacity=".82"/>
+      <circle cx="210" cy="32" r="2.2" fill="#fff" opacity=".96"/>
+      <circle cx="275" cy="18" r="1.4" fill="#e0d0ff" opacity=".88"/>
+      <circle cx="340" cy="28" r="1.5" fill="#fff" opacity=".90"/>
+      <circle cx="175" cy="65" r="1.2" fill="#b090ff" opacity=".78"/>
+      <circle cx="310" cy="72" r="1.4" fill="#fff" opacity=".82"/>
+      <circle cx="225" cy="48" r="2.0" fill="#fff" opacity=".92"/>
+      <circle cx="240" cy="38" r="1.6" fill="#d0c0ff" opacity=".86"/>
+      <circle cx="252" cy="58" r="1.4" fill="#fff" opacity=".82"/>
+      <line x1="330" y1="8" x2="330" y2="36" stroke="#9060e8" stroke-width="1" opacity=".35"/>
+      <line x1="316" y1="22" x2="344" y2="22" stroke="#9060e8" stroke-width="1" opacity=".35"/>
+      <line x1="320" y1="12" x2="340" y2="32" stroke="#9060e8" stroke-width=".8" opacity=".22"/>
+      <line x1="340" y1="12" x2="320" y2="32" stroke="#9060e8" stroke-width=".8" opacity=".22"/>
+      <circle cx="330" cy="22" r="5" fill="none" stroke="#9060e8" stroke-width=".8" opacity=".28"/>
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="#8060e0" stroke-width="1.5" opacity=".30"/>
+    </svg>
+  </div>
+  <div class="vhdr-text">
+    <h1 style="color:#a080f8">★ Peptide Scheduler</h1>
+    <div class="vsub" style="color:#604890">v1.8.0 — Lost in the nebula</div>
+  </div>
+  <div class="vhdr-strip">
+    <span style="background:#8060e0"></span><span style="background:#5030a0"></span><span style="background:#b090ff"></span><span style="background:#1a3070"></span>
+  </div>
+</div>
+
+<!-- COSMIC VOID HEADER -->
+<div id="cosmic-void-header">
+  <div class="vhdr-bg">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <radialGradient id="cv-nb1" cx="50%" cy="50%" r="35%"><stop offset="0%" stop-color="#0050b0" stop-opacity=".22"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <radialGradient id="cv-core" cx="50%" cy="50%" r="8%"><stop offset="0%" stop-color="#60c0ff" stop-opacity=".90"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="#000206"/>
+      <rect width="100%" height="100%" fill="url(#cv-nb1)"/>
+      <circle cx="18" cy="15" r="1.3" fill="#fff" opacity=".88"/>
+      <circle cx="62" cy="7" r=".9" fill="#a0d8ff" opacity=".72"/>
+      <circle cx="120" cy="28" r="1.5" fill="#fff" opacity=".92"/>
+      <circle cx="265" cy="12" r="1.1" fill="#80c8ff" opacity=".78"/>
+      <circle cx="320" cy="38" r="1.6" fill="#fff" opacity=".90"/>
+      <circle cx="22" cy="72" r="1.2" fill="#a0d8ff" opacity=".74"/>
+      <circle cx="88" cy="80" r="1.4" fill="#fff" opacity=".82"/>
+      <circle cx="178" cy="78" r="1.0" fill="#60aaff" opacity=".66"/>
+      <circle cx="345" cy="68" r="1.5" fill="#a0d8ff" opacity=".84"/>
+      <circle cx="48" cy="45" r=".8" fill="#fff" opacity=".60"/>
+      <circle cx="205" cy="55" r=".9" fill="#60aaff" opacity=".55"/>
+      <line x1="50%" y1="50%" x2="50%" y2="3%" stroke="#40b0ff" stroke-width="1.2" opacity=".55"/>
+      <line x1="50%" y1="50%" x2="50%" y2="97%" stroke="#40b0ff" stroke-width="1.2" opacity=".55"/>
+      <line x1="50%" y1="50%" x2="8%" y2="50%" stroke="#40b0ff" stroke-width="1.2" opacity=".55"/>
+      <line x1="50%" y1="50%" x2="92%" y2="50%" stroke="#40b0ff" stroke-width="1.2" opacity=".55"/>
+      <line x1="50%" y1="50%" x2="35%" y2="12%" stroke="#40b0ff" stroke-width=".8" opacity=".35"/>
+      <line x1="50%" y1="50%" x2="65%" y2="12%" stroke="#40b0ff" stroke-width=".8" opacity=".35"/>
+      <line x1="50%" y1="50%" x2="35%" y2="88%" stroke="#40b0ff" stroke-width=".8" opacity=".35"/>
+      <line x1="50%" y1="50%" x2="65%" y2="88%" stroke="#40b0ff" stroke-width=".8" opacity=".35"/>
+      <rect width="100%" height="100%" fill="url(#cv-core)"/>
+      <circle cx="50%" cy="50%" r="4" fill="#80d8ff" opacity=".95"/>
+      <circle cx="50%" cy="50%" r="10" fill="none" stroke="#40b0ff" stroke-width=".8" opacity=".45"/>
+      <circle cx="50%" cy="50%" r="20" fill="none" stroke="#2088d0" stroke-width=".6" opacity=".28"/>
+      <circle cx="50%" cy="50%" r="34" fill="none" stroke="#104880" stroke-width=".5" opacity=".18"/>
+      <circle cx="88%" cy="22%" r="6" fill="none" stroke="#0888f0" stroke-width=".8" opacity=".32"/>
+      <circle cx="88%" cy="22%" r="12" fill="none" stroke="#0888f0" stroke-width=".5" opacity=".18"/>
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="#0888f0" stroke-width="1.5" opacity=".38"/>
+    </svg>
+  </div>
+  <div class="vhdr-text">
+    <h1 style="color:#40aaff">◎ Peptide Scheduler</h1>
+    <div class="vsub" style="color:#104870">v1.8.0 — Nothing escapes the void</div>
+  </div>
+  <div class="vhdr-strip">
+    <span style="background:#0888f0"></span><span style="background:#0050b0"></span><span style="background:#60ccff"></span><span style="background:#040820"></span>
+  </div>
+</div>
+
+<!-- ANDROMEDA HEADER -->
+<div id="andromeda-header">
+  <div class="vhdr-bg">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <radialGradient id="ad-nb1" cx="38%" cy="44%" r="50%"><stop offset="0%" stop-color="#1830b0" stop-opacity=".60"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <radialGradient id="ad-nb2" cx="72%" cy="58%" r="40%"><stop offset="0%" stop-color="#b028a0" stop-opacity=".55"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <radialGradient id="ad-core" cx="40%" cy="46%" r="14%"><stop offset="0%" stop-color="#c0d0ff" stop-opacity=".70"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <pattern id="ad-blue" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+          <circle cx="4" cy="5" r=".42" fill="#a0b8ff" opacity=".35"/>
+          <circle cx="13" cy="11" r=".36" fill="#fff" opacity=".30"/>
+          <circle cx="8" cy="15" r=".38" fill="#a0b8ff" opacity=".25"/>
+        </pattern>
+        <pattern id="ad-pink" x="9" y="9" width="18" height="18" patternUnits="userSpaceOnUse">
+          <circle cx="4" cy="5" r=".40" fill="#ffb0e0" opacity=".32"/>
+          <circle cx="13" cy="11" r=".36" fill="#fff" opacity=".26"/>
+          <circle cx="8" cy="15" r=".38" fill="#ffb0e0" opacity=".22"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="#020316"/>
+      <rect width="55%" height="100%" fill="url(#ad-blue)"/>
+      <rect x="45%" width="55%" height="100%" fill="url(#ad-pink)"/>
+      <rect width="100%" height="100%" fill="url(#ad-nb1)"/>
+      <rect width="100%" height="100%" fill="url(#ad-nb2)"/>
+      <rect width="100%" height="100%" fill="url(#ad-core)"/>
+      <circle cx="22" cy="14" r="1.4" fill="#a0c0ff" opacity=".90"/>
+      <circle cx="65" cy="7" r="1.1" fill="#c0d4ff" opacity=".84"/>
+      <circle cx="115" cy="24" r="1.7" fill="#fff" opacity=".94"/>
+      <circle cx="48" cy="56" r="1.2" fill="#a0b8ff" opacity=".82"/>
+      <circle cx="95" cy="42" r="2.4" fill="#fff" opacity=".96"/>
+      <circle cx="142" cy="16" r="1.5" fill="#c0d4ff" opacity=".88"/>
+      <circle cx="195" cy="28" r="1.4" fill="#f0c0f0" opacity=".86"/>
+      <circle cx="248" cy="14" r="1.6" fill="#ffd0f8" opacity=".90"/>
+      <circle cx="298" cy="26" r="1.3" fill="#f0b0e8" opacity=".84"/>
+      <circle cx="275" cy="65" r="1.5" fill="#fff" opacity=".90"/>
+      <circle cx="340" cy="45" r="2.2" fill="#ffd0f8" opacity=".94"/>
+      <ellipse cx="40%" cy="50%" rx="30%" ry="12%" fill="none" stroke="#8090e0" stroke-width=".6" opacity=".20" transform="rotate(-28,150,42)"/>
+      <ellipse cx="40%" cy="50%" rx="20%" ry="8%" fill="none" stroke="#c0a0e0" stroke-width=".5" opacity=".18" transform="rotate(-28,150,42)"/>
+      <ellipse cx="86%" cy="24%" rx="12%" ry="6%" fill="none" stroke="#8060e8" stroke-width=".8" opacity=".30" transform="rotate(-20,322,20)"/>
+      <ellipse cx="86%" cy="24%" rx="7%" ry="4%" fill="none" stroke="#e060c8" stroke-width=".6" opacity=".25" transform="rotate(-20,322,20)"/>
+      <circle cx="86%" cy="24%" r="2.5" fill="#d0c0ff" opacity=".60"/>
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="#5060e0" stroke-width="1.5" opacity=".35"/>
+    </svg>
+  </div>
+  <div class="vhdr-text">
+    <h1 style="color:#8090f8">⊛ Peptide Scheduler</h1>
+    <div class="vsub" style="color:#4050a0">v1.8.0 — Two galaxies collide</div>
+  </div>
+  <div class="vhdr-strip">
+    <span style="background:#3858e8"></span><span style="background:#1030a0"></span><span style="background:#e060c8"></span><span style="background:#801880"></span>
+  </div>
+</div>
+
+<!-- SOLAR FLARE HEADER -->
+<div id="solar-flare-header">
+  <div class="vhdr-bg">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <radialGradient id="sf-heat" cx="92%" cy="50%" r="58%"><stop offset="0%" stop-color="#e06000" stop-opacity=".62"/><stop offset="45%" stop-color="#802800" stop-opacity=".38"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <radialGradient id="sf-corona" cx="92%" cy="50%" r="22%"><stop offset="0%" stop-color="#ffe060" stop-opacity=".82"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <pattern id="sf-dust" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+          <circle cx="4" cy="5" r=".42" fill="#ffd090" opacity=".28"/>
+          <circle cx="13" cy="12" r=".36" fill="#fff" opacity=".22"/>
+          <circle cx="8" cy="17" r=".38" fill="#ffb060" opacity=".20"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="#060100"/>
+      <rect width="100%" height="100%" fill="url(#sf-heat)"/>
+      <rect width="100%" height="100%" fill="url(#sf-dust)"/>
+      <line x1="92%" y1="50%" x2="55%" y2="50%" stroke="#ff9030" stroke-width="1.2" opacity=".52"/>
+      <line x1="92%" y1="50%" x2="62%" y2="18%" stroke="#ff9030" stroke-width="1.0" opacity=".44"/>
+      <line x1="92%" y1="50%" x2="62%" y2="82%" stroke="#ff9030" stroke-width="1.0" opacity=".44"/>
+      <line x1="92%" y1="50%" x2="68%" y2="5%" stroke="#ff9030" stroke-width=".8" opacity=".33"/>
+      <line x1="92%" y1="50%" x2="68%" y2="95%" stroke="#ff9030" stroke-width=".8" opacity=".33"/>
+      <line x1="92%" y1="50%" x2="76%" y2="2%" stroke="#ffa030" stroke-width=".7" opacity=".26"/>
+      <line x1="92%" y1="50%" x2="76%" y2="98%" stroke="#ffa030" stroke-width=".7" opacity=".26"/>
+      <line x1="92%" y1="50%" x2="100%" y2="20%" stroke="#ff7020" stroke-width=".6" opacity=".22"/>
+      <line x1="92%" y1="50%" x2="100%" y2="80%" stroke="#ff7020" stroke-width=".6" opacity=".22"/>
+      <circle cx="18" cy="16" r="1.2" fill="#ffd090" opacity=".82"/>
+      <circle cx="58" cy="8" r="1.0" fill="#fff" opacity=".77"/>
+      <circle cx="95" cy="28" r="1.5" fill="#ffd090" opacity=".84"/>
+      <circle cx="38" cy="62" r="1.2" fill="#ffb060" opacity=".74"/>
+      <circle cx="135" cy="15" r="1.6" fill="#fff" opacity=".87"/>
+      <circle cx="78" cy="78" r="1.3" fill="#ffd090" opacity=".76"/>
+      <circle cx="18" cy="78" r="1.4" fill="#fff" opacity=".80"/>
+      <circle cx="108" cy="82" r="1.1" fill="#ffb060" opacity=".70"/>
+      <rect width="100%" height="100%" fill="url(#sf-corona)"/>
+      <circle cx="92%" cy="50%" r="9" fill="#ffe060" opacity=".88"/>
+      <circle cx="92%" cy="50%" r="20" fill="none" stroke="#ffa030" stroke-width="1.2" opacity=".48"/>
+      <circle cx="92%" cy="50%" r="34" fill="none" stroke="#e06020" stroke-width=".8" opacity=".28"/>
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="#e06818" stroke-width="1.5" opacity=".45"/>
+    </svg>
+  </div>
+  <div class="vhdr-text">
+    <h1 style="color:#e87030">☀ Peptide Scheduler</h1>
+    <div class="vsub" style="color:#804018">v1.8.0 — Born of stellar fire</div>
+  </div>
+  <div class="vhdr-strip">
+    <span style="background:#e06818"></span><span style="background:#903008"></span><span style="background:#ffc848"></span><span style="background:#3a1400"></span>
+  </div>
+</div>
+
+<!-- QUANTUM DRIFT HEADER -->
+<div id="quantum-drift-header">
+  <div class="vhdr-bg">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <radialGradient id="qd-nb1" cx="30%" cy="58%" r="40%"><stop offset="0%" stop-color="#006858" stop-opacity=".52"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <radialGradient id="qd-nb2" cx="75%" cy="35%" r="34%"><stop offset="0%" stop-color="#0098a0" stop-opacity=".48"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <pattern id="qd-dust" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse">
+          <circle cx="3" cy="4" r=".42" fill="#40f0e0" opacity=".22"/>
+          <circle cx="12" cy="10" r=".36" fill="#fff" opacity=".20"/>
+          <circle cx="7" cy="15" r=".38" fill="#00c0b0" opacity=".18"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="#000c12"/>
+      <rect width="100%" height="100%" fill="url(#qd-nb1)"/>
+      <rect width="100%" height="100%" fill="url(#qd-nb2)"/>
+      <rect width="100%" height="100%" fill="url(#qd-dust)"/>
+      <line x1="0" y1="28%" x2="100%" y2="60%" stroke="#00c0b0" stroke-width=".9" opacity=".30"/>
+      <line x1="0" y1="48%" x2="100%" y2="80%" stroke="#00d8c8" stroke-width=".7" opacity=".22"/>
+      <line x1="0" y1="8%" x2="100%" y2="40%" stroke="#00b0a0" stroke-width=".5" opacity=".16"/>
+      <circle cx="25" cy="14" r="1.5" fill="#60fff0" opacity=".92"/>
+      <circle cx="72" cy="8" r="1.1" fill="#40f0e0" opacity=".86"/>
+      <circle cx="120" cy="25" r="1.8" fill="#fff" opacity=".94"/>
+      <circle cx="52" cy="60" r="1.3" fill="#40f0e0" opacity=".82"/>
+      <circle cx="170" cy="14" r="1.9" fill="#fff" opacity=".96"/>
+      <circle cx="225" cy="35" r="1.4" fill="#60fff0" opacity=".87"/>
+      <circle cx="278" cy="18" r="1.6" fill="#40f0e0" opacity=".90"/>
+      <circle cx="330" cy="42" r="2.2" fill="#fff" opacity=".94"/>
+      <circle cx="100" cy="72" r="1.4" fill="#40f0e0" opacity=".80"/>
+      <circle cx="160" cy="78" r="1.6" fill="#fff" opacity=".84"/>
+      <circle cx="230" cy="72" r="1.3" fill="#60fff0" opacity=".82"/>
+      <line x1="25" y1="14" x2="170" y2="14" stroke="#00c0b0" stroke-width=".6" opacity=".28"/>
+      <line x1="25" y1="14" x2="52" y2="60" stroke="#00c0b0" stroke-width=".6" opacity=".28"/>
+      <line x1="170" y1="14" x2="278" y2="18" stroke="#00c0b0" stroke-width=".6" opacity=".25"/>
+      <path d="M296,10 Q310,22 324,10 Q338,0 352,10 Q366,20 375,14" fill="none" stroke="#00d8c8" stroke-width="1.2" opacity=".42"/>
+      <circle cx="87%" cy="22%" r="5" fill="none" stroke="#00c0b0" stroke-width=".9" opacity=".42"/>
+      <circle cx="87%" cy="22%" r="11" fill="none" stroke="#009890" stroke-width=".6" opacity=".26"/>
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="#00c0b0" stroke-width="1.5" opacity=".40"/>
+    </svg>
+  </div>
+  <div class="vhdr-text">
+    <h1 style="color:#00d8c8">⊗ Peptide Scheduler</h1>
+    <div class="vsub" style="color:#005848">v1.8.0 — Riding quantum streams</div>
+  </div>
+  <div class="vhdr-strip">
+    <span style="background:#00c0b0"></span><span style="background:#006858"></span><span style="background:#40f0e0"></span><span style="background:#000c12"></span>
+  </div>
+</div>
+
+<!-- SUPERNOVA HEADER -->
+<div id="supernova-header">
+  <div class="vhdr-bg">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <defs>
+        <radialGradient id="sn-burst" cx="48%" cy="50%" r="50%"><stop offset="0%" stop-color="#c02000" stop-opacity=".72"/><stop offset="40%" stop-color="#800800" stop-opacity=".52"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <radialGradient id="sn-heat" cx="48%" cy="50%" r="22%"><stop offset="0%" stop-color="#ffa028" stop-opacity=".82"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <radialGradient id="sn-core" cx="48%" cy="50%" r="8%"><stop offset="0%" stop-color="#fff8d0" stop-opacity=".96"/><stop offset="100%" stop-color="#000" stop-opacity="0"/></radialGradient>
+        <pattern id="sn-dust" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+          <circle cx="3" cy="4" r=".40" fill="#ffd090" opacity=".28"/>
+          <circle cx="11" cy="9" r=".35" fill="#fff" opacity=".22"/>
+          <circle cx="7" cy="13" r=".38" fill="#ff8030" opacity=".18"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="#060000"/>
+      <rect width="100%" height="100%" fill="url(#sn-burst)"/>
+      <rect width="100%" height="100%" fill="url(#sn-dust)"/>
+      <line x1="48%" y1="50%" x2="48%" y2="2%" stroke="#ff5818" stroke-width="1.0" opacity=".56"/>
+      <line x1="48%" y1="50%" x2="48%" y2="98%" stroke="#ff5818" stroke-width="1.0" opacity=".56"/>
+      <line x1="48%" y1="50%" x2="8%" y2="50%" stroke="#ff5818" stroke-width="1.0" opacity=".56"/>
+      <line x1="48%" y1="50%" x2="88%" y2="50%" stroke="#ff5818" stroke-width="1.0" opacity=".56"/>
+      <line x1="48%" y1="50%" x2="27%" y2="14%" stroke="#ff5818" stroke-width=".9" opacity=".46"/>
+      <line x1="48%" y1="50%" x2="69%" y2="14%" stroke="#ff5818" stroke-width=".9" opacity=".46"/>
+      <line x1="48%" y1="50%" x2="27%" y2="86%" stroke="#ff5818" stroke-width=".9" opacity=".46"/>
+      <line x1="48%" y1="50%" x2="69%" y2="86%" stroke="#ff5818" stroke-width=".9" opacity=".46"/>
+      <line x1="48%" y1="50%" x2="14%" y2="8%" stroke="#ff7828" stroke-width=".7" opacity=".33"/>
+      <line x1="48%" y1="50%" x2="82%" y2="8%" stroke="#ff7828" stroke-width=".7" opacity=".33"/>
+      <line x1="48%" y1="50%" x2="14%" y2="92%" stroke="#ff7828" stroke-width=".7" opacity=".33"/>
+      <line x1="48%" y1="50%" x2="82%" y2="92%" stroke="#ff7828" stroke-width=".7" opacity=".33"/>
+      <circle cx="48%" cy="50%" r="28" fill="none" stroke="#ff4008" stroke-width="1.2" opacity=".42"/>
+      <circle cx="48%" cy="50%" r="52" fill="none" stroke="#c02008" stroke-width=".8" opacity=".28"/>
+      <circle cx="48%" cy="50%" r="78" fill="none" stroke="#800000" stroke-width=".6" opacity=".18"/>
+      <rect width="100%" height="100%" fill="url(#sn-heat)"/>
+      <rect width="100%" height="100%" fill="url(#sn-core)"/>
+      <circle cx="18" cy="12" r="1.4" fill="#fff" opacity=".88"/>
+      <circle cx="320" cy="16" r="1.6" fill="#ffd090" opacity=".90"/>
+      <circle cx="355" cy="8" r="1.3" fill="#fff" opacity=".84"/>
+      <circle cx="18" cy="78" r="1.5" fill="#ffc060" opacity=".82"/>
+      <circle cx="328" cy="72" r="1.7" fill="#fff" opacity=".88"/>
+      <path d="M336,10 L339,4 L342,10 L348,7 L344,13 L350,16 L344,16 L342,22 L339,16 L333,16 L339,13 L333,7 Z" fill="none" stroke="#ff8020" stroke-width=".9" opacity=".42"/>
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="#d82010" stroke-width="1.5" opacity=".52"/>
+    </svg>
+  </div>
+  <div class="vhdr-text">
+    <h1 style="color:#e83020">✹ Peptide Scheduler</h1>
+    <div class="vsub" style="color:#801008">v1.8.0 — A star dies in glory</div>
+  </div>
+  <div class="vhdr-strip">
+    <span style="background:#d82010"></span><span style="background:#800000"></span><span style="background:#ff7820"></span><span style="background:#ffc040"></span>
   </div>
 </div>
 
@@ -1217,7 +1579,7 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--text-muted);flex-shrink:0"><polyline points="9 18 15 12 9 6"/></svg>
     </div>
   </div>
-  <div style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:16px">Peptide Scheduler v1.7.0</div>
+  <div style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:16px">Peptide Scheduler v1.8.0</div>
 </div>
 
 <!-- INSIGHTS PAGE -->
@@ -9852,7 +10214,13 @@ const THEMES = [
   { id:'stormbringer', name:'Stormbringer',   desc:'Deep navy · sea waves · frost',    bg:'#050b12', accent:'#6ab0e8', line:'rgba(106,176,232,0.22)' },
   { id:'blood-eagle',  name:'Blood Eagle',    desc:'Black · crimson · Viking tribal',  bg:'#0a0404', accent:'#d04040', line:'rgba(208,64,64,0.22)' },
   { id:'valhalla',     name:'Valhalla',       desc:'Deep violet · stars · Norse runes',bg:'#060412', accent:'#b090f0', line:'rgba(176,144,240,0.22)' },
-  { id:'yggdrasil',   name:'Yggdrasil',      desc:'Deep forest · ancient roots · World Tree', bg:'#010a03', accent:'#4ea858', line:'rgba(78,168,88,0.22)' }
+  { id:'yggdrasil',    name:'Yggdrasil',      desc:'Deep forest · ancient roots · World Tree',  bg:'#010a03', accent:'#4ea858', line:'rgba(78,168,88,0.22)' },
+  { id:'dark-nebula',  name:'Dark Nebula',    desc:'Void black · violet clouds · deep space',   bg:'#030108', accent:'#8060e0', line:'rgba(128,96,224,0.22)' },
+  { id:'cosmic-void',  name:'Cosmic Void',    desc:'Pitch black · electric blue quasar',         bg:'#000206', accent:'#0888f0', line:'rgba(8,136,240,0.22)' },
+  { id:'andromeda',    name:'Andromeda',      desc:'Deep navy · blue spiral · magenta cluster',  bg:'#020316', accent:'#3858e8', line:'rgba(56,88,232,0.22)' },
+  { id:'solar-flare',  name:'Solar Flare',    desc:'Void black · amber corona · stellar heat',   bg:'#060100', accent:'#e06818', line:'rgba(224,104,24,0.22)' },
+  { id:'quantum-drift',name:'Quantum Drift',  desc:'Dark void · neon teal · particle streams',   bg:'#000c12', accent:'#00c0b0', line:'rgba(0,192,176,0.22)' },
+  { id:'supernova',    name:'Supernova',      desc:'Void black · crimson burst · shockwave rings',bg:'#060000', accent:'#d82010', line:'rgba(216,32,16,0.22)' }
 ];
 
 function applyTheme(id) {

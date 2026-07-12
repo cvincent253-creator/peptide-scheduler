@@ -57,8 +57,10 @@ bump the cache version.
 | 13   | peptide-scheduler-v16       | 1.6.7   | Fix runes: replace SVG text with path-drawn rune shapes (no font dependency) |
 | 14   | peptide-scheduler-v17       | 1.6.8   | Fix auto-update: call reg.update() on every app open — no more waiting an hour |
 | 15   | peptide-scheduler-v18       | 1.6.9   | Guaranteed update: startup version check against version.json wipes cache on mismatch |
+| 16   | peptide-scheduler-v19       | 1.7.0   | Add Yggdrasil (green Norse/World Tree) theme |
+| 17   | peptide-scheduler-v20       | 1.8.0   | Add 6 galaxy themes: Dark Nebula, Cosmic Void, Andromeda, Solar Flare, Quantum Drift, Supernova |
 
-**Next push should use: `peptide-scheduler-v19`**
+**Next push should use: `peptide-scheduler-v21`**
 
 ---
 
